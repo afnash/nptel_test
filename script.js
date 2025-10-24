@@ -279,10 +279,10 @@ class QuizApp {
             timeSpent
         };
 
-        // Show retake button only for weekly mode
+        // Show retake button for both weekly and full series
         const retakeBtn = document.getElementById('retake-btn');
         if (retakeBtn) {
-            retakeBtn.style.display = this.currentMode === 'weekly' ? 'block' : 'none';
+            retakeBtn.style.display = 'block';
         }
     }
 
@@ -376,7 +376,17 @@ function startQuiz(mode) {
     if (mode === 'weekly') {
         quizApp.showWeeklySelection();
     } else if (mode === 'full') {
-        quizApp.startQuiz('full');
+        // Show quiz screen and start full series
+        quizApp.currentMode = 'full';
+        quizApp.currentQuestionIndex = 0;
+        quizApp.userAnswers = [];
+        quizApp.startTime = Date.now();
+        quizApp.currentQuestions = quizApp.quizData.full_series;
+        quizApp.updateQuizInfo('Full Series', 'All Questions');
+        quizApp.hideAllScreens();
+        document.getElementById('quiz-screen').classList.add('active');
+        quizApp.showQuestion();
+        quizApp.updateProgress();
     }
 }
 
