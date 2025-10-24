@@ -12,7 +12,36 @@ body {
     overflow-x: hidden;
     position: relative;
 }
+    footer {
+    text-align: center;
+    color: white;
+    font-family: "Poppins", Arial, sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
 
+  footer a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    cursor: pointer;
+  }
+
+  footer a:hover {
+    color: #00bfff;
+  }
+
+  .heart {
+    display: inline-block;
+    transition: transform 0.3s ease;
+  }
+
+  .heart.pop {
+    transform: scale(1.5);
+  }
 /* Background Animation */
 .background-animation {
     position: fixed;

@@ -446,6 +446,13 @@ function addSmoothAnimations() {
         observer.observe(el);
     });
 }
+const heart = document.querySelector('.heart');
+const link = document.querySelector('footer a');
+
+  link.addEventListener('click', () => {
+    heart.classList.add('pop');
+    setTimeout(() => heart.classList.remove('pop'), 300);
+  });
 
 // Initialize animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', addSmoothAnimations);
