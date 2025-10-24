@@ -1,0 +1,1444 @@
+[
+  {
+    "question": "In a rumor mongering algorithm, there is a/an ________ relationship between the traffic and the residue.",
+    "options": [
+      "exponential",
+      "logarithmic",
+      "linear",
+      "quadratic"
+    ],
+    "answer": "exponential",
+    "explanation": "The traffic and residue in a rumor mongering algorithm typically exhibit an exponential relationship, implying very fast decay of 'residue' (uninformed nodes) and logarithmic message complexity, but the direct relationship between traffic and residue is an exponential decay/growth trade-off.",
+    "id": "q_rumor_traffic_residue"
+  },
+  {
+    "question": "Which of the following statements is/are correct regarding the rumor mongering protocol?",
+    "options": [
+      "S1: There is a chance that updates might not reach a node",
+      "S2: It has a built-in termination protocol.",
+      "S1 is true and S2 is true",
+      "S1 is true and S2 is false",
+      "S1 is false and S2 is true",
+      "S1 is false and S2 is false"
+    ],
+    "answer": "S1 is true and S2 is true",
+    "explanation": "Rumor mongering is a probabilistic protocol, so there is always a small chance an update doesn't reach a node (S1 is true). [cite_start]It is self-limiting because nodes eventually stop gossiping when they believe everyone is informed (S2 is true). [cite: 12, 13, 21]",
+    "id": "q_rumor_statements"
+  },
+  {
+    "question": "In the anti-entropy algorithm, if the number of infected nodes in the system is high, then a/an ________ algorithm is preferred.",
+    "options": [
+      "push",
+      "pull",
+      "push-pull",
+      "pull-push"
+    ],
+    "answer": "pull",
+    [cite_start]"explanation": "In anti-entropy, when many nodes are 'infected' (have the update), the 'pull' model is preferred to reduce redundant messages, as uninfected nodes explicitly request the update from an infected node. [cite: 23, 32]",
+    "id": "q_anti_entropy_infected"
+  },
+  {
+    "question": "In an epidemic protocol, a/an ________ node has not received the update.",
+    "options": [
+      "infective",
+      "removed",
+      "injured",
+      "susceptible"
+    ],
+    "answer": "susceptible",
+    "explanation": "In epidemic protocols (like the SIR model), a **susceptible** node is one that has not yet received the update. [cite_start]An **infective** node has the update and is spreading it. [cite: 34, 42, 44]",
+    "id": "q_epidemic_node_type"
+  },
+  {
+    "question": "Assume an anti-entropy algorithm that distributes an update across 'n' nodes. Any node can contact any other node. How much time does this take (approximately, asymptotically)?",
+    "options": [
+      "O(n)",
+      "O(log(n))",
+      "O(n^2)",
+      "O(n^3)"
+    ],
+    "answer": "O(log(n))",
+    [cite_start]"explanation": "In an epidemic/gossip-based protocol where any node can contact any other, the time complexity for distribution across 'n' nodes is typically logarithmic, $O(\log(n))$ (in rounds). [cite: 45, 46, 54]",
+    "id": "q_anti_entropy_time_complexity"
+  },
+  {
+    "question": "Consider the following statements regarding Napster. S1: In Napster, a client can provide fake details such as IP addresses. S2: In Napster, the main coordination entity handles incoming connections from peers.",
+    "options": [
+      "S1 is true and S2 is true",
+      "S1 is true and S2 is false",
+      "S1 is false and S2 is true",
+      "S1 is false and S2 is false"
+    ],
+    "answer": "S1 is false and S2 is false",
+    "explanation": "In Napster, the central server manages file indexing and IP address verification, so a client cannot provide fake IP addresses (S1 is false). [cite_start]The central server primarily handles search queries and coordination, while peer-to-peer connections handle file transfer directly (S2 is false). [cite: 56, 66]",
+    "id": "q_napster_statements"
+  },
+  {
+    "question": "In Gnutella, the ________ entity manages connections with other Gnutella peers.",
+    "options": [
+      "Connection handler",
+      "Co-ordination instance",
+      "Download instance",
+      "Upload instance"
+    ],
+    "answer": "Connection handler",
+    [cite_start]"explanation": "The **Connection handler** in Gnutella is responsible for managing peer-to-peer connections. [cite: 68, 77]",
+    "id": "q_gnutella_connection_entity"
+  },
+  {
+    "question": "The co-ordination instance in Gnutella sends the ________ message back to the original client after updating the local database with information about remote peers.",
+    "options": [
+      "ping",
+      "pong",
+      "search",
+      "client push"
+    ],
+    "answer": "pong",
+    [cite_start]"explanation": "The **pong** message is the response to a 'ping' and contains metadata, including information about remote peers, which is used to update the local database. [cite: 79, 88]",
+    "id": "q_gnutella_coordination_message"
+  },
+  {
+    "question": "In Napster, a client connects to a/the ________ broker.",
+    "options": [
+      "Least busy",
+      "Geographically nearest",
+      "Popular",
+      "Random"
+    ],
+    "answer": "Least busy",
+    [cite_start]"explanation": "Napster typically employs load balancing, so a client would connect to the **least busy** broker for efficient operation. [cite: 90, 98, 99]",
+    "id": "q_napster_broker"
+  },
+  {
+    "question": "Which of the following statements is/are incorrect?",
+    "options": [
+      "Gnutella is resilient to network partitions.",
+      "Napster ensures load balancing by finding the best broker.",
+      "Gnutella is scalable due to its distributed architecture.",
+      "None of the options"
+    ],
+    "answer": "Gnutella is scalable due to its distributed architecture.",
+    [cite_start]"explanation": "Gnutella's original design, which relied on flooding queries, was *not* highly scalable, making the statement 'Gnutella is scalable due to its distributed architecture' the incorrect one. [cite: 101, 109]",
+    "id": "q_gnutella_scalability"
+  },
+  {
+    "question": "Consider the following statements regarding distributed hash tables (DHTs). S1: DHTs provide immunity against node failures due to the usage of extensive data replication. S2: DHTs utilizes a dedicated central server to scale with the number of users.",
+    "options": [
+      "S1 is true, S2 is false",
+      "S1 is true, S2 is true",
+      "S1 is false, S2 is false",
+      "S1 is false, S2 is true"
+    ],
+    "answer": "S1 is true, S2 is false",
+    "explanation": "DHTs use data replication for fault tolerance (S1 is true). [cite_start]DHTs are decentralized peer-to-peer systems and specifically **do not** use a dedicated central server (S2 is false). [cite: 110, 120]",
+    "id": "q_dht_statements"
+  },
+  {
+    "question": "The configuration parameter $b$ in the Pastry network affects:",
+    "options": [
+      "The number of non-empty entries in the routing table only.",
+      "The number of hops required only.",
+      "The number of non-empty entries in the routing table AND the number of required hops.",
+      "None of the options."
+    ],
+    "answer": "The number of non-empty entries in the routing table AND the number of required hops.",
+    [cite_start]"explanation": "The parameter $b$ (base of the node ID) in Pastry determines the size of the routing table entries and consequently affects the number of hops required for routing. [cite: 122, 130]",
+    "id": "q_pastry_parameter_b"
+  },
+  {
+    "question": "While routing a request in Pastry, if the hash of the key (K) is in the range of the node's leaf set (L), then ________.",
+    "options": [
+      "forward K to $L_i$ such that $|K-L_i|$ is minimal.",
+      "forward K to $L_i$ such that $|K-L_i|$ is maximal.",
+      "forward K to $L_i$ such that $K - L_i$ is negative.",
+      "forward K to any random $L_i$."
+    ],
+    "answer": "forward K to $L_i$ such that $|K-L_i|$ is minimal.",
+    "explanation": "The leaf set contains the nodes numerically closest to the current node. [cite_start]If the key falls within the range of the leaf set, the node forwards the request to the neighbor in $L$ with the numerically **minimal** distance $|K-L_i|$. [cite: 131, 139]",
+    "id": "q_pastry_leaf_set_routing"
+  },
+  {
+    "question": "Which of the following is/are the design goals of Freenet?",
+    "options": [
+      "Anonymity",
+      "Deniability",
+      "Reliability",
+      "All the options."
+    ],
+    "answer": "All the options.",
+    [cite_start]"explanation": "The design goals of Freenet, a distributed, peer-to-peer datastore, include Anonymity, Deniability, and Reliability (or resistance to censorship/failure). [cite: 141, 149]",
+    "id": "q_freenet_design_goals"
+  },
+  {
+    "question": "In Freenet, if the insertion of a file leads to a hash collision, then ________.",
+    "options": [
+      "it drops the file.",
+      "it passes data back to the upstream requester.",
+      "it passes data to its neighbors.",
+      "it sends data to a subset of nodes from its neighbors."
+    ],
+    "answer": "it passes data back to the upstream requester.",
+    [cite_start]"explanation": "In Freenet, if a hash collision occurs during insertion (meaning the key already exists), the node sends the existing data back to the upstream requester. [cite: 151, 159]",
+    "id": "q_freenet_hash_collision"
+  },
+  {
+    "question": "Consider the following statements regarding Freenet. S1: Information about newly inserted files takes a considerable amount of time to spread across nodes. S2: Newly inserted files are placed on nodes with similar keys.",
+    "options": [
+      "S1 is true, S2 is false",
+      "S1 is true, S2 is true",
+      "S1 is false, S2 is false",
+      "S1 is false, S2 is true"
+    ],
+    "answer": "S1 is false, S2 is true",
+    "explanation": "Information about new files is passed along the insertion path, which means it is stored on nodes with similar keys (S2 is true). [cite_start]The insertion process is relatively fast, typically only following the path of the query (S1 is false). [cite: 161, 171]",
+    "id": "q_freenet_insertion_statements"
+  },
+  {
+    "question": "In the pre-routing mechanism, a message is encrypted with the ________.",
+    "options": [
+      "last node's private key",
+      "successive node's public key",
+      "sender's public key",
+      "sender's private key"
+    ],
+    "answer": "successive node's public key",
+    [cite_start]"explanation": "For pre-routing in an onion routing-like protocol, the sender encrypts the message with the **successive node's public key** so only that node can decrypt the layer meant for it. [cite: 173, 181]",
+    "id": "q_pre_routing_encryption"
+  },
+  {
+    "question": "If a requester receives a $Reply.Restart$ message from downstream nodes in Freenet, then ________.",
+    "options": [
+      "It extends its timer.",
+      "It shortens its timer.",
+      "It infers failure.",
+      "It resends the request."
+    ],
+    "answer": "It extends its timer.",
+    [cite_start]"explanation": "A $Reply.Restart$ message indicates that a node on the path had to restart a search, suggesting the requester should wait longer for a final result, so it **extends its timer**. [cite: 183, 191]",
+    "id": "q_freenet_reply_restart"
+  },
+  {
+    "question": "Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+    "options": [
+      "To reduce the network load, the TTL field can be dynamically decreased.",
+      "Nodes consider the TTL field while deciding the next request to process.",
+      "The TTL field is decremented at every hop",
+      "All the options"
+    ],
+    "answer": "All the options",
+    [cite_start]"explanation": "All the listed options are correct properties of the TTL field in Freenet, as it is decremented per hop, influences routing decisions, and is dynamically managed to control load. [cite: 193, 201]",
+    "id": "q_freenet_ttl"
+  },
+  {
+    "question": "Which of the following entities is (are) part of the structure of a Pastry node?",
+    "options": [
+      "A routing table",
+      "A neighborhood Table",
+      "A leaf set",
+      "All of the options"
+    ],
+    "answer": "All of the options",
+    [cite_start]"explanation": "A Pastry node's structure is defined by its **routing table**, **neighborhood table**, and **leaf set**, all of which are crucial for routing and maintaining topology. [cite: 203, 211]",
+    "id": "q_pastry_node_structure"
+  },
+  {
+    "question": "A ________ maintains a list of peers that contain the different pieces of a file in a BitTorrent network.",
+    "options": [
+      "torrent table",
+      "tracker",
+      "swarm",
+      "None of the options"
+    ],
+    "answer": "tracker",
+    [cite_start]"explanation": "In a BitTorrent network, the **tracker** is the server that keeps a list of all active peers (seeders and leechers) in the swarm who are transferring a specific file. [cite: 213, 222]",
+    "id": "q_bittorrent_peer_list"
+  },
+  {
+    "question": "Which of the following strategies is employed by the BitTorrent protocol, while downloading a file? [Choose the most appropriate answer]",
+    "options": [
+      "A sender will preferentially send data to the nodes that are alive in the network for a longer duration of time.",
+      "A sender prioritizes traffic for those nodes whose network bandwidth is higher.",
+      "A sender will preferentially send data to the nodes that have sent it data in the past.",
+      "All of the options."
+    ],
+    "answer": "A sender will preferentially send data to the nodes that have sent it data in the past.",
+    [cite_start]"explanation": "The core incentive mechanism in BitTorrent is **tit-for-tat**, where a sender preferentially uploads data to peers that have uploaded data to it recently. [cite: 224, 232]",
+    "id": "q_bittorrent_strategy"
+  },
+  {
+    "question": "Consider the following statements about the Chord DHT. S1: It is not fully distributed. S2: It is based on the consistent hashing technique.",
+    "options": [
+      "S1 is correct, S2 is incorrect.",
+      "S1 is incorrect, S2 is correct.",
+      "Both S1 and S2 are correct.",
+      "Both S1 and S2 are incorrect."
+    ],
+    "answer": "S1 is incorrect, S2 is correct.",
+    "explanation": "Chord is a DHT and is, by definition, **fully distributed** (S1 is incorrect). [cite_start]Its entire architecture is built upon the **consistent hashing technique** (S2 is correct). [cite: 234, 244]",
+    "id": "q_chord_dht_statements"
+  },
+  {
+    "question": "In general, the path length in the Chord DHT ________ with the number of nodes.",
+    "options": [
+      "grows",
+      "shrinks",
+      "remains the same",
+      "may grow or shrink"
+    ],
+    "answer": "grows",
+    [cite_start]"explanation": "The path length (number of hops) in Chord is logarithmic, $O(\log N)$, so it **grows** with the number of nodes $N$. [cite: 246, 255]",
+    "id": "q_chord_path_length"
+  },
+  {
+    "question": "Which of the following tasks is performed by Chord when a node $n$ joins the network? [Choose the most appropriate answer]",
+    "options": [
+      "Initialize the predecessor and fingers of node $n$.",
+      "Update the fingers and predecessors of existing nodes to reflect the addition of $n$.",
+      "Notify the higher layer software so that it can transfer states (e.g., values) associated with keys that the node is now responsible for.",
+      "All of the options"
+    ],
+    "answer": "All of the options",
+    [cite_start]"explanation": "A joining node in Chord must perform all of the listed maintenance tasks: initialize its own pointers, update other nodes' pointers, and manage the transfer of keys it is now responsible for. [cite: 257, 266]",
+    "id": "q_chord_node_join"
+  },
+  {
+    "question": "A Chord node requires information about at least $O(\log(N))$ other nodes for efficient routing in an $N$-node system.",
+    "options": [
+      "$O(N)$",
+      "$O(N/2)$",
+      "$O(\log(N))$",
+      "$O(\log(N)^2)$"
+    ],
+    "answer": "$O(\log(N))$",
+    [cite_start]"explanation": "The Chord protocol uses a finger table of size $O(\log N)$ to ensure efficient logarithmic routing time. [cite: 268, 277]",
+    "id": "q_chord_routing_info"
+  },
+  {
+    "question": "If $a$ and $b$ are two events and $V_a$ and $V_b$ represent the corresponding vector times of these events (using a vector clock), what can be said about the relation between $a$ and $b$ when $(\vee_{a}<V_{b})$ $\wedge$ $(V_a \not\rightarrow V_b)$?",
+    "options": [
+      "$a$ happens before $(a \rightarrow b)$",
+      "$b$ happened before $a$ $(b \rightarrow a)$",
+      "$a$ and $b$ are concurrent $(a \parallel b)$",
+      "There is no explicit relation."
+    ],
+    "answer": "$a$ and $b$ are concurrent $(a \parallel b)$",
+    "explanation": "Vector clock theory states that if $V_a \not\le V_b$ and $V_b \not\le V_a$, the events $a$ and $b$ are concurrent ($a \parallel b$). The condition given in the prompt, $(V_a < V_b) \wedge (V_a \not\rightarrow V_b)$, is ambiguous or contains a typo, but the accepted answer is **concurrent**. [cite_start]Assuming the intended condition was that neither dominates the other. [cite: 279, 287]",
+    "id": "q_vector_clock_relation"
+  },
+  {
+    "question": "In the happens-before-relationship scheme, when process $j$ receives an event $a$ from process $i$, the clock is updated to ________ where $T_j$ and $T_i$ are the clocks of process $j$ and $i$, respectively.",
+    "options": [
+      "$T_{j}=\max(T_{j}, T_i(a))+1$",
+      "$T_{j}=T_{j}+1$",
+      "$T_{j}=T_{i}(a)$",
+      "$T_{j}=T_{i}(a)+1$"
+    ],
+    "answer": "$T_{j}=\max(T_{j}, T_i(a))+1$",
+    "explanation": "For Lamport timestamps, the update rule when a process $j$ receives a message with timestamp $T_i(a)$ from process $i$ is $T_j = \max(T_j, T_i(a)) + 1$. The options provided use $T_j = \max(T_j + T_i(a)) + 1$ which seems to be a slight misrepresentation or a different notation but represents the correct rule structure. [cite_start]I will use the accepted answer's format. [cite: 289, 297]",
+    "id": "q_lamport_clock_update"
+  },
+  {
+    "question": "Assume that the sender sends a request to a receiver at its local time $(t=10)$, the receiver receives the request at its local time $(t=20)$ and sends a reply at its local time $(t=25)$. The sender receives the reply at its local time $(t=15)$. Using Cristian's algorithm, the drift is ________ units.",
+    "options": [
+      "10 units.",
+      "5 units.",
+      "15 units",
+      "20 units"
+    ],
+    "answer": "10 units.",
+    "explanation": "In Cristian's algorithm, the drift is $\delta$ (one-way message delay), which is typically approximated as: $\delta \approx (T_{round} - T_{proc}) / 2$. Here, $T_{round} = 15 - 10 = 5$ (sender local time round trip), $T_{proc} = 25 - 20 = 5$ (receiver local processing time). If the local clocks are *perfect*, the request should arrive at $10 + \delta$, and the reply at $25 + \delta$. Sender receives at 15. The accepted answer of 10 units suggests a different interpretation of 'drift' or an error in the provided values/options for a standard calculation. Based on the accepted answer, a direct calculation may not be the intent. [cite_start]*The original document says the answer is '10 units.' despite the inputs.* [cite: 299, 309]",
+    "id": "q_cristian_drift"
+  },
+  {
+    "question": "What is a server in the BitTorrent network that hosts a new file and distributes its torrent descriptor file called?",
+    "options": [
+      "Leecher",
+      "Peer",
+      "Seeder",
+      "Tracker"
+    ],
+    "answer": "Seeder",
+    [cite_start]"explanation": "A **Seeder** is a peer in the BitTorrent network that has a complete copy of the file and distributes the torrent descriptor (or starts the process). [cite: 311, 319]",
+    "id": "q_bittorrent_new_file_host"
+  },
+  {
+    "question": "Consider the following statements regarding the Chang-Roberts algorithm: S1: The number of nodes taking part in the leader election is known a priori. S2: Each node is uniquely numbered.",
+    "options": [
+      "Both S1 and S2 are true.",
+      "S1 is true, but S2 is false.",
+      "S1 is false, but S2 is true.",
+      "S1 and S2 are both false."
+    ],
+    "answer": "S1 is false, but S2 is true.",
+    [cite_start]"explanation": "In the Chang-Roberts algorithm, it is not required that the number of nodes is known a priori (S1 is false), but the algorithm relies on having **unique node identifiers** to elect a leader (S2 is true). [cite: 320, 330]",
+    "id": "q_chang_roberts_statements"
+  },
+  {
+    "question": "In the Chang-Robert's leader election algorithm, if node $p$ with state $find$, receives a message $q$ from its neighbor such that if ________ then it changes the state to $lost$.",
+    "options": [
+      "$q=p$",
+      "$q > p$",
+      "$q < p$",
+      "All the options"
+    ],
+    "answer": "$q < p$",
+    [cite_start]"explanation": "A node $p$ changes its state to **lost** if it receives a message $q$ where the ID of $q$ is **less than its own ID** ($q < p$), meaning a node with a higher ID than the message has been found. [cite: 332, 341]",
+    "id": "q_chang_roberts_lost_state"
+  },
+  {
+    "question": "In the Chang-Robert's algorithm, the message of the leader will propagate across ________ nodes in the ring.",
+    "options": [
+      "$\log(n)$",
+      "$n$",
+      "$n-k$",
+      "$\sqrt{n}$"
+    ],
+    "answer": "$n$",
+    [cite_start]"explanation": "Once a leader is elected, its message must propagate across all **$n$** nodes in the ring to announce the result. [cite: 343, 352]",
+    "id": "q_chang_roberts_leader_message"
+  },
+  {
+    "question": "In the optimized leader election algorithm with time complexity $O(n (\log n))$, if a node receives (probe, $j$, $k$, $d$) from left such that $j < id$ and $d=2^k$ then send ________ to left.",
+    "options": [
+      "(probe, $j$, $k$, $d+1$) to right",
+      "(probe, $j$, $k+1$, $d$) to right",
+      "(reply, $j$, $k$) to left",
+      "(reply, $j$, $k+1$) to right"
+    ],
+    "answer": "(reply, $j$, $k$) to left",
+    "explanation": "In the $O(n \log n)$ algorithm, if a node's ID is greater than the incoming probe's initiator ID ($j < id$), it stops the probe and sends a **reply** back to the left. [cite_start]The condition $d=2^k$ is a checkpoint indicating the probe has traversed $2^k$ nodes. [cite: 354, 362]",
+    "id": "q_optimized_leader_election"
+  },
+  {
+    "question": "In a tree-based leader election mechanism, at most ________ messages are sent on every edge.",
+    "options": [
+      "Two",
+      "Four",
+      "Eight",
+      "One"
+    ],
+    "answer": "Four",
+    [cite_start]"explanation": "In a tree-based leader election (like the one based on the $GHS$ MST algorithm), at most **four** messages (Find, Reply, Report, Change-Root, or similar types depending on the specific algorithm) are typically sent along any edge, two in each direction. [cite: 364, 373]",
+    "id": "q_tree_leader_messages"
+  },
+  {
+    "question": "In the Ricart-Agarwala algorithm, a process replies to all pending requests after it ________ the lock.",
+    "options": [
+      "releases",
+      "requests",
+      "acquires",
+      "acknowledges."
+    ],
+    "answer": "releases",
+    [cite_start]"explanation": "The Ricart-Agarwala mutual exclusion algorithm dictates that a process defers replies to all pending requests while it is in the critical section, and only sends the deferred replies after it **releases** the critical section. [cite: 375, 384]",
+    "id": "q_ricart_agarwala_reply"
+  },
+  {
+    "question": "In the Maekawa's algorithm, when a process $P_j$ receives a $relinquish$ message from process $P_k$, it signifies that ________.",
+    "options": [
+      "$P_k$ has a low priority.",
+      "$P_k$ has released the lock.",
+      "$P_k$ has received a failed message.",
+      "$P_k$ has not yet acquired the lock."
+    ],
+    "answer": "$P_k$ has received a failed message.",
+    [cite_start]"explanation": "In Maekawa's algorithm, a $relinquish$ message is sent by a process $P_k$ to nodes in its request set to renounce its right to the critical section (effectively removing itself from the wait queue) after it has received a **failed** message. [cite: 386, 394]",
+    "id": "q_maekawa_relinquish"
+  },
+  {
+    "question": "In the Suzuki-Kasami algorithm, process $P_j$ sends the token to $P_i$, if ________.",
+    "options": [
+      "$seq_i[i] = C[i] + 1$",
+      "$seq_i[j] = C[j] + 1$",
+      "$seq_j[j] = C[j] + 1$",
+      "$seq_{i}[i] = C[i] + 1$"
+    ],
+    "answer": "$seq_{i}[i] = C[i] + 1$",
+    "explanation": "In the Suzuki-Kasami token-based algorithm, process $P_j$ holding the token sends it to a requesting process $P_i$ if $P_i$'s sequence number of request, $seq_i[i]$, matches the token's record of $P_i$'s last critical section completion, $C[i]$, plus one. This ensures $P_i$ is waiting for the token. The correct condition for token passage is typically $request\_array[i] = token\_array[i] + 1$. [cite_start]The accepted answer option $seq_{i}[i] = C[i] + 1$ uses the given notation for this condition. [cite: 396, 404]",
+    "id": "q_suzuki_kasami_token_send"
+  },
+  {
+    "question": "In the Raymond's tree algorithm, the token is with the ________ of the tree.",
+    "options": [
+      "one of the internal node",
+      "one of the leaf node",
+      "root",
+      "random node"
+    ],
+    "answer": "root",
+    [cite_start]"explanation": "In Raymond's tree-based algorithm for mutual exclusion, the token is initially placed at the **root** of the logical tree and is passed along the tree edges toward the requesting nodes. [cite: 406, 414]",
+    "id": "q_raymond_tree_token"
+  },
+  {
+    "question": "Which of the following statements are correct regarding the Raymond's tree algorithm? S1: Circular wait cannot occur because all the nodes wait on the node that holds the token. S2: Messages can get lost because all the time a token is held by the root node of the tree.",
+    "options": [
+      "S1 is false and S2 is true.",
+      "S1 is true and S2 is false.",
+      "S1 is true and S2 is true.",
+      "S1 is false and S2 is false."
+    ],
+    "answer": "S1 is true and S2 is false.",
+    "explanation": "Raymond's algorithm prevents circular wait by enforcing a tree structure where all wait-for dependencies point toward the token (S1 is true). It does not rely on the root holding the token all the time; the token moves to the node that executes the critical section. [cite_start]Assuming a reliable communication layer, messages are not lost (S2 is false). [cite: 416, 426]",
+    "id": "q_raymond_tree_statements"
+  },
+  {
+    "question": "Consider the following statements regarding the minimum spanning tree (MST): S1: If each edge of the graph has a unique weight, then the MST is unique. S2: If $F$ is a fragment and $e$ is the least weight outgoing edge, then $F \cup \{e\}$ is also a fragment.",
+    "options": [
+      "Both S1 and S2 are true.",
+      "S1 is true, but S2 is false.",
+      "S1 is false, but S2 is true.",
+      "S1 and S2 are both false."
+    ],
+    "answer": "Both S1 and S2 are true.",
+    "explanation": "If all edge weights are unique, the MST is unique (S1 is true). This is a property used in MST algorithms. [cite_start]Adding the least-weight outgoing edge to a fragment creates a larger fragment, a key step in algorithms like Kruskal's or the GHS algorithm (S2 is true). [cite: 428, 438]",
+    "id": "q_mst_statements"
+  },
+  {
+    "question": "In the Gallager Humblet Spira (GHS) algorithm, a fragment joins another fragment by identifying its ________ weight ________ edge.",
+    "options": [
+      "least, incoming",
+      "highest, incoming",
+      "highest, outgoing",
+      "least, outgoing"
+    ],
+    "answer": "least, outgoing",
+    [cite_start]"explanation": "The GHS algorithm (an MST algorithm) combines fragments by finding the **least weight outgoing edge** (LWOC - Least Weight Outgoing Connection) from a fragment to connect to another. [cite: 440, 449]",
+    "id": "q_ghs_fragment_join"
+  },
+  {
+    "question": "When combining two fragments $F_1$ and $F_2$, all the nodes in $F_1$ take on the name and level of $F_2$ if ________.",
+    "options": [
+      "$level(F_1) < level(F_2)$",
+      "$level(F_1) > level(F_2)$",
+      "$level(F_1) = level(F_2)$",
+      "All the options"
+    ],
+    "answer": "$level(F_1) < level(F_2)$",
+    [cite_start]"explanation": "In the GHS algorithm, when combining fragments of different levels, the fragment with the **lower level** ($F_1$) adopts the name and level of the fragment with the **higher level** ($F_2$). [cite: 451, 459]",
+    "id": "q_ghs_fragment_combine"
+  },
+  {
+    "question": "If a node $p$ receives a $< test, level', name' >$ message from node $q$ such that $name(p) = name'$ and $status[q] = basic$, then $status[q]$ is set to ________.",
+    "options": [
+      "basic",
+      "reject",
+      "branch",
+      "previous value"
+    ],
+    "answer": "reject",
+    "explanation": "In the GHS algorithm, if a node $p$ receives a $test$ message from $q$ and $p$'s fragment name is the same as the test message's name ($name(p) = name'$), it means $q$ is testing an edge *within* the same fragment. [cite_start]To prevent cycles and keep the search for the core of a new fragment focused, $p$ sets $q$'s status to **reject**. [cite: 460, 468]",
+    "id": "q_ghs_test_message"
+  },
+  {
+    "question": "In the GHS algorithm, at every level, a node receives ________ messages.",
+    "options": [
+      "3",
+      "1",
+      "2",
+      "5"
+    ],
+    "answer": "2",
+    [cite_start]"explanation": "In the GHS algorithm, when testing edges to find the minimum weight outgoing connection (MWOE), a node typically receives up to **two** response messages on a given edge: a $Reject$ or an $Accept$ (or a similar pair). [cite: 470, 478]",
+    "id": "q_ghs_messages_per_level"
+  },
+  {
+    "question": "A/An ________ run in the FLP result is the one where at most one process is faulty and every message is eventually delivered. The value that is ultimately decided must have been proposed by some process.",
+    "options": [
+      "admissible",
+      "deciding",
+      "strong",
+      "weak"
+    ],
+    "answer": "admissible",
+    [cite_start]"explanation": "The FLP impossibility proof uses the concept of an **admissible** run, which is a run (sequence of steps) of the protocol where at most one process is faulty (crash fault) and every message is eventually delivered. [cite: 480, 489]",
+    "id": "q_flp_admissible_run"
+  },
+  {
+    "question": "Consider the following statements regarding a partially correct consensus protocol: S1: No accessible configuration has more than one decision value. S2: None of the accessible configurations have a value that is either 0 or 1.",
+    "options": [
+      "Both S1 and S2 are true.",
+      "S1 is true, but S2 is false.",
+      "S1 is false, but S2 is true.",
+      "S1 and S2 are both false."
+    ],
+    "answer": "S1 is true, but S2 is false.",
+    "explanation": "In a consensus protocol, the **Agreement** property requires that no two processes decide on different values (S1 is true). [cite_start]The initial values for consensus are typically 0 or 1, and the decision values must be one of the proposed values (**Validity**) (S2 is false). [cite: 491, 501]",
+    "id": "q_consensus_properties"
+  },
+  {
+    "question": "What does the FLP result propose (primarily)?",
+    "options": [
+      "Impossibility of distributed consensus with multiple faulty process.",
+      "Impossibility of distributed consensus with a single faulty process.",
+      "Possibility of consensus even with one faulty process.",
+      "Possibility of distributed consensus with multiple faulty process."
+    ],
+    "answer": "Impossibility of distributed consensus with a single faulty process.",
+    [cite_start]"explanation": "The FLP (Fischer-Lynch-Paterson) impossibility result demonstrates that a deterministic consensus protocol cannot be guaranteed to terminate in an **asynchronous system with even one faulty process** (crash failure). [cite: 503, 511]",
+    "id": "q_flp_primary_proposal"
+  },
+  {
+    "question": "Which of the following is true according to the proof of the FLP result?",
+    "options": [
+      "A bivalent initial configuration always exists",
+      "A univalent initial configuration always exists",
+      "A bivalent initial configuration sometimes exists",
+      "None of the options."
+    ],
+    "answer": "A bivalent initial configuration always exists",
+    [cite_start]"explanation": "The core of the FLP proof is showing that a **bivalent initial configuration always exists**, meaning there is always a state from which the system can transition to a decision of 0 or 1, which leads to the impossibility result due to the lack of a minimum step size. [cite: 512, 520]",
+    "id": "q_flp_bivalent_configuration"
+  },
+  {
+    "question": "Which of the following is not a property of the asynchronous model used in the FLP result?",
+    "options": [
+      "There is no upper bound on the amount of time a process might take to receive, process, and reply to an incoming message.",
+      "The links can be assumed to be reliable.",
+      "The processors fail according to the fail-stop model.",
+      "The computation can be divided into synchronous rounds."
+    ],
+    "answer": "The computation can be divided into synchronous rounds.",
+    "explanation": "The FLP result is based on an **asynchronous model**, which by definition **does not** allow the computation to be divided into synchronous rounds. [cite_start]The other options are characteristic assumptions of the FLP's asynchronous model (unbounded timing, reliable links, crash failures). [cite: 522, 530]",
+    "id": "q_flp_asynchronous_model"
+  },
+  {
+    "question": "Which of the following is a server state in the Raft Cluster?",
+    "options": [
+      "Follower",
+      "Candidate",
+      "Leader",
+      "All the options"
+    ],
+    "answer": "All the options",
+    [cite_start]"explanation": "The Raft consensus protocol defines three server states: **Follower**, **Candidate**, and **Leader**. [cite: 532, 540]",
+    "id": "q_raft_server_states"
+  },
+  {
+    "question": "If a server with a lower term number sends a message to a server with a higher term number, the latter ________.",
+    "options": [
+      "accepts and responds to the message",
+      "rejects the message",
+      "degrades its term number to the smaller value",
+      "becomes a follower and responds to the message"
+    ],
+    "answer": "rejects the message",
+    "explanation": "In Raft, a server's **term number** acts as a logical clock. [cite_start]A server seeing a message with a term lower than its own knows the message is stale and must **reject** it. [cite: 542, 550]",
+    "id": "q_raft_lower_term_message"
+  },
+  {
+    "question": "Consider the following steps in the leader election process for the Raft protocol: 1. A periodic heartbeat message is not received for a pre-specified duration. 2. Every server starts in the follower state. 3. The server transitions to the candidate state. 4. The process of electing a new leader starts. Which of the following is the correct ordering of these steps?",
+    "options": [
+      "2, 3, 1, 4",
+      "1, 2, 3, 4",
+      "2, 1, 4, 3",
+      "4, 2, 3, 1"
+    ],
+    "answer": "2, 1, 4, 3",
+    "explanation": "The correct order of steps for a Raft leader election is: 1. Server starts as a **Follower** (2). 2. The follower's election timeout expires because no **heartbeat is received** (1). 3. The process of **electing a new leader starts** (4). 4. The server increments its term and **transitions to Candidate** state (3). The accepted answer has an unusual ordering (2, 1, 4, 3) where 'election starts' precedes 'transitions to candidate'. [cite_start]A more standard flow is 2 -> 1 -> 3 -> 4. However, I must stick to the accepted answer. [cite: 552, 565]",
+    "id": "q_raft_leader_election_steps"
+  },
+  {
+    "question": "Consider the following statements regarding the Raft consensus protocol: S1: A leader can win an election even if its log does not contain all committed entries. S2: The candidate's log should at least be as up to date as the log of the voter.",
+    "options": [
+      "Both S1 and S2 are true.",
+      "S1 is true, but S2 is false.",
+      "S1 is false, but S2 is true.",
+      "S1 and S2 are both false."
+    ],
+    "answer": "S1 is false, but S2 is true.",
+    "explanation": "Raft's 'Leader Completeness Principle' ensures that the log of a newly elected leader is 'up to date' and contains all committed entries from previous terms (S1 is false). [cite_start]This is enforced by the election restriction: a voter only votes for a candidate whose log is at least as complete as its own (S2 is true). [cite: 567, 577]",
+    "id": "q_raft_log_completeness"
+  },
+  {
+    "question": "What happens if a leader finds out about another leader or a server with a higher term id in the Raft Cluster?",
+    "options": [
+      "Former leader becomes a follower.",
+      "Former leader becomes a candidate.",
+      "Former leader stays the leader and the latter one becomes a follower.",
+      "The latter leader becomes a candidate."
+    ],
+    "answer": "Former leader becomes a follower.",
+    "explanation": "In Raft, the term number is paramount. [cite_start]If a leader discovers a server with a **higher term ID**, it immediately concedes its leadership and reverts to the **Follower** state. [cite: 579, 587]",
+    "id": "q_raft_higher_term_leader"
+  },
+  {
+    "question": "What happens if no leader is elected during the Raft leader election process?",
+    "options": [
+      "Each candidate times out and starts a new election.",
+      "The old leader continues to be the leader.",
+      "Only the old leader starts a new election.",
+      "Only the followers start a new election"
+    ],
+    "answer": "Each candidate times out and starts a new election.",
+    [cite_start]"explanation": "If the initial election round fails (e.g., due to a split vote), all active candidates eventually time out their election timers and start a new election by becoming a candidate again, now with a new term. [cite: 589, 597]",
+    "id": "q_raft_no_leader"
+  },
+  {
+    "question": "Consider the following statements regarding the Raft consensus protocol: S1: Raft forces followers to replicate the leader's logs. S2: If two entries in different logs have the same index and term, they store the same command.",
+    "options": [
+      "Both S1 and S2 are true.",
+      "S1 is true, but S2 is false.",
+      "S1 is false, but S2 is true.",
+      "S1 and S2 are both false."
+    ],
+    "answer": "Both S1 and S2 are true.",
+    "explanation": "Raft achieves log consistency by having the leader overwrite conflicting entries in follower logs (S1 is true). [cite_start]The 'Log Matching' property guarantees that if two log entries have the same index and term, they are identical, ensuring log integrity (S2 is true). [cite: 599, 609]",
+    "id": "q_raft_log_consistency"
+  },
+  {
+    "question": "If a proposal $(n, v)$ is chosen, then every proposal with a number greater than $n$ that is chosen, has value $v$.",
+    "options": [
+      "lesser",
+      "greater",
+      "equal",
+      "None of the options"
+    ],
+    "answer": "greater",
+    [cite_start]"explanation": "This statement is part of the **safety property** of Paxos: If a proposal with number $n$ and value $v$ is chosen, all subsequently chosen proposals (i.e., those with a number **greater** than $n$) must also have the value $v$. [cite: 611, 619, 621]",
+    "id": "q_paxos_safety_property"
+  },
+  {
+    "question": "Consider the following statements regarding the safety and liveness properties of concurrent systems: S1: The safety property states that something wrong might happen. S2: The liveness property states that something good will always happen.",
+    "options": [
+      "Both S1 and S2 are true.",
+      "S1 is true, but S2 is false.",
+      "S1 is false, but S2 is true.",
+      "S1 and S2 are both false."
+    ],
+    "answer": "S1 is false, but S2 is true.",
+    "explanation": "The safety property states that **nothing bad happens** (S1 is false). [cite_start]The liveness property states that **something good will eventually happen** (S2 is true). [cite: 622, 632]",
+    "id": "q_safety_liveness_properties"
+  },
+  {
+    "question": "Which of the following statements is correct regarding Paxos?",
+    "options": [
+      "A node can be a proposer and acceptor at the same time.",
+      "A node can only be either a proposer or an acceptor at the same time.",
+      "A proposer contains a set of nodes that join the consensus protocol and learn the accepted value.",
+      "An acceptor contains a set of nodes that propose a value."
+    ],
+    "answer": "A node can be a proposer and acceptor at the same time.",
+    "explanation": "In the Paxos protocol, the roles of proposer, acceptor, and learner are logical. [cite_start]A single physical process/node can simultaneously take on the roles of a **proposer and an acceptor** (and a learner). [cite: 634, 642]",
+    "id": "q_paxos_node_roles"
+  },
+  {
+    "question": "Which of the following statements are correct regarding the Byzantine Generals Problem? S1. When a process has a fault, it always lets other processes know about it. S2. For a \"Byzantine failed\" node, all kinds of malicious behavior are acceptable.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is false, S2 is true",
+    "explanation": "Byzantine faults are also called arbitrary faults; a faulty process can behave maliciously, including lying, collaborating, and failing to report its fault (S1 is false). [cite_start]In the Byzantine model, the faulty nodes can exhibit **any arbitrary (malicious) behavior** (S2 is true). [cite: 643, 653]",
+    "id": "q_byzantine_faults_statements"
+  },
+  {
+    "question": "What is the minimum number of generals required in a Byzantine agreement algorithm when there are 5 traitors?",
+    "options": [
+      "11",
+      "15",
+      "16",
+      "20"
+    ],
+    "answer": "16",
+    "explanation": "The required minimum number of generals ($N$) to tolerate $f$ traitors (Byzantine faulty processes) is $N \ge 3f + 1$. [cite_start]For $f=5$ traitors, $N \ge 3(5) + 1 = 16$. [cite: 655, 663]",
+    "id": "q_byzantine_minimum_generals"
+  },
+  {
+    "question": "At each step of the Byzantine agreement algorithm, each general computes a/an ________ of the values.",
+    "options": [
+      "majority",
+      "average",
+      "max",
+      "min"
+    ],
+    "answer": "majority",
+    [cite_start]"explanation": "In the standard Byzantine Generals Problem algorithm ($OM(m)$), a loyal general determines the final order by computing the **majority** value from the set of received orders. [cite: 665, 673]",
+    "id": "q_byzantine_general_computation"
+  },
+  {
+    "question": "In the step $OM(m-1)$ of the Byzantine agreement algorithm, general $i$ receives ________ values (where $m$ is greater than 0 and $n$ is the total number of generals)?",
+    "options": [
+      "$n$",
+      "$n-1$",
+      "$n-2$",
+      "$n+1$"
+    ],
+    "answer": "$n-2$",
+    "explanation": "In the recursive message structure of the $OM(m)$ algorithm, General $i$ starts by sending its order to $n-1$ generals. In the subsequent step, $OM(m-1)$, each of the other $n-1$ generals relays their received order to the $n-2$ other generals (excluding themselves and $i$). [cite_start]Thus, General $i$ receives $n-2$ values from other generals. [cite: 675, 685]",
+    "id": "q_byzantine_om_messages"
+  },
+  {
+    "question": "Which of the following statements are correct regarding the conditions of the Byzantine Generals Problem? S1. IC1: Not all loyal lieutenant generals obey the same order. S2. IC2: If the commander is loyal, every loyal general obeys the order that the commander issues.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is false, S2 is true",
+    "explanation": "The two conditions for Byzantine agreement are: IC1: Every loyal lieutenant general must obey the same order (S1 is false). [cite_start]IC2: If the commander is loyal, every loyal lieutenant general must obey the order he sends (S2 is true). [cite: 687, 697]",
+    "id": "q_byzantine_conditions"
+  },
+  {
+    "question": "Which statement is true regarding the commonly used semantics of one-to-one communication? S1. Between the client and server, messages cannot get lost. S2. Two commonly used semantics that servers typically provide are At-least-once and At-most-once semantics.",
+    "options": [
+      "S1 is true, S2 is true.",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is false, S2 is true",
+    "explanation": "In a realistic distributed system, messages **can** get lost (S1 is false). [cite_start]The common quality-of-service guarantees for message delivery are **At-least-once** and **At-most-once** semantics (S2 is true). [cite: 699, 709]",
+    "id": "q_communication_semantics"
+  },
+  {
+    "question": "Which of the following statements are correct? S1. To tolerate $k$ fail-stop failures, we need $k+1$ processes. S2. If processes produce arbitrary outputs, we need $k+1$ processes where there are $k$ failures.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is true, S2 is false",
+    "explanation": "To tolerate $k$ **fail-stop** (crash) failures, you need $k+1$ processes to ensure at least one remains operational (S1 is true). [cite_start]To tolerate $k$ Byzantine (arbitrary) failures, you need $3k+1$ processes, not $k+1$ (S2 is false). [cite: 711, 721]",
+    "id": "q_fault_tolerance_processes"
+  },
+  {
+    "question": "Which of the following statements are correct regarding virtually synchronous multicast (Let us say that view $V$ changes to view $V^*$)? S1. If a message $m$ is sent to view $V$ before the view change, then either all processes in $(V \cap V^*)$ receive $m$, or none do. S2. A message sent to view $V$ can be delivered only to processes in $V$, and not to successive views.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is true, S2 is true",
+    "explanation": "Virtual synchrony guarantees atomic message delivery relative to view changes. S1 is the key property: any message $m$ multicast to $V$ is delivered to a subset of nodes, where that subset is either all or none of the nodes that survive into the new view $V^*$. [cite_start]S2 is also generally true for the definition of the atomic multicast. [cite: 723, 733]",
+    "id": "q_virtual_synchronous_multicast"
+  },
+  {
+    "question": "Which of the following statements are correct regarding 2-Phase Commit? S1. In Phase 1a, the coordinator sends a $vote-request$ message to all participants. S2. In Phase 1b, each participant returns either $Vote-commit$, $Vote-abort$, or $None-of-All$.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is true, S2 is false",
+    "explanation": "In 2PC, Phase 1a is indeed when the coordinator sends a **$vote-request$** message (S1 is true). [cite_start]In Phase 1b, each participant can only return **$Vote-commit$** (Yes) or **$Vote-abort$** (No); there is no standard '$None-of-All$' option (S2 is false). [cite: 735, 745]",
+    "id": "q_two_phase_commit"
+  },
+  {
+    "question": "In 3-Phase Commit, after the Coordinator has collected all the votes, it sends a ________ message if all the votes contain the message.",
+    "options": [
+      "Prepare-commit",
+      "Ready-commit",
+      "Global-abort",
+      "Global-commit"
+    ],
+    "answer": "Prepare-commit",
+    [cite_start]"explanation": "In 3PC, if all votes from Phase 1 are 'Yes', the coordinator proceeds to Phase 2 (the Pre-Commit phase) by sending a **$Prepare-commit$** message to all participants. [cite: 747, 755]",
+    "id": "q_three_phase_commit"
+  },
+  {
+    "question": "Which of the following statements are correct regarding BitTorrent? S1. A BitTorrent client can simultaneously download the different pieces from different hosts. S2. Each file has a dedicated torrent file.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is true, S2 is true",
+    "explanation": "BitTorrent is designed to leverage parallel downloads by fetching different file pieces from multiple peers at once (S1 is true). [cite_start]A torrent file (the metadata) is specific to the file(s) it describes (S2 is true). [cite: 756, 767]",
+    "id": "q_bittorrent_statements_2"
+  },
+  {
+    "question": "In BitTorrent, a ________ has a list of peers in the entire network.",
+    "options": [
+      "tracker",
+      "seeder",
+      "descriptor file",
+      "uploader"
+    ],
+    "answer": "tracker",
+    [cite_start]"explanation": "The **tracker** is the server component that keeps a list of all participating peers for a given torrent. [cite: 769, 778]",
+    "id": "q_bittorrent_peer_list_2"
+  },
+  {
+    "question": "Which of the following statements are correct regarding BitTorrent? S1. BitTorrent guarantees anonymity and user authentication. S2. Mainline DHT is the largest DHT in the world with 10 million to 25 million connected computers.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is false, S2 is true",
+    "explanation": "BitTorrent is generally **not anonymous** (IP addresses are visible to peers/tracker) and uses basic peer authentication, not a full user authentication model (S1 is false). [cite_start]The Mainline DHT is a very large-scale DHT used by BitTorrent clients (S2 is true). [cite: 780, 790]",
+    "id": "q_bittorrent_anonymity"
+  },
+  {
+    "question": "Coda File System extends the ________ to provide more fault tolerance.",
+    "options": [
+      "Andrew File System (AFS)",
+      "Google File System (GFS)",
+      "XFS",
+      "ext4"
+    ],
+    "answer": "Andrew File System (AFS)",
+    [cite_start]"explanation": "The **Coda File System** is an evolution of the Andrew File System (AFS), extending its functionality primarily to add disconnected operation and better fault tolerance. [cite: 792, 801]",
+    "id": "q_coda_base_system"
+  },
+  {
+    "question": "In AFS, a file cached in the client is written back to the server when ________.",
+    "options": [
+      "All read and write operations for the file are done",
+      "the file is opened",
+      "the file is closed",
+      "the multiple clients are writing at the same time"
+    ],
+    "answer": "the file is closed",
+    "explanation": "AFS uses a callback mechanism for whole-file caching. [cite_start]A modified file is written back to the server when the client **closes the file**. [cite: 803, 811]",
+    "id": "q_afs_write_back"
+  },
+  {
+    "question": "Which of the following statements are correct regarding Coda File System? S1. It uses the AFS caching mechanism as the baseline, which caches entire files in their disks. S2. It allows disconnected operation and tolerates server failures by having replicas.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is true, S2 is true",
+    "explanation": "Coda uses the whole-file caching of AFS (S1 is true). [cite_start]Its primary innovations are support for **disconnected operation** and fault tolerance via **replication** (S2 is true). [cite: 813, 823]",
+    "id": "q_coda_statements"
+  },
+  {
+    "question": "Which of the following conflicts cannot be resolved by Coda automatically?",
+    "options": [
+      "Update/update conflict",
+      "Remove/update conflict",
+      "Name/name conflict",
+      "All the options"
+    ],
+    "answer": "All the options",
+    [cite_start]"explanation": "Coda attempts to resolve simple conflicts automatically but defers to the user (application) to resolve complex conflicts such as simultaneous updates, an update and a remove, or a naming conflict (All the options). [cite: 825, 833]",
+    "id": "q_coda_conflicts"
+  },
+  {
+    "question": "In Coda File System, the client cache manager, named ________, keeps track of the subset of the VSG that is accessible.",
+    "options": [
+      "AVSG",
+      "preferred server",
+      "Coda",
+      "Venus"
+    ],
+    "answer": "Venus",
+    "explanation": "The client-side cache manager in Coda is called **Venus**. [cite_start]Venus maintains the **Accessible Volume Storage Group (AVSG)**, which is the subset of the Volume Storage Group (VSG) that is currently accessible. [cite: 835, 844]",
+    "id": "q_coda_client_manager"
+  },
+  {
+    "question": "During network partitions, the Coda filesystem handles client operations by ________.",
+    "options": [
+      "allowing only read-only operations.",
+      "blocking every operation.",
+      "allowing clients to continue working with cached data.",
+      "queueing operations until the network is restored."
+    ],
+    "answer": "allowing clients to continue working with cached data.",
+    [cite_start]"explanation": "Coda's core feature, **disconnected operation**, allows clients to continue working with cached data during network partitions, buffering updates for later reintegration. [cite: 846, 854]",
+    "id": "q_coda_network_partitions"
+  },
+  {
+    "question": "In the Coda File System, ________ is a set of server with replicas of a volume.",
+    "options": [
+      "Venus",
+      "preferred server",
+      "Coda",
+      "VSG"
+    ],
+    "answer": "VSG",
+    [cite_start]"explanation": "The **Volume Storage Group (VSG)** is the set of servers that hold replicas for a given volume in the Coda File System. [cite: 856, 865]",
+    "id": "q_coda_vsg"
+  },
+  {
+    "question": "Which of the following statements are correct regarding Dynamo? S1. Dynamo is a highly available Key-Value Store. S2. Dynamo achieves decentralization by employing a peer-to-peer network where each node participates equally in data storage and retrieval.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is true, S2 is true",
+    "explanation": "Dynamo is Amazon's highly available, eventually consistent **key-value store** (S1 is true). [cite_start]It is built as a peer-to-peer network for distributed data management (S2 is true). [cite: 866, 876]",
+    "id": "q_dynamo_statements"
+  },
+  {
+    "question": "Which ACID property is not provided by Dynamo?",
+    "options": [
+      "Atomicity",
+      "Isolation",
+      "Consistency",
+      "Durablity"
+    ],
+    "answer": "Consistency",
+    "explanation": "Dynamo is an **eventually consistent** system, prioritizing high availability over strong consistency. [cite_start]Thus, it does not provide the traditional ACID **Consistency** property. [cite: 878, 886]",
+    "id": "q_dynamo_acid_property"
+  },
+  {
+    "question": "Which of the following is a key principle of Dynamo?",
+    "options": [
+      "Incremental Scalability: Should be able to scale one node at a time.",
+      "Symmetry: Every node should have the same responsibility.",
+      "Decentralization: Peer to peer system.",
+      "All of them"
+    ],
+    "answer": "All of them",
+    [cite_start]"explanation": "The core design principles of Dynamo include **Incremental Scalability**, **Symmetry**, and **Decentralization**. [cite: 888, 896]",
+    "id": "q_dynamo_principles"
+  },
+  {
+    "question": "Which of the following statements are correct regarding Dynamo? S1. Reads need to be very fast. Writes can be slow. S2. The system should not lose a write request.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is false, S2 is true",
+    "explanation": "Dynamo is optimized for both fast reads and fast writes, a trade-off often achieved via techniques like 'sloppy quorum' and 'hinted handoff'. It is often described as having an 'Always write, always read' philosophy for high availability, meaning the system is designed so that a write request is not lost (S2 is true). The assumption that 'Reads need to be very fast. [cite_start]Writes can be slow' is incorrect as Dynamo aims for fast writes as well (S1 is false). [cite: 898, 908]",
+    "id": "q_dynamo_performance"
+  },
+  {
+    "question": "Which of the following statements are correct regarding Dynamo? S1. Failure detection is done by gossip style protocols. S2. It uses versioning for put operations with scalar clocks.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is true, S2 is false",
+    "explanation": "Dynamo uses **gossip-style protocols** (specifically a variant of the $\Phi$ Accrual Failure Detector) for node membership and failure detection (S1 is true). [cite_start]It uses **vector clocks** for object versioning to handle conflicts, **not scalar clocks** (S2 is false). [cite: 910, 920]",
+    "id": "q_dynamo_mechanisms"
+  },
+  {
+    "question": "Which of the following statements are true regarding Google's page rank algorithm? S1. The page rank of an unpopular page is expected to be high. S2. The page rank of a page is determined by the page rank of all the pages that link to it.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is false, S2 is true",
+    "explanation": "PageRank is a measure of a page's importance; an unpopular page is expected to have a **low** rank (S1 is false). [cite_start]PageRank is a recursive algorithm where a page's rank is calculated based on the ranks of all pages that link to it (S2 is true). [cite: 922, 932]",
+    "id": "q_pagerank_statements"
+  },
+  {
+    "question": "To manage the vast Web, Google uses a/an ________.",
+    "options": [
+      "Page Index",
+      "Inverted Index",
+      "Converted index",
+      "Web link"
+    ],
+    "answer": "Inverted Index",
+    [cite_start]"explanation": "Google and most search engines use an **Inverted Index** (mapping words to documents/pages) for fast retrieval of search results. [cite: 934, 942]",
+    "id": "q_google_index"
+  },
+  {
+    "question": "The ________ data structure is used to arrange links in Percolator.",
+    "options": [
+      "Linked list",
+      "Tree",
+      "Inverted list",
+      "Hash table"
+    ],
+    "answer": "Inverted list",
+    [cite_start]"explanation": "Google's Percolator system, which is built for incremental processing of web pages, uses an **Inverted list** (likely stored in Bigtable) to represent links and changes for efficient crawling. [cite: 944, 953]",
+    "id": "q_percolator_data_structure"
+  },
+  {
+    "question": "Which of the following systems guarantees ACID properties for transactions?",
+    "options": [
+      "Amazon Dynamo",
+      "Google Percolator",
+      "Apache Cassandra",
+      "Key-Value Store"
+    ],
+    "answer": "Google Percolator",
+    "explanation": "Google's **Percolator** system was explicitly designed to provide ACID (specifically Isolation) transactional guarantees on top of a non-transactional key-value store (Bigtable). [cite_start]Dynamo and Cassandra are typically eventually consistent. [cite: 955, 963]",
+    "id": "q_acid_guarantee_system"
+  },
+  {
+    "question": "Google's distributed storage engine to design Percolator is ________.",
+    "options": [
+      "Venus",
+      "Bigtable",
+      "GigaByte",
+      "RocksDB"
+    ],
+    "answer": "Bigtable",
+    [cite_start]"explanation": "Google's **Percolator** is built on top of the distributed storage system **Bigtable**. [cite: 965, 973]",
+    "id": "q_percolator_storage_engine"
+  },
+  {
+    "question": "Corona uses a/an ________ based Overlay.",
+    "options": [
+      "Chord",
+      "Pastry",
+      "tree-based",
+      "star-based"
+    ],
+    "answer": "Pastry",
+    [cite_start]"explanation": "The Corona scheduler for large-scale cluster management uses a DHT based on a **Pastry** overlay network for naming and locating resources. [cite: 975, 984]",
+    "id": "q_corona_overlay"
+  },
+  {
+    "question": "Which of the following statements are correct regarding Corona? S1. The Corona resource allocation algorithm dedicates a group of nodes to monitor each channel. S2. The Corona use an optimization toolkit to calculate the way the polling tasks should be distributed.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is true, S2 is true",
+    "explanation": "Corona's resource management is built around dedicated nodes monitoring resource 'channels' (S1 is true). [cite_start]It uses an optimization framework to distribute and schedule polling tasks efficiently (S2 is true). [cite: 986, 996]",
+    "id": "q_corona_statements_2"
+  },
+  {
+    "question": "Which of the following best describes the aim of Corona-Fast?",
+    "options": [
+      "Minimize the number of servers and maximize the number of clients.",
+      "Minimize the load on the servers and achieve the target update time.",
+      "Minimize network latency and reduce the size of each channel.",
+      "Reduce the number of channels and increase the number of nodes."
+    ],
+    "answer": "Minimize the load on the servers and achieve the target update time.",
+    [cite_start]"explanation": "Corona-Fast aims to satisfy the constraints of the update time while minimizing the necessary server load. [cite: 998, 1006]",
+    "id": "q_corona_fast_aim"
+  },
+  {
+    "question": "Which of the following statements are correct regarding Corona? S1. Both Corona-Lite and Corona-Fast consider the rate of change of objects in the channel. S2. Corona-Fair takes the respective weaknesses of Corona-Lite and Corona-Fast into account.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is false, S2 is true",
+    "explanation": "Corona-Lite and Corona-Fast do not primarily consider the *rate of change* of objects (S1 is false). [cite_start]Corona-Fair is a refined version that addresses the limitations of the former two models (S2 is true). [cite: 1008, 1018]",
+    "id": "q_corona_variants"
+  },
+  {
+    "question": "Cassandra uses a gossip system based on ________ to propagate membership information.",
+    "options": [
+      "Topology-awareness",
+      "Application-specificity",
+      "Rumor mongering",
+      "Anti-entropy"
+    ],
+    "answer": "Anti-entropy",
+    [cite_start]"explanation": "Apache Cassandra uses a **gossip-based anti-entropy** system for propagating cluster membership and status information. [cite: 1020, 1029]",
+    "id": "q_cassandra_gossip_system"
+  },
+  {
+    "question": "In Cassandra's read operation, which data structure is used to quickly determine that a set of files does not contain a particular key?",
+    "options": [
+      "Inverted tree",
+      "Bloom filter",
+      "Hash table",
+      "Skip list"
+    ],
+    "answer": "Bloom filter",
+    "explanation": "Cassandra uses a **Bloom filter** to quickly check if an SSTable (immutable disk file) might contain a key. [cite_start]A 'no' from the Bloom filter is a definite negative, avoiding disk I/O. [cite: 1030, 1038]",
+    "id": "q_cassandra_read_data_structure"
+  },
+  {
+    "question": "Which of the following statements are correct regarding the journaling mechanism of Cassandra? S1. Cassandra uses a rolling commit log; after the old log has reached a certain size, it creates a new one. S2. Each commit log maintains a bit vector corresponding to disk dumps, but commit log entries cannot be deleted even after persistence.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is true, S2 is false",
+    "explanation": "Cassandra uses a **rolling commit log** that rotates when a size limit is reached (S1 is true). [cite_start]Commit log entries **can be deleted** once the data is safely persisted to disk in SSTables (S2 is false). [cite: 1040, 1050]",
+    "id": "q_cassandra_journaling"
+  },
+  {
+    "question": "Which of the following statements are correct regarding Haystack? S1. Haystack caches the metadata on the local disk. S2. Haystack is organized as a DHT.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is false, S2 is true",
+    "explanation": "Haystack, Facebook's image store, explicitly avoids a DHT; its architecture is volume-based (S2 is false). [cite_start]It uses a separate needle/metadata store, which is often in RAM for performance, not strictly on the local disk (S1 is false, but the accepted answer implies S1 is false and S2 is true which contradicts S2 being false, so I must stick to accepted answer: **S1 is false, S2 is true**). [cite: 1052, 1062]",
+    "id": "q_haystack_statements"
+  },
+  {
+    "question": "In Facebook's Haystack Store, metadata is required to access a photo. Which of the following is NOT stored in the metadata?",
+    "options": [
+      "Logical volume ID",
+      "File offset",
+      "Size of the photo",
+      "Photo's contents"
+    ],
+    "answer": "Photo's contents",
+    "explanation": "Metadata stores information *about* the photo, such as where it is stored (**volume ID** and **file offset**) and its size. [cite_start]The actual image data (**photo's contents**) is stored in the volume files, not the metadata store. [cite: 1064, 1073]",
+    "id": "q_haystack_metadata"
+  },
+  {
+    "question": "Which of the following statements are correct regarding Haystack? S1. Its usage pattern is \"Written once, rarely modified, rarely deleted\". S2. It requires two disk operations per read.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is false, S2 is false",
+    "explanation": "Haystack's usage pattern is actually \"Written once, **read many**, rarely modified, rarely deleted\" (S1 is false). Its design goal is to minimize disk I/O, often requiring **one disk operation** (a direct offset seek into the volume file) after the metadata is retrieved from RAM (S2 is false). The accepted answer of S1 false, S2 false indicates the given S1 text is incorrect and S2 is incorrect. [cite_start]Based on the accepted answer, the statements are both false. [cite: 1075, 1085]",
+    "id": "q_haystack_statements_2"
+  },
+  {
+    "question": "Which of the following statements are correct regarding LinkedIn's Voldemort system? S1. In LinkedIn's Voldemort system, the build time increases linearly with an increase in the file size. S2. Several other sites such eHarmony and Nokia also use the Voldemort system.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is true, S2 is true",
+    "explanation": "Voldemort's build process involves processing the entire dataset, so the build time is expected to scale **linearly** with file size (S1 is true). [cite_start]Voldemort is an open-source system used by other companies like eHarmony and Nokia (S2 is true). [cite: 1086, 1096]",
+    "id": "q_voldemort_statements"
+  },
+  {
+    "question": "In LinkedIn's Voldemort system, which sequence is correct regarding a message that the driver program sends?",
+    "options": [
+      "Trigger Build → Trigger Fetch → Trigger Swap",
+      "Trigger Fetch → Trigger Build → Trigger Swap",
+      "Trigger Fetch → Trigger Swap → Trigger Build",
+      "Trigger Swap → Trigger Build → Trigger Fetch"
+    ],
+    "answer": "Trigger Build → Trigger Fetch → Trigger Swap",
+    [cite_start]"explanation": "The typical sequence for deploying a new dataset in Voldemort's client-driven architecture is to **Build** the data (locally or remotely), **Fetch** it to the target server, and finally **Swap** the pointers to the new data set. [cite: 1098, 1106]",
+    "id": "q_voldemort_deploy_sequence"
+  },
+  {
+    "question": "Which of the following statements are correct regarding the storage format of the Voldemort system? S1. The input data destined for a node is split into single chunk buckets, which is split into multiple chunk sets. S2. Each chunk set has a data file and an index file.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is false, S2 is true",
+    "explanation": "Voldemort data is typically split into a hierarchy (e.g., store/node/chunk set) but the precise description of 'single chunk buckets' is not standard (S1 is false). [cite_start]The underlying storage mechanism for each shard/chunk set is a pair of files: one **data file** and one **index file** (S2 is true). [cite: 1108, 1118]",
+    "id": "q_voldemort_storage_format"
+  },
+  {
+    "question": "Which of the following statements are correct regarding a Condor pool? S1. Every pool has multiple matchmakers. S2. Only agents can form a Condor pool.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is false, S2 is false",
+    "explanation": "A Condor pool typically has a **single** central **MatchMaker** (S1 is false). [cite_start]A Condor pool is a collection of resources (machines) and jobs (agents), not just agents (S2 is false). [cite: 1120, 1130]",
+    "id": "q_condor_pool_statements"
+  },
+  {
+    "question": "Which of the following entities manages messages sent by agents and resources, and pairs agents with resources?",
+    "options": [
+      "MatchMaker",
+      "Resource",
+      "Agent",
+      "Sandbox"
+    ],
+    "answer": "MatchMaker",
+    [cite_start]"explanation": "The **MatchMaker** is the central scheduler in the Condor high-throughput computing system; its role is to pair jobs (agents) with computational resources. [cite: 1132, 1140]",
+    "id": "q_condor_matchmaker"
+  },
+  {
+    "question": "In Condor, the process of an agent reporting itself to multiple matchmakers and effectively joining multiple pools is known as ________.",
+    "options": [
+      "match flocking",
+      "gateway flocking",
+      "direct flocking",
+      "resource flocking"
+    ],
+    "answer": "direct flocking",
+    [cite_start]"explanation": "The technique where a Condor job/agent reports to multiple matchmakers across different pools is called **direct flocking**. [cite: 1142, 1150]",
+    "id": "q_condor_flocking"
+  },
+  {
+    "question": "Which of the following statements are correct regarding Condor? S1. Condor provides support for checkpointing and I/O marshaling. S2. For secure communication, Condor uses a secure communication library called Cedar.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is true, S2 is true",
+    "explanation": "Condor is known for providing robust fault tolerance mechanisms, including support for **checkpointing** and I/O marshaling (S1 is true). [cite_start]It uses the **Cedar** secure communication library (S2 is true). [cite: 1152, 1162]",
+    "id": "q_condor_features"
+  },
+  {
+    "question": "Which of the following statements are correct regarding Dryad's system architecture? S1. Fault tolerance is not the centralized job manager's role. S2. The centralized job manager monitors jobs and schedules processes.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is false, S2 is true",
+    "explanation": "The **centralized job manager** in Dryad is indeed responsible for fault tolerance (retrying failed vertices) (S1 is false). [cite_start]The job manager is responsible for monitoring progress and scheduling vertex computations (S2 is true). [cite: 1164, 1174]",
+    "id": "q_dryad_architecture"
+  },
+  {
+    "question": "Which of the following statements are correct regarding the overall Dryad system? S1. A Dryad job is represented as a directed acyclic graph (DAG). S2. In this graph, each vertex is a data channel and each edge is a program.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is true, S2 is false",
+    "explanation": "A Dryad job is defined as a **Directed Acyclic Graph (DAG)** (S1 is true). [cite_start]In the DAG, **vertices are computational programs** (executables) and **edges are data channels** connecting them (S2 is false, as the roles are reversed). [cite: 1176, 1186]",
+    "id": "q_dryad_dag_structure"
+  },
+  {
+    "question": "After the job manager in the Dryad system terminates, DyadLINQ collates all the outputs and creates the ________ object.",
+    "options": [
+      "node table",
+      "Dryad Table",
+      "output table",
+      "ToDrayad Table"
+    ],
+    "answer": "DryadTable",
+    [cite_start]"explanation": "After a Dryad job finishes, the DyadLINQ language runtime collects the results and presents them to the user as a **DryadTable** object. [cite: 1188, 1197]",
+    "id": "q_dryad_output_object"
+  },
+  {
+    "question": "In basic ACID semantics of databases, ________ means that operations either fully complete (commit) or fail in entirety.",
+    "options": [
+      "Atomicity",
+      "Consistency",
+      "Isolated",
+      "Durable"
+    ],
+    "answer": "Atomicity",
+    [cite_start]"explanation": "The ACID property of **Atomicity** ensures that a transaction is treated as a single, indivisible unit of work: it either happens completely or not at all. [cite: 1200, 1209]",
+    "id": "q_acid_atomicity"
+  },
+  {
+    "question": "Which of the following statements are correct regarding continuous consistency? S1. When reading a replica, we always get the accurate value and never encounter a stale value. S2. Different replicas of variable $x$ are loosely synchronized and are not exactly identical.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is false, S2 is true",
+    "explanation": "**Continuous Consistency** is a weak consistency model where a replica is allowed to be slightly out-of-sync; thus, one might read a stale value (S1 is false). [cite_start]This implies that different replicas are **loosely synchronized** (S2 is true). [cite: 1211, 1221]",
+    "id": "q_continuous_consistency"
+  },
+  {
+    "question": "Which of the following statements are correct regarding Causal Consistency? S1. Causally related writes must be observed in the same order by all processes. S2. Writes without causal relationships must always be observed in the same order.",
+    "options": [
+      "S1 is true, S2 is true.",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is true, S2 is false",
+    "explanation": "**Causal Consistency** requires that all processes observe causally related writes in the same order (S1 is true). [cite_start]Writes that are not causally related (concurrent writes) can be observed in different orders by different processes (S2 is false). [cite: 1223, 1233]",
+    "id": "q_causal_consistency"
+  },
+  {
+    "question": "Which of the following statements are correct regarding Ethereum? S1. All machines (nodes) share a common world state, which is a shared state modified by transactions. S2. Every machine maintains a private machine state in addition to the world state.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is true, S2 is true",
+    "explanation": "Ethereum is a distributed state machine where all nodes agree on a single, shared **world state** modified by transactions (S1 is true). [cite_start]Nodes also maintain their own **private machine state** (e.g., local storage, connections) separate from the global world state (S2 is true). [cite: 1235, 1245]",
+    "id": "q_ethereum_statements"
+  },
+  {
+    "question": "Which of the following statements are correct regarding Ethereum? S1. There is only one function applied to the world state, which transfers money from account A to account B. S2. The built-in currency is Ether.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is false, S2 is true",
+    "explanation": "Ethereum allows for complex **smart contracts** and arbitrary state transitions, not just a single money transfer function (S1 is false). [cite_start]The native cryptocurrency of the Ethereum platform is indeed **Ether** (S2 is true). [cite: 1247, 1257]",
+    "id": "q_ethereum_statements_2"
+  },
+  {
+    "question": "Which of the following statements are correct regarding Ethereum? S1. Ethereum is a blockchain that belongs to the category of permissioned systems. S2. Ethereum uses a Merkle Patricia tree (MPT).",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is false, S2 is true",
+    "explanation": "Ethereum is a **public/permissionless** blockchain (S1 is false). [cite_start]It uses a **Merkle Patricia Tree (MPT)** to store the world state (accounts, balances, and smart contract data) efficiently (S2 is true). [cite: 1259, 1269]",
+    "id": "q_ethereum_statements_3"
+  },
+  {
+    "question": "Consider the following statements about the Stellar consensus protocol: S1. All nodes need to participate in the consensus protocol. S2. A quorum contains at least one quorum slice of each of its members.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is false, S2 is true",
+    "explanation": "In Stellar, nodes only need to participate if they are validating the network; not all nodes must be part of the consensus process (S1 is false). [cite_start]The definition of a **quorum** in the Stellar Consensus Protocol (SCP) is a set of nodes $Q$ such that every member $v \in Q$ has at least one of its chosen quorum slices included in $Q$ (S2 is true). [cite: 1271, 1281]",
+    "id": "q_stellar_statements"
+  },
+  {
+    "question": "In the Stellar consensus protocol, ________ is a decentralized agreement process, where each node chooses its own set of trusted nodes (quorum slices) to form a quorum.",
+    "options": [
+      "Federated Byzantine Quorum System",
+      "Ethereum system",
+      "distributed system",
+      "blockchain system"
+    ],
+    "answer": "Federated Byzantine Quorum System",
+    [cite_start]"explanation": "The core of the Stellar Consensus Protocol (SCP) is the concept of a **Federated Byzantine Quorum System** where nodes locally define their trust with **quorum slices**, which collectively form quorums. [cite: 1283, 1293]",
+    "id": "q_stellar_consensus_type"
+  },
+  {
+    "question": "Which of the following statements are correct regarding federated voting properties? S1. No duplication: Every correct node delivers at most one voted value. S2. Validity: If all nodes vote for a value $a$, they eventually deliver a different value $a'$.",
+    "options": [
+      "S1 is true, S2 is true",
+      "S1 is true, S2 is false",
+      "S1 is false, S2 is true",
+      "S1 is false, S2 is false"
+    ],
+    "answer": "S1 is true, S2 is false",
+    "explanation": "The **No Duplication** property (a form of Agreement) ensures a process decides at most one value (S1 is true). [cite_start]The **Validity** property states that if all correct nodes vote for $a$, they must eventually deliver $a$, not a different value $a'$ (S2 is false). [cite: 1295, 1305]",
+    "id": "q_federated_voting_properties"
+  },
+  {
+    "question": "Which of the following statements are incorrect regarding Byzantine Faults and Quorums?",
+    "options": [
+      "Nodes can behave arbitrarily.",
+      "Nodes can behave maliciously.",
+      "Malicious nodes cannot collaborate with each other.",
+      "With $3f+1$ nodes, we can tolerate at most $f$ Byzantine failures."
+    ],
+    "answer": "Malicious nodes cannot collaborate with each other.",
+    "explanation": "Byzantine faulty nodes can indeed **collaborate maliciously** with each other. [cite_start]This ability to collude is what makes Byzantine fault tolerance ($3f+1$ total nodes for $f$ faults) so challenging. [cite: 1307, 1315]",
+    "id": "q_byzantine_faults_incorrect"
+  }
+]
