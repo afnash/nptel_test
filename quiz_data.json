@@ -1,0 +1,2959 @@
+{
+  "total_questions": 120,
+  "Weeks": [
+    {
+      "Week_id": 1,
+      "Week_name": "Week 1",
+      "questions": [
+        {
+          "question": "Week 1, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+          "options": [
+            "It ensures eventual consistency",
+            "It uses gossip-based communication",
+            "It has O(log n) message complexity",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+          "id": "g1_q1"
+        },
+        {
+          "question": "Week 1, Q2: What does the FLP result propose (primarily)?",
+          "options": [
+            "Consensus is impossible in asynchronous systems with one faulty process",
+            "Consensus is always possible in synchronous systems",
+            "Consensus requires at least 2f+1 processes",
+            "Consensus is NP-complete"
+          ],
+          "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+          "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+          "id": "g1_q2"
+        },
+        {
+          "question": "Week 1, Q3: Which of the following is true according to the proof of the FLP result?",
+          "options": [
+            "It uses a bivalent configuration argument",
+            "It assumes crash failures only",
+            "It requires message ordering",
+            "It works only for deterministic algorithms"
+          ],
+          "answer": "It uses a bivalent configuration argument",
+          "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+          "id": "g1_q3"
+        },
+        {
+          "question": "Week 1, Q4: Which of the following is/are the design goals of Freenet?",
+          "options": [
+            "Anonymity",
+            "Decentralization",
+            "Resistance to censorship",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+          "id": "g1_q4"
+        },
+        {
+          "question": "Week 1, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+          "options": [
+            "It prevents infinite loops in routing",
+            "It controls data expiration",
+            "It limits the number of hops",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+          "id": "g1_q5"
+        },
+        {
+          "question": "Week 1, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+          "options": [
+            "Leaf set",
+            "Routing table",
+            "Neighborhood set",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+          "id": "g1_q6"
+        },
+        {
+          "question": "Week 1, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+          "options": [
+            "Rarest first piece selection",
+            "Tit-for-tat bandwidth allocation",
+            "Endgame mode",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+          "id": "g1_q7"
+        },
+        {
+          "question": "Week 1, Q8: What is the primary purpose of the Chord protocol?",
+          "options": [
+            "Distributed hash table implementation",
+            "Consensus algorithm",
+            "Load balancing",
+            "Message ordering"
+          ],
+          "answer": "Distributed hash table implementation",
+          "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+          "id": "g1_q8"
+        },
+        {
+          "question": "Week 1, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+          "options": [
+            "O(log n)",
+            "O(n)",
+            "O(1)",
+            "O(n log n)"
+          ],
+          "answer": "O(log n)",
+          "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+          "id": "g1_q9"
+        },
+        {
+          "question": "Week 1, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+          "options": [
+            "Uses d-dimensional coordinate space",
+            "Each node maintains O(d) neighbors",
+            "Routing complexity is O(dn^(1/d))",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+          "id": "g1_q10"
+        }
+      ]
+    },
+    {
+      "Week_id": 2,
+      "Week_name": "Week 2",
+      "questions": [
+        {
+          "question": "Week 2, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+          "options": [
+            "It ensures eventual consistency",
+            "It uses gossip-based communication",
+            "It has O(log n) message complexity",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+          "id": "g2_q1"
+        },
+        {
+          "question": "Week 2, Q2: What does the FLP result propose (primarily)?",
+          "options": [
+            "Consensus is impossible in asynchronous systems with one faulty process",
+            "Consensus is always possible in synchronous systems",
+            "Consensus requires at least 2f+1 processes",
+            "Consensus is NP-complete"
+          ],
+          "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+          "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+          "id": "g2_q2"
+        },
+        {
+          "question": "Week 2, Q3: Which of the following is true according to the proof of the FLP result?",
+          "options": [
+            "It uses a bivalent configuration argument",
+            "It assumes crash failures only",
+            "It requires message ordering",
+            "It works only for deterministic algorithms"
+          ],
+          "answer": "It uses a bivalent configuration argument",
+          "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+          "id": "g2_q3"
+        },
+        {
+          "question": "Week 2, Q4: Which of the following is/are the design goals of Freenet?",
+          "options": [
+            "Anonymity",
+            "Decentralization",
+            "Resistance to censorship",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+          "id": "g2_q4"
+        },
+        {
+          "question": "Week 2, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+          "options": [
+            "It prevents infinite loops in routing",
+            "It controls data expiration",
+            "It limits the number of hops",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+          "id": "g2_q5"
+        },
+        {
+          "question": "Week 2, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+          "options": [
+            "Leaf set",
+            "Routing table",
+            "Neighborhood set",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+          "id": "g2_q6"
+        },
+        {
+          "question": "Week 2, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+          "options": [
+            "Rarest first piece selection",
+            "Tit-for-tat bandwidth allocation",
+            "Endgame mode",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+          "id": "g2_q7"
+        },
+        {
+          "question": "Week 2, Q8: What is the primary purpose of the Chord protocol?",
+          "options": [
+            "Distributed hash table implementation",
+            "Consensus algorithm",
+            "Load balancing",
+            "Message ordering"
+          ],
+          "answer": "Distributed hash table implementation",
+          "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+          "id": "g2_q8"
+        },
+        {
+          "question": "Week 2, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+          "options": [
+            "O(log n)",
+            "O(n)",
+            "O(1)",
+            "O(n log n)"
+          ],
+          "answer": "O(log n)",
+          "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+          "id": "g2_q9"
+        },
+        {
+          "question": "Week 2, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+          "options": [
+            "Uses d-dimensional coordinate space",
+            "Each node maintains O(d) neighbors",
+            "Routing complexity is O(dn^(1/d))",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+          "id": "g2_q10"
+        }
+      ]
+    },
+    {
+      "Week_id": 3,
+      "Week_name": "Week 3",
+      "questions": [
+        {
+          "question": "Week 3, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+          "options": [
+            "It ensures eventual consistency",
+            "It uses gossip-based communication",
+            "It has O(log n) message complexity",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+          "id": "g3_q1"
+        },
+        {
+          "question": "Week 3, Q2: What does the FLP result propose (primarily)?",
+          "options": [
+            "Consensus is impossible in asynchronous systems with one faulty process",
+            "Consensus is always possible in synchronous systems",
+            "Consensus requires at least 2f+1 processes",
+            "Consensus is NP-complete"
+          ],
+          "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+          "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+          "id": "g3_q2"
+        },
+        {
+          "question": "Week 3, Q3: Which of the following is true according to the proof of the FLP result?",
+          "options": [
+            "It uses a bivalent configuration argument",
+            "It assumes crash failures only",
+            "It requires message ordering",
+            "It works only for deterministic algorithms"
+          ],
+          "answer": "It uses a bivalent configuration argument",
+          "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+          "id": "g3_q3"
+        },
+        {
+          "question": "Week 3, Q4: Which of the following is/are the design goals of Freenet?",
+          "options": [
+            "Anonymity",
+            "Decentralization",
+            "Resistance to censorship",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+          "id": "g3_q4"
+        },
+        {
+          "question": "Week 3, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+          "options": [
+            "It prevents infinite loops in routing",
+            "It controls data expiration",
+            "It limits the number of hops",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+          "id": "g3_q5"
+        },
+        {
+          "question": "Week 3, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+          "options": [
+            "Leaf set",
+            "Routing table",
+            "Neighborhood set",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+          "id": "g3_q6"
+        },
+        {
+          "question": "Week 3, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+          "options": [
+            "Rarest first piece selection",
+            "Tit-for-tat bandwidth allocation",
+            "Endgame mode",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+          "id": "g3_q7"
+        },
+        {
+          "question": "Week 3, Q8: What is the primary purpose of the Chord protocol?",
+          "options": [
+            "Distributed hash table implementation",
+            "Consensus algorithm",
+            "Load balancing",
+            "Message ordering"
+          ],
+          "answer": "Distributed hash table implementation",
+          "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+          "id": "g3_q8"
+        },
+        {
+          "question": "Week 3, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+          "options": [
+            "O(log n)",
+            "O(n)",
+            "O(1)",
+            "O(n log n)"
+          ],
+          "answer": "O(log n)",
+          "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+          "id": "g3_q9"
+        },
+        {
+          "question": "Week 3, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+          "options": [
+            "Uses d-dimensional coordinate space",
+            "Each node maintains O(d) neighbors",
+            "Routing complexity is O(dn^(1/d))",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+          "id": "g3_q10"
+        }
+      ]
+    },
+    {
+      "Week_id": 4,
+      "Week_name": "Week 4",
+      "questions": [
+        {
+          "question": "Week 4, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+          "options": [
+            "It ensures eventual consistency",
+            "It uses gossip-based communication",
+            "It has O(log n) message complexity",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+          "id": "g4_q1"
+        },
+        {
+          "question": "Week 4, Q2: What does the FLP result propose (primarily)?",
+          "options": [
+            "Consensus is impossible in asynchronous systems with one faulty process",
+            "Consensus is always possible in synchronous systems",
+            "Consensus requires at least 2f+1 processes",
+            "Consensus is NP-complete"
+          ],
+          "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+          "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+          "id": "g4_q2"
+        },
+        {
+          "question": "Week 4, Q3: Which of the following is true according to the proof of the FLP result?",
+          "options": [
+            "It uses a bivalent configuration argument",
+            "It assumes crash failures only",
+            "It requires message ordering",
+            "It works only for deterministic algorithms"
+          ],
+          "answer": "It uses a bivalent configuration argument",
+          "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+          "id": "g4_q3"
+        },
+        {
+          "question": "Week 4, Q4: Which of the following is/are the design goals of Freenet?",
+          "options": [
+            "Anonymity",
+            "Decentralization",
+            "Resistance to censorship",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+          "id": "g4_q4"
+        },
+        {
+          "question": "Week 4, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+          "options": [
+            "It prevents infinite loops in routing",
+            "It controls data expiration",
+            "It limits the number of hops",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+          "id": "g4_q5"
+        },
+        {
+          "question": "Week 4, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+          "options": [
+            "Leaf set",
+            "Routing table",
+            "Neighborhood set",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+          "id": "g4_q6"
+        },
+        {
+          "question": "Week 4, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+          "options": [
+            "Rarest first piece selection",
+            "Tit-for-tat bandwidth allocation",
+            "Endgame mode",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+          "id": "g4_q7"
+        },
+        {
+          "question": "Week 4, Q8: What is the primary purpose of the Chord protocol?",
+          "options": [
+            "Distributed hash table implementation",
+            "Consensus algorithm",
+            "Load balancing",
+            "Message ordering"
+          ],
+          "answer": "Distributed hash table implementation",
+          "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+          "id": "g4_q8"
+        },
+        {
+          "question": "Week 4, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+          "options": [
+            "O(log n)",
+            "O(n)",
+            "O(1)",
+            "O(n log n)"
+          ],
+          "answer": "O(log n)",
+          "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+          "id": "g4_q9"
+        },
+        {
+          "question": "Week 4, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+          "options": [
+            "Uses d-dimensional coordinate space",
+            "Each node maintains O(d) neighbors",
+            "Routing complexity is O(dn^(1/d))",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+          "id": "g4_q10"
+        }
+      ]
+    },
+    {
+      "Week_id": 5,
+      "Week_name": "Week 5",
+      "questions": [
+        {
+          "question": "Week 5, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+          "options": [
+            "It ensures eventual consistency",
+            "It uses gossip-based communication",
+            "It has O(log n) message complexity",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+          "id": "g5_q1"
+        },
+        {
+          "question": "Week 5, Q2: What does the FLP result propose (primarily)?",
+          "options": [
+            "Consensus is impossible in asynchronous systems with one faulty process",
+            "Consensus is always possible in synchronous systems",
+            "Consensus requires at least 2f+1 processes",
+            "Consensus is NP-complete"
+          ],
+          "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+          "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+          "id": "g5_q2"
+        },
+        {
+          "question": "Week 5, Q3: Which of the following is true according to the proof of the FLP result?",
+          "options": [
+            "It uses a bivalent configuration argument",
+            "It assumes crash failures only",
+            "It requires message ordering",
+            "It works only for deterministic algorithms"
+          ],
+          "answer": "It uses a bivalent configuration argument",
+          "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+          "id": "g5_q3"
+        },
+        {
+          "question": "Week 5, Q4: Which of the following is/are the design goals of Freenet?",
+          "options": [
+            "Anonymity",
+            "Decentralization",
+            "Resistance to censorship",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+          "id": "g5_q4"
+        },
+        {
+          "question": "Week 5, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+          "options": [
+            "It prevents infinite loops in routing",
+            "It controls data expiration",
+            "It limits the number of hops",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+          "id": "g5_q5"
+        },
+        {
+          "question": "Week 5, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+          "options": [
+            "Leaf set",
+            "Routing table",
+            "Neighborhood set",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+          "id": "g5_q6"
+        },
+        {
+          "question": "Week 5, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+          "options": [
+            "Rarest first piece selection",
+            "Tit-for-tat bandwidth allocation",
+            "Endgame mode",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+          "id": "g5_q7"
+        },
+        {
+          "question": "Week 5, Q8: What is the primary purpose of the Chord protocol?",
+          "options": [
+            "Distributed hash table implementation",
+            "Consensus algorithm",
+            "Load balancing",
+            "Message ordering"
+          ],
+          "answer": "Distributed hash table implementation",
+          "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+          "id": "g5_q8"
+        },
+        {
+          "question": "Week 5, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+          "options": [
+            "O(log n)",
+            "O(n)",
+            "O(1)",
+            "O(n log n)"
+          ],
+          "answer": "O(log n)",
+          "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+          "id": "g5_q9"
+        },
+        {
+          "question": "Week 5, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+          "options": [
+            "Uses d-dimensional coordinate space",
+            "Each node maintains O(d) neighbors",
+            "Routing complexity is O(dn^(1/d))",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+          "id": "g5_q10"
+        }
+      ]
+    },
+    {
+      "Week_id": 6,
+      "Week_name": "Week 6",
+      "questions": [
+        {
+          "question": "Week 6, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+          "options": [
+            "It ensures eventual consistency",
+            "It uses gossip-based communication",
+            "It has O(log n) message complexity",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+          "id": "g6_q1"
+        },
+        {
+          "question": "Week 6, Q2: What does the FLP result propose (primarily)?",
+          "options": [
+            "Consensus is impossible in asynchronous systems with one faulty process",
+            "Consensus is always possible in synchronous systems",
+            "Consensus requires at least 2f+1 processes",
+            "Consensus is NP-complete"
+          ],
+          "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+          "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+          "id": "g6_q2"
+        },
+        {
+          "question": "Week 6, Q3: Which of the following is true according to the proof of the FLP result?",
+          "options": [
+            "It uses a bivalent configuration argument",
+            "It assumes crash failures only",
+            "It requires message ordering",
+            "It works only for deterministic algorithms"
+          ],
+          "answer": "It uses a bivalent configuration argument",
+          "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+          "id": "g6_q3"
+        },
+        {
+          "question": "Week 6, Q4: Which of the following is/are the design goals of Freenet?",
+          "options": [
+            "Anonymity",
+            "Decentralization",
+            "Resistance to censorship",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+          "id": "g6_q4"
+        },
+        {
+          "question": "Week 6, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+          "options": [
+            "It prevents infinite loops in routing",
+            "It controls data expiration",
+            "It limits the number of hops",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+          "id": "g6_q5"
+        },
+        {
+          "question": "Week 6, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+          "options": [
+            "Leaf set",
+            "Routing table",
+            "Neighborhood set",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+          "id": "g6_q6"
+        },
+        {
+          "question": "Week 6, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+          "options": [
+            "Rarest first piece selection",
+            "Tit-for-tat bandwidth allocation",
+            "Endgame mode",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+          "id": "g6_q7"
+        },
+        {
+          "question": "Week 6, Q8: What is the primary purpose of the Chord protocol?",
+          "options": [
+            "Distributed hash table implementation",
+            "Consensus algorithm",
+            "Load balancing",
+            "Message ordering"
+          ],
+          "answer": "Distributed hash table implementation",
+          "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+          "id": "g6_q8"
+        },
+        {
+          "question": "Week 6, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+          "options": [
+            "O(log n)",
+            "O(n)",
+            "O(1)",
+            "O(n log n)"
+          ],
+          "answer": "O(log n)",
+          "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+          "id": "g6_q9"
+        },
+        {
+          "question": "Week 6, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+          "options": [
+            "Uses d-dimensional coordinate space",
+            "Each node maintains O(d) neighbors",
+            "Routing complexity is O(dn^(1/d))",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+          "id": "g6_q10"
+        }
+      ]
+    },
+    {
+      "Week_id": 7,
+      "Week_name": "Week 7",
+      "questions": [
+        {
+          "question": "Week 7, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+          "options": [
+            "It ensures eventual consistency",
+            "It uses gossip-based communication",
+            "It has O(log n) message complexity",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+          "id": "g7_q1"
+        },
+        {
+          "question": "Week 7, Q2: What does the FLP result propose (primarily)?",
+          "options": [
+            "Consensus is impossible in asynchronous systems with one faulty process",
+            "Consensus is always possible in synchronous systems",
+            "Consensus requires at least 2f+1 processes",
+            "Consensus is NP-complete"
+          ],
+          "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+          "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+          "id": "g7_q2"
+        },
+        {
+          "question": "Week 7, Q3: Which of the following is true according to the proof of the FLP result?",
+          "options": [
+            "It uses a bivalent configuration argument",
+            "It assumes crash failures only",
+            "It requires message ordering",
+            "It works only for deterministic algorithms"
+          ],
+          "answer": "It uses a bivalent configuration argument",
+          "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+          "id": "g7_q3"
+        },
+        {
+          "question": "Week 7, Q4: Which of the following is/are the design goals of Freenet?",
+          "options": [
+            "Anonymity",
+            "Decentralization",
+            "Resistance to censorship",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+          "id": "g7_q4"
+        },
+        {
+          "question": "Week 7, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+          "options": [
+            "It prevents infinite loops in routing",
+            "It controls data expiration",
+            "It limits the number of hops",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+          "id": "g7_q5"
+        },
+        {
+          "question": "Week 7, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+          "options": [
+            "Leaf set",
+            "Routing table",
+            "Neighborhood set",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+          "id": "g7_q6"
+        },
+        {
+          "question": "Week 7, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+          "options": [
+            "Rarest first piece selection",
+            "Tit-for-tat bandwidth allocation",
+            "Endgame mode",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+          "id": "g7_q7"
+        },
+        {
+          "question": "Week 7, Q8: What is the primary purpose of the Chord protocol?",
+          "options": [
+            "Distributed hash table implementation",
+            "Consensus algorithm",
+            "Load balancing",
+            "Message ordering"
+          ],
+          "answer": "Distributed hash table implementation",
+          "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+          "id": "g7_q8"
+        },
+        {
+          "question": "Week 7, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+          "options": [
+            "O(log n)",
+            "O(n)",
+            "O(1)",
+            "O(n log n)"
+          ],
+          "answer": "O(log n)",
+          "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+          "id": "g7_q9"
+        },
+        {
+          "question": "Week 7, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+          "options": [
+            "Uses d-dimensional coordinate space",
+            "Each node maintains O(d) neighbors",
+            "Routing complexity is O(dn^(1/d))",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+          "id": "g7_q10"
+        }
+      ]
+    },
+    {
+      "Week_id": 8,
+      "Week_name": "Week 8",
+      "questions": [
+        {
+          "question": "Week 8, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+          "options": [
+            "It ensures eventual consistency",
+            "It uses gossip-based communication",
+            "It has O(log n) message complexity",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+          "id": "g8_q1"
+        },
+        {
+          "question": "Week 8, Q2: What does the FLP result propose (primarily)?",
+          "options": [
+            "Consensus is impossible in asynchronous systems with one faulty process",
+            "Consensus is always possible in synchronous systems",
+            "Consensus requires at least 2f+1 processes",
+            "Consensus is NP-complete"
+          ],
+          "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+          "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+          "id": "g8_q2"
+        },
+        {
+          "question": "Week 8, Q3: Which of the following is true according to the proof of the FLP result?",
+          "options": [
+            "It uses a bivalent configuration argument",
+            "It assumes crash failures only",
+            "It requires message ordering",
+            "It works only for deterministic algorithms"
+          ],
+          "answer": "It uses a bivalent configuration argument",
+          "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+          "id": "g8_q3"
+        },
+        {
+          "question": "Week 8, Q4: Which of the following is/are the design goals of Freenet?",
+          "options": [
+            "Anonymity",
+            "Decentralization",
+            "Resistance to censorship",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+          "id": "g8_q4"
+        },
+        {
+          "question": "Week 8, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+          "options": [
+            "It prevents infinite loops in routing",
+            "It controls data expiration",
+            "It limits the number of hops",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+          "id": "g8_q5"
+        },
+        {
+          "question": "Week 8, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+          "options": [
+            "Leaf set",
+            "Routing table",
+            "Neighborhood set",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+          "id": "g8_q6"
+        },
+        {
+          "question": "Week 8, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+          "options": [
+            "Rarest first piece selection",
+            "Tit-for-tat bandwidth allocation",
+            "Endgame mode",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+          "id": "g8_q7"
+        },
+        {
+          "question": "Week 8, Q8: What is the primary purpose of the Chord protocol?",
+          "options": [
+            "Distributed hash table implementation",
+            "Consensus algorithm",
+            "Load balancing",
+            "Message ordering"
+          ],
+          "answer": "Distributed hash table implementation",
+          "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+          "id": "g8_q8"
+        },
+        {
+          "question": "Week 8, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+          "options": [
+            "O(log n)",
+            "O(n)",
+            "O(1)",
+            "O(n log n)"
+          ],
+          "answer": "O(log n)",
+          "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+          "id": "g8_q9"
+        },
+        {
+          "question": "Week 8, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+          "options": [
+            "Uses d-dimensional coordinate space",
+            "Each node maintains O(d) neighbors",
+            "Routing complexity is O(dn^(1/d))",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+          "id": "g8_q10"
+        }
+      ]
+    },
+    {
+      "Week_id": 9,
+      "Week_name": "Week 9",
+      "questions": [
+        {
+          "question": "Week 9, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+          "options": [
+            "It ensures eventual consistency",
+            "It uses gossip-based communication",
+            "It has O(log n) message complexity",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+          "id": "g9_q1"
+        },
+        {
+          "question": "Week 9, Q2: What does the FLP result propose (primarily)?",
+          "options": [
+            "Consensus is impossible in asynchronous systems with one faulty process",
+            "Consensus is always possible in synchronous systems",
+            "Consensus requires at least 2f+1 processes",
+            "Consensus is NP-complete"
+          ],
+          "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+          "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+          "id": "g9_q2"
+        },
+        {
+          "question": "Week 9, Q3: Which of the following is true according to the proof of the FLP result?",
+          "options": [
+            "It uses a bivalent configuration argument",
+            "It assumes crash failures only",
+            "It requires message ordering",
+            "It works only for deterministic algorithms"
+          ],
+          "answer": "It uses a bivalent configuration argument",
+          "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+          "id": "g9_q3"
+        },
+        {
+          "question": "Week 9, Q4: Which of the following is/are the design goals of Freenet?",
+          "options": [
+            "Anonymity",
+            "Decentralization",
+            "Resistance to censorship",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+          "id": "g9_q4"
+        },
+        {
+          "question": "Week 9, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+          "options": [
+            "It prevents infinite loops in routing",
+            "It controls data expiration",
+            "It limits the number of hops",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+          "id": "g9_q5"
+        },
+        {
+          "question": "Week 9, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+          "options": [
+            "Leaf set",
+            "Routing table",
+            "Neighborhood set",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+          "id": "g9_q6"
+        },
+        {
+          "question": "Week 9, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+          "options": [
+            "Rarest first piece selection",
+            "Tit-for-tat bandwidth allocation",
+            "Endgame mode",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+          "id": "g9_q7"
+        },
+        {
+          "question": "Week 9, Q8: What is the primary purpose of the Chord protocol?",
+          "options": [
+            "Distributed hash table implementation",
+            "Consensus algorithm",
+            "Load balancing",
+            "Message ordering"
+          ],
+          "answer": "Distributed hash table implementation",
+          "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+          "id": "g9_q8"
+        },
+        {
+          "question": "Week 9, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+          "options": [
+            "O(log n)",
+            "O(n)",
+            "O(1)",
+            "O(n log n)"
+          ],
+          "answer": "O(log n)",
+          "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+          "id": "g9_q9"
+        },
+        {
+          "question": "Week 9, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+          "options": [
+            "Uses d-dimensional coordinate space",
+            "Each node maintains O(d) neighbors",
+            "Routing complexity is O(dn^(1/d))",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+          "id": "g9_q10"
+        }
+      ]
+    },
+    {
+      "Week_id": 10,
+      "Week_name": "Week 10",
+      "questions": [
+        {
+          "question": "Week 10, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+          "options": [
+            "It ensures eventual consistency",
+            "It uses gossip-based communication",
+            "It has O(log n) message complexity",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+          "id": "g10_q1"
+        },
+        {
+          "question": "Week 10, Q2: What does the FLP result propose (primarily)?",
+          "options": [
+            "Consensus is impossible in asynchronous systems with one faulty process",
+            "Consensus is always possible in synchronous systems",
+            "Consensus requires at least 2f+1 processes",
+            "Consensus is NP-complete"
+          ],
+          "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+          "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+          "id": "g10_q2"
+        },
+        {
+          "question": "Week 10, Q3: Which of the following is true according to the proof of the FLP result?",
+          "options": [
+            "It uses a bivalent configuration argument",
+            "It assumes crash failures only",
+            "It requires message ordering",
+            "It works only for deterministic algorithms"
+          ],
+          "answer": "It uses a bivalent configuration argument",
+          "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+          "id": "g10_q3"
+        },
+        {
+          "question": "Week 10, Q4: Which of the following is/are the design goals of Freenet?",
+          "options": [
+            "Anonymity",
+            "Decentralization",
+            "Resistance to censorship",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+          "id": "g10_q4"
+        },
+        {
+          "question": "Week 10, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+          "options": [
+            "It prevents infinite loops in routing",
+            "It controls data expiration",
+            "It limits the number of hops",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+          "id": "g10_q5"
+        },
+        {
+          "question": "Week 10, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+          "options": [
+            "Leaf set",
+            "Routing table",
+            "Neighborhood set",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+          "id": "g10_q6"
+        },
+        {
+          "question": "Week 10, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+          "options": [
+            "Rarest first piece selection",
+            "Tit-for-tat bandwidth allocation",
+            "Endgame mode",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+          "id": "g10_q7"
+        },
+        {
+          "question": "Week 10, Q8: What is the primary purpose of the Chord protocol?",
+          "options": [
+            "Distributed hash table implementation",
+            "Consensus algorithm",
+            "Load balancing",
+            "Message ordering"
+          ],
+          "answer": "Distributed hash table implementation",
+          "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+          "id": "g10_q8"
+        },
+        {
+          "question": "Week 10, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+          "options": [
+            "O(log n)",
+            "O(n)",
+            "O(1)",
+            "O(n log n)"
+          ],
+          "answer": "O(log n)",
+          "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+          "id": "g10_q9"
+        },
+        {
+          "question": "Week 10, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+          "options": [
+            "Uses d-dimensional coordinate space",
+            "Each node maintains O(d) neighbors",
+            "Routing complexity is O(dn^(1/d))",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+          "id": "g10_q10"
+        }
+      ]
+    },
+    {
+      "Week_id": 11,
+      "Week_name": "Week 11",
+      "questions": [
+        {
+          "question": "Week 11, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+          "options": [
+            "It ensures eventual consistency",
+            "It uses gossip-based communication",
+            "It has O(log n) message complexity",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+          "id": "g11_q1"
+        },
+        {
+          "question": "Week 11, Q2: What does the FLP result propose (primarily)?",
+          "options": [
+            "Consensus is impossible in asynchronous systems with one faulty process",
+            "Consensus is always possible in synchronous systems",
+            "Consensus requires at least 2f+1 processes",
+            "Consensus is NP-complete"
+          ],
+          "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+          "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+          "id": "g11_q2"
+        },
+        {
+          "question": "Week 11, Q3: Which of the following is true according to the proof of the FLP result?",
+          "options": [
+            "It uses a bivalent configuration argument",
+            "It assumes crash failures only",
+            "It requires message ordering",
+            "It works only for deterministic algorithms"
+          ],
+          "answer": "It uses a bivalent configuration argument",
+          "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+          "id": "g11_q3"
+        },
+        {
+          "question": "Week 11, Q4: Which of the following is/are the design goals of Freenet?",
+          "options": [
+            "Anonymity",
+            "Decentralization",
+            "Resistance to censorship",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+          "id": "g11_q4"
+        },
+        {
+          "question": "Week 11, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+          "options": [
+            "It prevents infinite loops in routing",
+            "It controls data expiration",
+            "It limits the number of hops",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+          "id": "g11_q5"
+        },
+        {
+          "question": "Week 11, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+          "options": [
+            "Leaf set",
+            "Routing table",
+            "Neighborhood set",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+          "id": "g11_q6"
+        },
+        {
+          "question": "Week 11, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+          "options": [
+            "Rarest first piece selection",
+            "Tit-for-tat bandwidth allocation",
+            "Endgame mode",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+          "id": "g11_q7"
+        },
+        {
+          "question": "Week 11, Q8: What is the primary purpose of the Chord protocol?",
+          "options": [
+            "Distributed hash table implementation",
+            "Consensus algorithm",
+            "Load balancing",
+            "Message ordering"
+          ],
+          "answer": "Distributed hash table implementation",
+          "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+          "id": "g11_q8"
+        },
+        {
+          "question": "Week 11, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+          "options": [
+            "O(log n)",
+            "O(n)",
+            "O(1)",
+            "O(n log n)"
+          ],
+          "answer": "O(log n)",
+          "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+          "id": "g11_q9"
+        },
+        {
+          "question": "Week 11, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+          "options": [
+            "Uses d-dimensional coordinate space",
+            "Each node maintains O(d) neighbors",
+            "Routing complexity is O(dn^(1/d))",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+          "id": "g11_q10"
+        }
+      ]
+    },
+    {
+      "Week_id": 12,
+      "Week_name": "Week 12",
+      "questions": [
+        {
+          "question": "Week 12, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+          "options": [
+            "It ensures eventual consistency",
+            "It uses gossip-based communication",
+            "It has O(log n) message complexity",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+          "id": "g12_q1"
+        },
+        {
+          "question": "Week 12, Q2: What does the FLP result propose (primarily)?",
+          "options": [
+            "Consensus is impossible in asynchronous systems with one faulty process",
+            "Consensus is always possible in synchronous systems",
+            "Consensus requires at least 2f+1 processes",
+            "Consensus is NP-complete"
+          ],
+          "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+          "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+          "id": "g12_q2"
+        },
+        {
+          "question": "Week 12, Q3: Which of the following is true according to the proof of the FLP result?",
+          "options": [
+            "It uses a bivalent configuration argument",
+            "It assumes crash failures only",
+            "It requires message ordering",
+            "It works only for deterministic algorithms"
+          ],
+          "answer": "It uses a bivalent configuration argument",
+          "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+          "id": "g12_q3"
+        },
+        {
+          "question": "Week 12, Q4: Which of the following is/are the design goals of Freenet?",
+          "options": [
+            "Anonymity",
+            "Decentralization",
+            "Resistance to censorship",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+          "id": "g12_q4"
+        },
+        {
+          "question": "Week 12, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+          "options": [
+            "It prevents infinite loops in routing",
+            "It controls data expiration",
+            "It limits the number of hops",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+          "id": "g12_q5"
+        },
+        {
+          "question": "Week 12, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+          "options": [
+            "Leaf set",
+            "Routing table",
+            "Neighborhood set",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+          "id": "g12_q6"
+        },
+        {
+          "question": "Week 12, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+          "options": [
+            "Rarest first piece selection",
+            "Tit-for-tat bandwidth allocation",
+            "Endgame mode",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+          "id": "g12_q7"
+        },
+        {
+          "question": "Week 12, Q8: What is the primary purpose of the Chord protocol?",
+          "options": [
+            "Distributed hash table implementation",
+            "Consensus algorithm",
+            "Load balancing",
+            "Message ordering"
+          ],
+          "answer": "Distributed hash table implementation",
+          "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+          "id": "g12_q8"
+        },
+        {
+          "question": "Week 12, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+          "options": [
+            "O(log n)",
+            "O(n)",
+            "O(1)",
+            "O(n log n)"
+          ],
+          "answer": "O(log n)",
+          "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+          "id": "g12_q9"
+        },
+        {
+          "question": "Week 12, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+          "options": [
+            "Uses d-dimensional coordinate space",
+            "Each node maintains O(d) neighbors",
+            "Routing complexity is O(dn^(1/d))",
+            "All of the above"
+          ],
+          "answer": "All of the above",
+          "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+          "id": "g12_q10"
+        }
+      ]
+    }
+  ],
+  "full_series": [
+    {
+      "question": "Week 1, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+      "options": [
+        "It ensures eventual consistency",
+        "It uses gossip-based communication",
+        "It has O(log n) message complexity",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+      "id": "g1_q1"
+    },
+    {
+      "question": "Week 1, Q2: What does the FLP result propose (primarily)?",
+      "options": [
+        "Consensus is impossible in asynchronous systems with one faulty process",
+        "Consensus is always possible in synchronous systems",
+        "Consensus requires at least 2f+1 processes",
+        "Consensus is NP-complete"
+      ],
+      "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+      "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+      "id": "g1_q2"
+    },
+    {
+      "question": "Week 1, Q3: Which of the following is true according to the proof of the FLP result?",
+      "options": [
+        "It uses a bivalent configuration argument",
+        "It assumes crash failures only",
+        "It requires message ordering",
+        "It works only for deterministic algorithms"
+      ],
+      "answer": "It uses a bivalent configuration argument",
+      "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+      "id": "g1_q3"
+    },
+    {
+      "question": "Week 1, Q4: Which of the following is/are the design goals of Freenet?",
+      "options": [
+        "Anonymity",
+        "Decentralization",
+        "Resistance to censorship",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+      "id": "g1_q4"
+    },
+    {
+      "question": "Week 1, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+      "options": [
+        "It prevents infinite loops in routing",
+        "It controls data expiration",
+        "It limits the number of hops",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+      "id": "g1_q5"
+    },
+    {
+      "question": "Week 1, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+      "options": [
+        "Leaf set",
+        "Routing table",
+        "Neighborhood set",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+      "id": "g1_q6"
+    },
+    {
+      "question": "Week 1, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+      "options": [
+        "Rarest first piece selection",
+        "Tit-for-tat bandwidth allocation",
+        "Endgame mode",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+      "id": "g1_q7"
+    },
+    {
+      "question": "Week 1, Q8: What is the primary purpose of the Chord protocol?",
+      "options": [
+        "Distributed hash table implementation",
+        "Consensus algorithm",
+        "Load balancing",
+        "Message ordering"
+      ],
+      "answer": "Distributed hash table implementation",
+      "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+      "id": "g1_q8"
+    },
+    {
+      "question": "Week 1, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+      "options": [
+        "O(log n)",
+        "O(n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "answer": "O(log n)",
+      "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+      "id": "g1_q9"
+    },
+    {
+      "question": "Week 1, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+      "options": [
+        "Uses d-dimensional coordinate space",
+        "Each node maintains O(d) neighbors",
+        "Routing complexity is O(dn^(1/d))",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+      "id": "g1_q10"
+    },
+    {
+      "question": "Week 2, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+      "options": [
+        "It ensures eventual consistency",
+        "It uses gossip-based communication",
+        "It has O(log n) message complexity",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+      "id": "g2_q1"
+    },
+    {
+      "question": "Week 2, Q2: What does the FLP result propose (primarily)?",
+      "options": [
+        "Consensus is impossible in asynchronous systems with one faulty process",
+        "Consensus is always possible in synchronous systems",
+        "Consensus requires at least 2f+1 processes",
+        "Consensus is NP-complete"
+      ],
+      "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+      "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+      "id": "g2_q2"
+    },
+    {
+      "question": "Week 2, Q3: Which of the following is true according to the proof of the FLP result?",
+      "options": [
+        "It uses a bivalent configuration argument",
+        "It assumes crash failures only",
+        "It requires message ordering",
+        "It works only for deterministic algorithms"
+      ],
+      "answer": "It uses a bivalent configuration argument",
+      "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+      "id": "g2_q3"
+    },
+    {
+      "question": "Week 2, Q4: Which of the following is/are the design goals of Freenet?",
+      "options": [
+        "Anonymity",
+        "Decentralization",
+        "Resistance to censorship",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+      "id": "g2_q4"
+    },
+    {
+      "question": "Week 2, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+      "options": [
+        "It prevents infinite loops in routing",
+        "It controls data expiration",
+        "It limits the number of hops",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+      "id": "g2_q5"
+    },
+    {
+      "question": "Week 2, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+      "options": [
+        "Leaf set",
+        "Routing table",
+        "Neighborhood set",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+      "id": "g2_q6"
+    },
+    {
+      "question": "Week 2, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+      "options": [
+        "Rarest first piece selection",
+        "Tit-for-tat bandwidth allocation",
+        "Endgame mode",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+      "id": "g2_q7"
+    },
+    {
+      "question": "Week 2, Q8: What is the primary purpose of the Chord protocol?",
+      "options": [
+        "Distributed hash table implementation",
+        "Consensus algorithm",
+        "Load balancing",
+        "Message ordering"
+      ],
+      "answer": "Distributed hash table implementation",
+      "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+      "id": "g2_q8"
+    },
+    {
+      "question": "Week 2, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+      "options": [
+        "O(log n)",
+        "O(n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "answer": "O(log n)",
+      "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+      "id": "g2_q9"
+    },
+    {
+      "question": "Week 2, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+      "options": [
+        "Uses d-dimensional coordinate space",
+        "Each node maintains O(d) neighbors",
+        "Routing complexity is O(dn^(1/d))",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+      "id": "g2_q10"
+    },
+    {
+      "question": "Week 3, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+      "options": [
+        "It ensures eventual consistency",
+        "It uses gossip-based communication",
+        "It has O(log n) message complexity",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+      "id": "g3_q1"
+    },
+    {
+      "question": "Week 3, Q2: What does the FLP result propose (primarily)?",
+      "options": [
+        "Consensus is impossible in asynchronous systems with one faulty process",
+        "Consensus is always possible in synchronous systems",
+        "Consensus requires at least 2f+1 processes",
+        "Consensus is NP-complete"
+      ],
+      "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+      "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+      "id": "g3_q2"
+    },
+    {
+      "question": "Week 3, Q3: Which of the following is true according to the proof of the FLP result?",
+      "options": [
+        "It uses a bivalent configuration argument",
+        "It assumes crash failures only",
+        "It requires message ordering",
+        "It works only for deterministic algorithms"
+      ],
+      "answer": "It uses a bivalent configuration argument",
+      "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+      "id": "g3_q3"
+    },
+    {
+      "question": "Week 3, Q4: Which of the following is/are the design goals of Freenet?",
+      "options": [
+        "Anonymity",
+        "Decentralization",
+        "Resistance to censorship",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+      "id": "g3_q4"
+    },
+    {
+      "question": "Week 3, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+      "options": [
+        "It prevents infinite loops in routing",
+        "It controls data expiration",
+        "It limits the number of hops",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+      "id": "g3_q5"
+    },
+    {
+      "question": "Week 3, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+      "options": [
+        "Leaf set",
+        "Routing table",
+        "Neighborhood set",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+      "id": "g3_q6"
+    },
+    {
+      "question": "Week 3, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+      "options": [
+        "Rarest first piece selection",
+        "Tit-for-tat bandwidth allocation",
+        "Endgame mode",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+      "id": "g3_q7"
+    },
+    {
+      "question": "Week 3, Q8: What is the primary purpose of the Chord protocol?",
+      "options": [
+        "Distributed hash table implementation",
+        "Consensus algorithm",
+        "Load balancing",
+        "Message ordering"
+      ],
+      "answer": "Distributed hash table implementation",
+      "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+      "id": "g3_q8"
+    },
+    {
+      "question": "Week 3, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+      "options": [
+        "O(log n)",
+        "O(n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "answer": "O(log n)",
+      "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+      "id": "g3_q9"
+    },
+    {
+      "question": "Week 3, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+      "options": [
+        "Uses d-dimensional coordinate space",
+        "Each node maintains O(d) neighbors",
+        "Routing complexity is O(dn^(1/d))",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+      "id": "g3_q10"
+    },
+    {
+      "question": "Week 4, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+      "options": [
+        "It ensures eventual consistency",
+        "It uses gossip-based communication",
+        "It has O(log n) message complexity",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+      "id": "g4_q1"
+    },
+    {
+      "question": "Week 4, Q2: What does the FLP result propose (primarily)?",
+      "options": [
+        "Consensus is impossible in asynchronous systems with one faulty process",
+        "Consensus is always possible in synchronous systems",
+        "Consensus requires at least 2f+1 processes",
+        "Consensus is NP-complete"
+      ],
+      "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+      "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+      "id": "g4_q2"
+    },
+    {
+      "question": "Week 4, Q3: Which of the following is true according to the proof of the FLP result?",
+      "options": [
+        "It uses a bivalent configuration argument",
+        "It assumes crash failures only",
+        "It requires message ordering",
+        "It works only for deterministic algorithms"
+      ],
+      "answer": "It uses a bivalent configuration argument",
+      "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+      "id": "g4_q3"
+    },
+    {
+      "question": "Week 4, Q4: Which of the following is/are the design goals of Freenet?",
+      "options": [
+        "Anonymity",
+        "Decentralization",
+        "Resistance to censorship",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+      "id": "g4_q4"
+    },
+    {
+      "question": "Week 4, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+      "options": [
+        "It prevents infinite loops in routing",
+        "It controls data expiration",
+        "It limits the number of hops",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+      "id": "g4_q5"
+    },
+    {
+      "question": "Week 4, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+      "options": [
+        "Leaf set",
+        "Routing table",
+        "Neighborhood set",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+      "id": "g4_q6"
+    },
+    {
+      "question": "Week 4, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+      "options": [
+        "Rarest first piece selection",
+        "Tit-for-tat bandwidth allocation",
+        "Endgame mode",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+      "id": "g4_q7"
+    },
+    {
+      "question": "Week 4, Q8: What is the primary purpose of the Chord protocol?",
+      "options": [
+        "Distributed hash table implementation",
+        "Consensus algorithm",
+        "Load balancing",
+        "Message ordering"
+      ],
+      "answer": "Distributed hash table implementation",
+      "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+      "id": "g4_q8"
+    },
+    {
+      "question": "Week 4, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+      "options": [
+        "O(log n)",
+        "O(n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "answer": "O(log n)",
+      "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+      "id": "g4_q9"
+    },
+    {
+      "question": "Week 4, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+      "options": [
+        "Uses d-dimensional coordinate space",
+        "Each node maintains O(d) neighbors",
+        "Routing complexity is O(dn^(1/d))",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+      "id": "g4_q10"
+    },
+    {
+      "question": "Week 5, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+      "options": [
+        "It ensures eventual consistency",
+        "It uses gossip-based communication",
+        "It has O(log n) message complexity",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+      "id": "g5_q1"
+    },
+    {
+      "question": "Week 5, Q2: What does the FLP result propose (primarily)?",
+      "options": [
+        "Consensus is impossible in asynchronous systems with one faulty process",
+        "Consensus is always possible in synchronous systems",
+        "Consensus requires at least 2f+1 processes",
+        "Consensus is NP-complete"
+      ],
+      "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+      "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+      "id": "g5_q2"
+    },
+    {
+      "question": "Week 5, Q3: Which of the following is true according to the proof of the FLP result?",
+      "options": [
+        "It uses a bivalent configuration argument",
+        "It assumes crash failures only",
+        "It requires message ordering",
+        "It works only for deterministic algorithms"
+      ],
+      "answer": "It uses a bivalent configuration argument",
+      "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+      "id": "g5_q3"
+    },
+    {
+      "question": "Week 5, Q4: Which of the following is/are the design goals of Freenet?",
+      "options": [
+        "Anonymity",
+        "Decentralization",
+        "Resistance to censorship",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+      "id": "g5_q4"
+    },
+    {
+      "question": "Week 5, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+      "options": [
+        "It prevents infinite loops in routing",
+        "It controls data expiration",
+        "It limits the number of hops",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+      "id": "g5_q5"
+    },
+    {
+      "question": "Week 5, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+      "options": [
+        "Leaf set",
+        "Routing table",
+        "Neighborhood set",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+      "id": "g5_q6"
+    },
+    {
+      "question": "Week 5, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+      "options": [
+        "Rarest first piece selection",
+        "Tit-for-tat bandwidth allocation",
+        "Endgame mode",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+      "id": "g5_q7"
+    },
+    {
+      "question": "Week 5, Q8: What is the primary purpose of the Chord protocol?",
+      "options": [
+        "Distributed hash table implementation",
+        "Consensus algorithm",
+        "Load balancing",
+        "Message ordering"
+      ],
+      "answer": "Distributed hash table implementation",
+      "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+      "id": "g5_q8"
+    },
+    {
+      "question": "Week 5, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+      "options": [
+        "O(log n)",
+        "O(n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "answer": "O(log n)",
+      "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+      "id": "g5_q9"
+    },
+    {
+      "question": "Week 5, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+      "options": [
+        "Uses d-dimensional coordinate space",
+        "Each node maintains O(d) neighbors",
+        "Routing complexity is O(dn^(1/d))",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+      "id": "g5_q10"
+    },
+    {
+      "question": "Week 6, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+      "options": [
+        "It ensures eventual consistency",
+        "It uses gossip-based communication",
+        "It has O(log n) message complexity",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+      "id": "g6_q1"
+    },
+    {
+      "question": "Week 6, Q2: What does the FLP result propose (primarily)?",
+      "options": [
+        "Consensus is impossible in asynchronous systems with one faulty process",
+        "Consensus is always possible in synchronous systems",
+        "Consensus requires at least 2f+1 processes",
+        "Consensus is NP-complete"
+      ],
+      "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+      "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+      "id": "g6_q2"
+    },
+    {
+      "question": "Week 6, Q3: Which of the following is true according to the proof of the FLP result?",
+      "options": [
+        "It uses a bivalent configuration argument",
+        "It assumes crash failures only",
+        "It requires message ordering",
+        "It works only for deterministic algorithms"
+      ],
+      "answer": "It uses a bivalent configuration argument",
+      "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+      "id": "g6_q3"
+    },
+    {
+      "question": "Week 6, Q4: Which of the following is/are the design goals of Freenet?",
+      "options": [
+        "Anonymity",
+        "Decentralization",
+        "Resistance to censorship",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+      "id": "g6_q4"
+    },
+    {
+      "question": "Week 6, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+      "options": [
+        "It prevents infinite loops in routing",
+        "It controls data expiration",
+        "It limits the number of hops",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+      "id": "g6_q5"
+    },
+    {
+      "question": "Week 6, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+      "options": [
+        "Leaf set",
+        "Routing table",
+        "Neighborhood set",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+      "id": "g6_q6"
+    },
+    {
+      "question": "Week 6, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+      "options": [
+        "Rarest first piece selection",
+        "Tit-for-tat bandwidth allocation",
+        "Endgame mode",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+      "id": "g6_q7"
+    },
+    {
+      "question": "Week 6, Q8: What is the primary purpose of the Chord protocol?",
+      "options": [
+        "Distributed hash table implementation",
+        "Consensus algorithm",
+        "Load balancing",
+        "Message ordering"
+      ],
+      "answer": "Distributed hash table implementation",
+      "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+      "id": "g6_q8"
+    },
+    {
+      "question": "Week 6, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+      "options": [
+        "O(log n)",
+        "O(n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "answer": "O(log n)",
+      "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+      "id": "g6_q9"
+    },
+    {
+      "question": "Week 6, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+      "options": [
+        "Uses d-dimensional coordinate space",
+        "Each node maintains O(d) neighbors",
+        "Routing complexity is O(dn^(1/d))",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+      "id": "g6_q10"
+    },
+    {
+      "question": "Week 7, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+      "options": [
+        "It ensures eventual consistency",
+        "It uses gossip-based communication",
+        "It has O(log n) message complexity",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+      "id": "g7_q1"
+    },
+    {
+      "question": "Week 7, Q2: What does the FLP result propose (primarily)?",
+      "options": [
+        "Consensus is impossible in asynchronous systems with one faulty process",
+        "Consensus is always possible in synchronous systems",
+        "Consensus requires at least 2f+1 processes",
+        "Consensus is NP-complete"
+      ],
+      "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+      "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+      "id": "g7_q2"
+    },
+    {
+      "question": "Week 7, Q3: Which of the following is true according to the proof of the FLP result?",
+      "options": [
+        "It uses a bivalent configuration argument",
+        "It assumes crash failures only",
+        "It requires message ordering",
+        "It works only for deterministic algorithms"
+      ],
+      "answer": "It uses a bivalent configuration argument",
+      "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+      "id": "g7_q3"
+    },
+    {
+      "question": "Week 7, Q4: Which of the following is/are the design goals of Freenet?",
+      "options": [
+        "Anonymity",
+        "Decentralization",
+        "Resistance to censorship",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+      "id": "g7_q4"
+    },
+    {
+      "question": "Week 7, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+      "options": [
+        "It prevents infinite loops in routing",
+        "It controls data expiration",
+        "It limits the number of hops",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+      "id": "g7_q5"
+    },
+    {
+      "question": "Week 7, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+      "options": [
+        "Leaf set",
+        "Routing table",
+        "Neighborhood set",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+      "id": "g7_q6"
+    },
+    {
+      "question": "Week 7, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+      "options": [
+        "Rarest first piece selection",
+        "Tit-for-tat bandwidth allocation",
+        "Endgame mode",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+      "id": "g7_q7"
+    },
+    {
+      "question": "Week 7, Q8: What is the primary purpose of the Chord protocol?",
+      "options": [
+        "Distributed hash table implementation",
+        "Consensus algorithm",
+        "Load balancing",
+        "Message ordering"
+      ],
+      "answer": "Distributed hash table implementation",
+      "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+      "id": "g7_q8"
+    },
+    {
+      "question": "Week 7, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+      "options": [
+        "O(log n)",
+        "O(n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "answer": "O(log n)",
+      "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+      "id": "g7_q9"
+    },
+    {
+      "question": "Week 7, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+      "options": [
+        "Uses d-dimensional coordinate space",
+        "Each node maintains O(d) neighbors",
+        "Routing complexity is O(dn^(1/d))",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+      "id": "g7_q10"
+    },
+    {
+      "question": "Week 8, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+      "options": [
+        "It ensures eventual consistency",
+        "It uses gossip-based communication",
+        "It has O(log n) message complexity",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+      "id": "g8_q1"
+    },
+    {
+      "question": "Week 8, Q2: What does the FLP result propose (primarily)?",
+      "options": [
+        "Consensus is impossible in asynchronous systems with one faulty process",
+        "Consensus is always possible in synchronous systems",
+        "Consensus requires at least 2f+1 processes",
+        "Consensus is NP-complete"
+      ],
+      "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+      "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+      "id": "g8_q2"
+    },
+    {
+      "question": "Week 8, Q3: Which of the following is true according to the proof of the FLP result?",
+      "options": [
+        "It uses a bivalent configuration argument",
+        "It assumes crash failures only",
+        "It requires message ordering",
+        "It works only for deterministic algorithms"
+      ],
+      "answer": "It uses a bivalent configuration argument",
+      "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+      "id": "g8_q3"
+    },
+    {
+      "question": "Week 8, Q4: Which of the following is/are the design goals of Freenet?",
+      "options": [
+        "Anonymity",
+        "Decentralization",
+        "Resistance to censorship",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+      "id": "g8_q4"
+    },
+    {
+      "question": "Week 8, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+      "options": [
+        "It prevents infinite loops in routing",
+        "It controls data expiration",
+        "It limits the number of hops",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+      "id": "g8_q5"
+    },
+    {
+      "question": "Week 8, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+      "options": [
+        "Leaf set",
+        "Routing table",
+        "Neighborhood set",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+      "id": "g8_q6"
+    },
+    {
+      "question": "Week 8, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+      "options": [
+        "Rarest first piece selection",
+        "Tit-for-tat bandwidth allocation",
+        "Endgame mode",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+      "id": "g8_q7"
+    },
+    {
+      "question": "Week 8, Q8: What is the primary purpose of the Chord protocol?",
+      "options": [
+        "Distributed hash table implementation",
+        "Consensus algorithm",
+        "Load balancing",
+        "Message ordering"
+      ],
+      "answer": "Distributed hash table implementation",
+      "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+      "id": "g8_q8"
+    },
+    {
+      "question": "Week 8, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+      "options": [
+        "O(log n)",
+        "O(n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "answer": "O(log n)",
+      "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+      "id": "g8_q9"
+    },
+    {
+      "question": "Week 8, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+      "options": [
+        "Uses d-dimensional coordinate space",
+        "Each node maintains O(d) neighbors",
+        "Routing complexity is O(dn^(1/d))",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+      "id": "g8_q10"
+    },
+    {
+      "question": "Week 9, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+      "options": [
+        "It ensures eventual consistency",
+        "It uses gossip-based communication",
+        "It has O(log n) message complexity",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+      "id": "g9_q1"
+    },
+    {
+      "question": "Week 9, Q2: What does the FLP result propose (primarily)?",
+      "options": [
+        "Consensus is impossible in asynchronous systems with one faulty process",
+        "Consensus is always possible in synchronous systems",
+        "Consensus requires at least 2f+1 processes",
+        "Consensus is NP-complete"
+      ],
+      "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+      "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+      "id": "g9_q2"
+    },
+    {
+      "question": "Week 9, Q3: Which of the following is true according to the proof of the FLP result?",
+      "options": [
+        "It uses a bivalent configuration argument",
+        "It assumes crash failures only",
+        "It requires message ordering",
+        "It works only for deterministic algorithms"
+      ],
+      "answer": "It uses a bivalent configuration argument",
+      "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+      "id": "g9_q3"
+    },
+    {
+      "question": "Week 9, Q4: Which of the following is/are the design goals of Freenet?",
+      "options": [
+        "Anonymity",
+        "Decentralization",
+        "Resistance to censorship",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+      "id": "g9_q4"
+    },
+    {
+      "question": "Week 9, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+      "options": [
+        "It prevents infinite loops in routing",
+        "It controls data expiration",
+        "It limits the number of hops",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+      "id": "g9_q5"
+    },
+    {
+      "question": "Week 9, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+      "options": [
+        "Leaf set",
+        "Routing table",
+        "Neighborhood set",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+      "id": "g9_q6"
+    },
+    {
+      "question": "Week 9, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+      "options": [
+        "Rarest first piece selection",
+        "Tit-for-tat bandwidth allocation",
+        "Endgame mode",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+      "id": "g9_q7"
+    },
+    {
+      "question": "Week 9, Q8: What is the primary purpose of the Chord protocol?",
+      "options": [
+        "Distributed hash table implementation",
+        "Consensus algorithm",
+        "Load balancing",
+        "Message ordering"
+      ],
+      "answer": "Distributed hash table implementation",
+      "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+      "id": "g9_q8"
+    },
+    {
+      "question": "Week 9, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+      "options": [
+        "O(log n)",
+        "O(n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "answer": "O(log n)",
+      "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+      "id": "g9_q9"
+    },
+    {
+      "question": "Week 9, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+      "options": [
+        "Uses d-dimensional coordinate space",
+        "Each node maintains O(d) neighbors",
+        "Routing complexity is O(dn^(1/d))",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+      "id": "g9_q10"
+    },
+    {
+      "question": "Week 10, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+      "options": [
+        "It ensures eventual consistency",
+        "It uses gossip-based communication",
+        "It has O(log n) message complexity",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+      "id": "g10_q1"
+    },
+    {
+      "question": "Week 10, Q2: What does the FLP result propose (primarily)?",
+      "options": [
+        "Consensus is impossible in asynchronous systems with one faulty process",
+        "Consensus is always possible in synchronous systems",
+        "Consensus requires at least 2f+1 processes",
+        "Consensus is NP-complete"
+      ],
+      "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+      "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+      "id": "g10_q2"
+    },
+    {
+      "question": "Week 10, Q3: Which of the following is true according to the proof of the FLP result?",
+      "options": [
+        "It uses a bivalent configuration argument",
+        "It assumes crash failures only",
+        "It requires message ordering",
+        "It works only for deterministic algorithms"
+      ],
+      "answer": "It uses a bivalent configuration argument",
+      "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+      "id": "g10_q3"
+    },
+    {
+      "question": "Week 10, Q4: Which of the following is/are the design goals of Freenet?",
+      "options": [
+        "Anonymity",
+        "Decentralization",
+        "Resistance to censorship",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+      "id": "g10_q4"
+    },
+    {
+      "question": "Week 10, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+      "options": [
+        "It prevents infinite loops in routing",
+        "It controls data expiration",
+        "It limits the number of hops",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+      "id": "g10_q5"
+    },
+    {
+      "question": "Week 10, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+      "options": [
+        "Leaf set",
+        "Routing table",
+        "Neighborhood set",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+      "id": "g10_q6"
+    },
+    {
+      "question": "Week 10, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+      "options": [
+        "Rarest first piece selection",
+        "Tit-for-tat bandwidth allocation",
+        "Endgame mode",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+      "id": "g10_q7"
+    },
+    {
+      "question": "Week 10, Q8: What is the primary purpose of the Chord protocol?",
+      "options": [
+        "Distributed hash table implementation",
+        "Consensus algorithm",
+        "Load balancing",
+        "Message ordering"
+      ],
+      "answer": "Distributed hash table implementation",
+      "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+      "id": "g10_q8"
+    },
+    {
+      "question": "Week 10, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+      "options": [
+        "O(log n)",
+        "O(n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "answer": "O(log n)",
+      "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+      "id": "g10_q9"
+    },
+    {
+      "question": "Week 10, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+      "options": [
+        "Uses d-dimensional coordinate space",
+        "Each node maintains O(d) neighbors",
+        "Routing complexity is O(dn^(1/d))",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+      "id": "g10_q10"
+    },
+    {
+      "question": "Week 11, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+      "options": [
+        "It ensures eventual consistency",
+        "It uses gossip-based communication",
+        "It has O(log n) message complexity",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+      "id": "g11_q1"
+    },
+    {
+      "question": "Week 11, Q2: What does the FLP result propose (primarily)?",
+      "options": [
+        "Consensus is impossible in asynchronous systems with one faulty process",
+        "Consensus is always possible in synchronous systems",
+        "Consensus requires at least 2f+1 processes",
+        "Consensus is NP-complete"
+      ],
+      "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+      "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+      "id": "g11_q2"
+    },
+    {
+      "question": "Week 11, Q3: Which of the following is true according to the proof of the FLP result?",
+      "options": [
+        "It uses a bivalent configuration argument",
+        "It assumes crash failures only",
+        "It requires message ordering",
+        "It works only for deterministic algorithms"
+      ],
+      "answer": "It uses a bivalent configuration argument",
+      "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+      "id": "g11_q3"
+    },
+    {
+      "question": "Week 11, Q4: Which of the following is/are the design goals of Freenet?",
+      "options": [
+        "Anonymity",
+        "Decentralization",
+        "Resistance to censorship",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+      "id": "g11_q4"
+    },
+    {
+      "question": "Week 11, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+      "options": [
+        "It prevents infinite loops in routing",
+        "It controls data expiration",
+        "It limits the number of hops",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+      "id": "g11_q5"
+    },
+    {
+      "question": "Week 11, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+      "options": [
+        "Leaf set",
+        "Routing table",
+        "Neighborhood set",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+      "id": "g11_q6"
+    },
+    {
+      "question": "Week 11, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+      "options": [
+        "Rarest first piece selection",
+        "Tit-for-tat bandwidth allocation",
+        "Endgame mode",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+      "id": "g11_q7"
+    },
+    {
+      "question": "Week 11, Q8: What is the primary purpose of the Chord protocol?",
+      "options": [
+        "Distributed hash table implementation",
+        "Consensus algorithm",
+        "Load balancing",
+        "Message ordering"
+      ],
+      "answer": "Distributed hash table implementation",
+      "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+      "id": "g11_q8"
+    },
+    {
+      "question": "Week 11, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+      "options": [
+        "O(log n)",
+        "O(n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "answer": "O(log n)",
+      "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+      "id": "g11_q9"
+    },
+    {
+      "question": "Week 11, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+      "options": [
+        "Uses d-dimensional coordinate space",
+        "Each node maintains O(d) neighbors",
+        "Routing complexity is O(dn^(1/d))",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+      "id": "g11_q10"
+    },
+    {
+      "question": "Week 12, Q1: Which of the following statements is/are correct regarding the rumor mongering protocol?",
+      "options": [
+        "It ensures eventual consistency",
+        "It uses gossip-based communication",
+        "It has O(log n) message complexity",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Rumor mongering protocol uses gossip-based communication to ensure eventual consistency with logarithmic message complexity.",
+      "id": "g12_q1"
+    },
+    {
+      "question": "Week 12, Q2: What does the FLP result propose (primarily)?",
+      "options": [
+        "Consensus is impossible in asynchronous systems with one faulty process",
+        "Consensus is always possible in synchronous systems",
+        "Consensus requires at least 2f+1 processes",
+        "Consensus is NP-complete"
+      ],
+      "answer": "Consensus is impossible in asynchronous systems with one faulty process",
+      "explanation": "The FLP (Fischer-Lynch-Paterson) result proves that consensus is impossible in asynchronous distributed systems with even one faulty process.",
+      "id": "g12_q2"
+    },
+    {
+      "question": "Week 12, Q3: Which of the following is true according to the proof of the FLP result?",
+      "options": [
+        "It uses a bivalent configuration argument",
+        "It assumes crash failures only",
+        "It requires message ordering",
+        "It works only for deterministic algorithms"
+      ],
+      "answer": "It uses a bivalent configuration argument",
+      "explanation": "The FLP proof uses the concept of bivalent configurations to show that consensus is impossible.",
+      "id": "g12_q3"
+    },
+    {
+      "question": "Week 12, Q4: Which of the following is/are the design goals of Freenet?",
+      "options": [
+        "Anonymity",
+        "Decentralization",
+        "Resistance to censorship",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "Freenet is designed to provide anonymity, decentralization, and resistance to censorship.",
+      "id": "g12_q4"
+    },
+    {
+      "question": "Week 12, Q5: Which of the following statements is (are) correct regarding the TTL (time-to-live) field in Freenet?",
+      "options": [
+        "It prevents infinite loops in routing",
+        "It controls data expiration",
+        "It limits the number of hops",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "TTL in Freenet prevents infinite loops, controls data expiration, and limits the number of hops.",
+      "id": "g12_q5"
+    },
+    {
+      "question": "Week 12, Q6: Which of the following entities is (are) part of the structure of a Pastry node?",
+      "options": [
+        "Leaf set",
+        "Routing table",
+        "Neighborhood set",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "A Pastry node contains a leaf set, routing table, and neighborhood set for efficient routing.",
+      "id": "g12_q6"
+    },
+    {
+      "question": "Week 12, Q7: Which of the following strategies is employed by the BitTorrent protocol while downloading a file?",
+      "options": [
+        "Rarest first piece selection",
+        "Tit-for-tat bandwidth allocation",
+        "Endgame mode",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "BitTorrent uses rarest first piece selection, tit-for-tat bandwidth allocation, and endgame mode for efficient file sharing.",
+      "id": "g12_q7"
+    },
+    {
+      "question": "Week 12, Q8: What is the primary purpose of the Chord protocol?",
+      "options": [
+        "Distributed hash table implementation",
+        "Consensus algorithm",
+        "Load balancing",
+        "Message ordering"
+      ],
+      "answer": "Distributed hash table implementation",
+      "explanation": "Chord is a distributed hash table protocol that provides efficient key-value storage and retrieval in a peer-to-peer network.",
+      "id": "g12_q8"
+    },
+    {
+      "question": "Week 12, Q9: In the Chord protocol, what is the maximum number of hops required to find a key?",
+      "options": [
+        "O(log n)",
+        "O(n)",
+        "O(1)",
+        "O(n log n)"
+      ],
+      "answer": "O(log n)",
+      "explanation": "Chord uses a finger table that allows routing to any key in O(log n) hops where n is the number of nodes.",
+      "id": "g12_q9"
+    },
+    {
+      "question": "Week 12, Q10: Which of the following is a characteristic of the CAN (Content Addressable Network) protocol?",
+      "options": [
+        "Uses d-dimensional coordinate space",
+        "Each node maintains O(d) neighbors",
+        "Routing complexity is O(dn^(1/d))",
+        "All of the above"
+      ],
+      "answer": "All of the above",
+      "explanation": "CAN uses a d-dimensional coordinate space, each node maintains O(d) neighbors, and routing complexity is O(dn^(1/d)).",
+      "id": "g12_q10"
+    }
+  ]
+}
