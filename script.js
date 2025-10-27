@@ -394,10 +394,18 @@ class QuizApp {
             document.body.appendChild(alertBox);
         }
         alertBox.style.background = isCorrect ? '#4caf50' : '#f44336';
-        alertBox.innerHTML = `<strong>${message}</strong><br><span style='font-size:14px;'>${explanation || ''}</span>`;
+        alertBox.innerHTML = `<strong>${message}</strong><br><span style='font-size:14px;'>${explanation || ''}</span>\n<button id='close-alert-btn' style='position:absolute;top:8px;right:12px;background:transparent;border:none;color:#fff;font-size:18px;cursor:pointer;' aria-label='Close'>&times;</button>`;
         alertBox.style.display = 'block';
+        // Add close button event
+        const closeBtn = document.getElementById('close-alert-btn');
+        if (closeBtn) {
+            closeBtn.onclick = () => { alertBox.style.display = 'none'; };
+        }
+        // Auto-hide after 3s unless closed manually
         setTimeout(() => {
-            alertBox.style.display = 'none';
+            if (alertBox.style.display !== 'none') {
+                alertBox.style.display = 'none';
+            }
         }, 3000);
     }
 
