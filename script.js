@@ -165,6 +165,7 @@ class QuizApp {
         
         // Enable next button
         this.updateNavigationButtons();
+        this.showAnswerFeedback(optionIndex); // Pass optionIndex to feedback
     }
 
     nextQuestion() {
@@ -357,6 +358,47 @@ class QuizApp {
                 reviewContainer.appendChild(reviewItem);
             }
         }
+    }
+
+    showAnswerFeedback(optionIndex) {
+        const question = this.currentQuestions[this.currentQuestionIndex];
+        const correctAnswerIndex = question.options.indexOf(question.answer);
+        let feedbackMsg = '';
+        let isCorrect = false;
+        if (optionIndex == correctAnswerIndex) {
+            feedbackMsg = 'Correct!';
+            isCorrect = true;
+        } else {
+            feedbackMsg = 'Incorrect!';
+        }
+        // Show feedback alert
+        this.showSimpleAlert(feedbackMsg, isCorrect, question.explanation);
+    }
+
+    showSimpleAlert(message, isCorrect, explanation) {
+        let alertBox = document.getElementById('answer-alert');
+        if (!alertBox) {
+            alertBox = document.createElement('div');
+            alertBox.id = 'answer-alert';
+            alertBox.style.position = 'fixed';
+            alertBox.style.bottom = '30px';
+            alertBox.style.left = '50%';
+            alertBox.style.transform = 'translateX(-50%)';
+            alertBox.style.zIndex = '9999';
+            alertBox.style.padding = '12px 20px';
+            alertBox.style.borderRadius = '8px';
+            alertBox.style.fontSize = '16px';
+            alertBox.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
+            alertBox.style.color = '#fff';
+            alertBox.style.maxWidth = '90vw';
+            document.body.appendChild(alertBox);
+        }
+        alertBox.style.background = isCorrect ? '#4caf50' : '#f44336';
+        alertBox.innerHTML = `<strong>${message}</strong><br><span style='font-size:14px;'>${explanation || ''}</span>`;
+        alertBox.style.display = 'block';
+        setTimeout(() => {
+            alertBox.style.display = 'none';
+        }, 5000);
     }
 
     retakeQuiz() {
