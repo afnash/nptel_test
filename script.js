@@ -398,7 +398,7 @@ class QuizApp {
         alertBox.style.display = 'block';
         setTimeout(() => {
             alertBox.style.display = 'none';
-        }, 5000);
+        }, 3000);
     }
 
     retakeQuiz() {
