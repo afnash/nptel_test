@@ -41,7 +41,9 @@
             <div class="welcome-card">
                 <div class="welcome-content">
                     <h2>Welcome to ADS Quiz</h2>
-                    <p>Test your knowledge of Advanced Distributed Systems with the comprehensive quiz series.</p>
+                    <p>Test your knowledge of Advanced Distributed Systems with the comprehensive quiz series.
+                        Weekly divided notes also included !
+                    </p>
                     <div class="stats">
                         <div class="stat">
                             <i class="fas fa-question-circle"></i>
@@ -60,6 +62,17 @@
             </div>
 
             <div class="quiz-options">
+                <div class="option-card" onclick="startQuiz('weekly')">
+                    <div class="option-icon">
+                        <i class="fas fa-calendar-week"></i>
+                    </div>
+                    <h3>Weekly Series</h3>
+                    <p>10 questions per week, 12 weeks <br> 
+                        Weekly short notes also included
+                    </p>
+                    <div class="option-badge">Learn and Practice !</div>
+                </div>
+
                 <div class="option-card" onclick="startQuiz('full')">
                     <div class="option-icon">
                         <i class="fas fa-play-circle"></i>
@@ -69,14 +82,20 @@
                     <div class="option-badge">All Questions</div>
                 </div>
 
-                <div class="option-card" onclick="startQuiz('weekly')">
+                <div class="option-card" onclick="startLearning()">
                     <div class="option-icon">
-                        <i class="fas fa-calendar-week"></i>
+                        <i class=" fas fa-book"></i>
+                        <h3>Short Notes</h3>
+                        <p>Complete Short notes from yt videos</p>
+                        <div class="option-badge">Short Notes</div>
+
                     </div>
-                    <h3>Weekly Series</h3>
-                    <p>10 questions per week, 12 weeks</p>
-                    <div class="option-badge">12 Weeks</div>
+
                 </div>
+
+                
+
+                
             </div>
         </div>
 
@@ -96,6 +115,12 @@
         <!-- Quiz Screen -->
         <div id="quiz-screen" class="screen">
             <div class="quiz-header">
+                <div class="screen-header">
+                    <button class="back-btn" onclick="showHome()">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <h2>Full Test</h2>
+                </div>
                 <div class="progress-container">
                     <div class="progress-bar">
                         <div class="progress-fill" id="progress-fill"></div>
@@ -202,7 +227,7 @@
     <footer style="text-align:center;">
   <p>Made with ❤️ by <a href="https://www.github.com/afnash" target="_blank">afnashh</a></p>
   <br></br>
-  <p>Contribute Questions / Feedback: <a href="https://wa.me/917902981323?text=hi,NPTEL update..." target="_blank">send hi 👋!</a></p>
+  <p>Contribute Questions / Feedback: <a href="https://wa.me/917902981323?text=heyyy" target="_blank">send hi 👋!</a></p>
 
 </footer>
 

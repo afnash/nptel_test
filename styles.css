@@ -844,3 +844,49 @@ body {
         transform: translateX(0);
     }
 }
+
+/* Modern Theme Styles for Week Actions and Buttons */
+.week-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 14px;
+}
+.week-btn {
+    min-width: 110px;
+    padding: 12px 0;
+    font-size: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+.week-btn i {
+    font-size: 1.1rem;
+    opacity: 0.85;
+}
+.week-btn.btn-primary {
+    background: linear-gradient(135deg, #4CAF50, #8BC34A);
+    color: #fff;
+    border: none;
+}
+.week-btn.btn-primary:hover {
+    background: linear-gradient(135deg, #388E3C, #689F38);
+    box-shadow: 0 6px 24px rgba(76,175,80,0.18);
+    transform: translateY(-2px);
+}
+.week-btn.btn-outline {
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    border: 1.5px solid #fff;
+}
+.week-btn.btn-outline:hover {
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    border-color: #8BC34A;
+    box-shadow: 0 6px 24px rgba(76,175,80,0.10);
+    transform: translateY(-2px);
+}

@@ -76,13 +76,19 @@ class QuizApp {
         this.quizData.Weeks.forEach((Week, index) => {
             const weekCard = document.createElement('div');
             weekCard.className = 'week-card';
-            weekCard.onclick = () => this.startWeeklyQuiz(index);
-            
+            const links = [link1,link2,link3,link4,link5,link6,link7,link8,link9,link10,link11,link12];
             weekCard.innerHTML = `
                 <h3>${Week.Week_name}</h3>
                 <p>10 Questions</p>
+                <div class="week-actions">
+                    <button class="btn btn-primary week-btn" onclick="startWeeklyQuiz(${index})">
+                        <i class='fas fa-pen'></i> Practice
+                    </button>
+                    <a class="btn btn-outline week-btn" href='${links[index]}' target="_blank">
+                        <i class='fas fa-book-open'></i> Learn
+                    </a>
+                </div>
             `;
-            
             weeksGrid.appendChild(weekCard);
         });
     }
@@ -421,7 +427,18 @@ class QuizApp {
 
 // Global functions for HTML onclick handlers
 let quizApp;
-
+const link1 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.0"
+const link2 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.w3dohtd4qyma"
+const link3 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.qkipdfd29nk"
+const link4 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.bj2qhxpzptuc"
+const link5 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.kkfeldhfirzd"
+const link6 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.xpae877kiffg"
+const link7 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.pd4hzvn6fms2"
+const link8 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.qmcfsfe17x0r"
+const link9 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.wtifxkh9mlt4"
+const link10 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.votxh6hkn3t0"
+const link11= "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.6v2q42iq9n9m"
+const link12= "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.ciergd8njz0u"
 function startQuiz(mode) {
     if (mode === 'weekly') {
         quizApp.showWeeklySelection();
@@ -438,6 +455,10 @@ function startQuiz(mode) {
         quizApp.showQuestion();
         quizApp.updateProgress();
     }
+}
+
+function startLearning() {
+    window.open("https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?usp=sharing","_blank");
 }
 
 function startWeeklyQuiz(WeekIndex) {
