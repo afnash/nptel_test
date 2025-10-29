@@ -412,7 +412,7 @@ class QuizApp {
             if (alertBox.style.display !== 'none') {
                 alertBox.style.display = 'none';
             }
-        }, 3000);
+        }, 5500);
     }
 
     retakeQuiz() {
@@ -427,9 +427,9 @@ class QuizApp {
 
 // Global functions for HTML onclick handlers
 let quizApp;
-const link1 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.0"
-const link2 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.w3dohtd4qyma"
-const link3 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.qkipdfd29nk"
+const link1 = "https://drive.google.com/file/d/1PzfvKQUl-FYqb4KbuzcsGzL16Mds714-/view?usp=sharing"
+const link2 = "https://drive.google.com/file/d/136C2RXIWN3OI5S7cZZiCgJIJrrPsvKuO/view?usp=sharing"
+const link3 = "https://drive.google.com/file/d/1UD9S0A7N15cR43sHXM1chSofabWmQYjr/view?usp=sharing"
 const link4 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.bj2qhxpzptuc"
 const link5 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.kkfeldhfirzd"
 const link6 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.xpae877kiffg"
