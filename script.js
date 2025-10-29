@@ -427,7 +427,7 @@ class QuizApp {
 
 // Global functions for HTML onclick handlers
 let quizApp;
-const link1 = "https://drive.google.com/file/d/1PzfvKQUl-FYqb4KbuzcsGzL16Mds714-/view?usp=sharing"
+const link1 = "https://drive.google.com/file/d/14Cc11O3-7EoMPCtPbXqIgwOJepvPRqvc/view?usp=drive_link"
 const link2 = "https://drive.google.com/file/d/136C2RXIWN3OI5S7cZZiCgJIJrrPsvKuO/view?usp=sharing"
 const link3 = "https://drive.google.com/file/d/1UD9S0A7N15cR43sHXM1chSofabWmQYjr/view?usp=sharing"
 const link4 = "https://drive.google.com/file/d/1Vmokhw8daGtPaHH70VCtUM7IgT6im04v/view?usp=drive_link"
