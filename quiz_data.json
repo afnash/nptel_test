@@ -64,7 +64,7 @@
             "O(n^3)"
           ],
           "answer": "O(log(n))",
-          "explanation": "In an epidemic/gossip-based protocol where any node can contact any other, the time complexity for distribution across 'n' nodes is typically logarithmic,  O(\\log(n))  (in rounds). ",
+          "explanation": "In an epidemic/gossip-based protocol where any node can contact any other, the time complexity for distribution across 'n' nodes is typically logarithmic,  O(  log(n))  (in rounds). ",
           "id": "w1_q5"
         },
         {
@@ -304,7 +304,7 @@
             "may grow or shrink"
           ],
           "answer": "grows",
-          "explanation": "The path length (number of hops) in Chord is logarithmic,  O(\\log N) , so it **grows** with the number of nodes  N . ",
+          "explanation": "The path length (number of hops) in Chord is logarithmic,  O(  log N) , so it **grows** with the number of nodes  N . ",
           "id": "w3_q4"
         },
         {
@@ -320,39 +320,39 @@
           "id": "w3_q5"
         },
         {
-          "question": "Week 3, Q6: A Chord node requires information about at least  O(\\log(N))  other nodes for efficient routing in an  N -node system.",
+          "question": "Week 3, Q6: A Chord node requires information about at least  O(  log(N))  other nodes for efficient routing in an  N -node system.",
           "options": [
             " O(N) ",
             " O(N/2) ",
-            " O(\\log(N)) ",
-            " O(\\log(N)^2) "
+            " O(  log(N)) ",
+            " O(  log(N)^2) "
           ],
-          "answer": " O(\\log(N)) ",
-          "explanation": "The Chord protocol uses a finger table of size  O(\\log N)  to ensure efficient logarithmic routing time. ",
+          "answer": " O(  log(N)) ",
+          "explanation": "The Chord protocol uses a finger table of size  O(  log N)  to ensure efficient logarithmic routing time. ",
           "id": "w3_q6"
         },
         {
-          "question": "Week 3, Q7: If  a  and  b  are two events and  V_a  and  V_b  represent the corresponding vector times of these events (using a vector clock), what can be said about the relation between  a  and  b  when  (\\vee_{a}<V_{b})   \\wedge   (V_a \not\rightarrow V_b) ?",
+          "question": "Week 3, Q7: If  a  and  b  are two events and  V_a  and  V_b  represent the corresponding vector times of these events (using a vector clock), what can be said about the relation between  a  and  b  when  (V_{a}<V_{b})     wedge   (V_a   not  → V_b) ?",
           "options": [
-            " a  happens before  (a \rightarrow b) ",
-            " b  happened before  a   (b \rightarrow a) ",
-            " a  and  b  are concurrent  (a \\parallel b) ",
+            " a  happens before  (a   → b) ",
+            " b  happened before  a   (b   → a) ",
+            " a  and  b  are concurrent  (a ⋈ b) ",
             "There is no explicit relation."
           ],
-          "answer": " a  and  b  are concurrent  (a \\parallel b) ",
-          "explanation": "Vector clock theory states that if  V_a \not\\le V_b  and  V_b \not\\le V_a , the events  a  and  b  are concurrent ( a \\parallel b ). The condition given in the prompt,  (V_a < V_b) \\wedge (V_a \not\rightarrow V_b) , is ambiguous or contains a typo, but the accepted answer is **concurrent**. Assuming the intended condition was that neither dominates the other. ",
+          "answer": " a  and  b  are concurrent  (a   ⋈ b) ",
+          "explanation": "Vector clock theory states that if  V_a   not  le V_b  and  V_b   not  le V_a , the events  a  and  b  are concurrent ( a ⋈ b ). The condition given in the prompt,  (V_a < V_b)   wedge (V_a   not  → V_b) , is ambiguous or contains a typo, but the accepted answer is **concurrent**. Assuming the intended condition was that neither dominates the other. ",
           "id": "w3_q7"
         },
         {
           "question": "Week 3, Q8: In the happens-before-relationship scheme, when process  j  receives an event  a  from process  i , the clock is updated to ________ where  T_j  and  T_i  are the clocks of process  j  and  i , respectively.",
           "options": [
-            " T_{j}=\\max(T_{j}, T_i(a))+1 ",
+            " T_{j}=  max(T_{j}, T_i(a))+1 ",
             " T_{j}=T_{j}+1 ",
             " T_{j}=T_{i}(a) ",
             " T_{j}=T_{i}(a)+1 "
           ],
-          "answer": " T_{j}=\\max(T_{j}, T_i(a))+1 ",
-          "explanation": "For Lamport timestamps, the update rule when a process  j  receives a message with timestamp  T_i(a)  from process  i  is  T_j = \\max(T_j, T_i(a)) + 1 . The options provided use  T_j = \\max(T_j + T_i(a)) + 1  which seems to be a slight misrepresentation or a different notation but represents the correct rule structure. I will use the accepted answer's format. ",
+          "answer": " T_{j}=  max(T_{j}, T_i(a))+1 ",
+          "explanation": "For Lamport timestamps, the update rule when a process  j  receives a message with timestamp  T_i(a)  from process  i  is  T_j =   max(T_j, T_i(a)) + 1 . The options provided use  T_j =   max(T_j + T_i(a)) + 1  which seems to be a slight misrepresentation or a different notation but represents the correct rule structure. I will use the accepted answer's format. ",
           "id": "w3_q8"
         },
         {
@@ -364,7 +364,7 @@
             "20 units"
           ],
           "answer": "10 units.",
-          "explanation": "In Cristian's algorithm, the drift is  \\delta  (one-way message delay), which is typically approximated as:  \\delta \\approx (T_{round} - T_{proc}) / 2 . Here,  T_{round} = 15 - 10 = 5  (sender local time round trip),  T_{proc} = 25 - 20 = 5  (receiver local processing time). If the local clocks are *perfect*, the request should arrive at  10 + \\delta , and the reply at  25 + \\delta . Sender receives at 15. The accepted answer of 10 units suggests a different interpretation of 'drift' or an error in the provided values/options for a standard calculation. Based on the accepted answer, a direct calculation may not be the intent. *The original document says the answer is '10 units.' despite the inputs.* ",
+          "explanation": "In Cristian's algorithm, the drift is    delta  (one-way message delay), which is typically approximated as:    delta   approx (T_{round} - T_{proc}) / 2 . Here,  T_{round} = 15 - 10 = 5  (sender local time round trip),  T_{proc} = 25 - 20 = 5  (receiver local processing time). If the local clocks are *perfect*, the request should arrive at  10 +   delta , and the reply at  25 +   delta . Sender receives at 15. The accepted answer of 10 units suggests a different interpretation of 'drift' or an error in the provided values/options for a standard calculation. Based on the accepted answer, a direct calculation may not be the intent. *The original document says the answer is '10 units.' despite the inputs.* ",
           "id": "w3_q9"
         },
         {
@@ -412,17 +412,17 @@
         {
           "question": "Week 4, Q3: In the Chang-Robert's algorithm, the message of the leader will propagate across ________ nodes in the ring.",
           "options": [
-            " \\log(n) ",
+            "   log(n) ",
             " n ",
             " n-k ",
-            " \\sqrt{n} "
+            "   sqrt{n} "
           ],
           "answer": " n ",
           "explanation": "Once a leader is elected, its message must propagate across all ** n ** nodes in the ring to announce the result. ",
           "id": "w4_q3"
         },
         {
-          "question": "Week 4, Q4: In the optimized leader election algorithm with time complexity  O(n (\\log n)) , if a node receives (probe,  j ,  k ,  d ) from left such that  j < id  and  d=2^k  then send ________ to left.",
+          "question": "Week 4, Q4: In the optimized leader election algorithm with time complexity  O(n (  log n)) , if a node receives (probe,  j ,  k ,  d ) from left such that  j < id  and  d=2^k  then send ________ to left.",
           "options": [
             "(probe,  j ,  k ,  d+1 ) to right",
             "(probe,  j ,  k+1 ,  d ) to right",
@@ -430,7 +430,7 @@
             "(reply,  j ,  k+1 ) to right"
           ],
           "answer": "(reply,  j ,  k ) to left",
-          "explanation": "In the  O(n \\log n)  algorithm, if a node's ID is greater than the incoming probe's initiator ID ( j < id ), it stops the probe and sends a **reply** back to the left. The condition  d=2^k  is a checkpoint indicating the probe has traversed  2^k  nodes. ",
+          "explanation": "In the  O(n   log n)  algorithm, if a node's ID is greater than the incoming probe's initiator ID ( j < id ), it stops the probe and sends a **reply** back to the left. The condition  d=2^k  is a checkpoint indicating the probe has traversed  2^k  nodes. ",
           "id": "w4_q4"
         },
         {
@@ -478,7 +478,7 @@
             " seq_{i}[i] = C[i] + 1 "
           ],
           "answer": " seq_{i}[i] = C[i] + 1 ",
-          "explanation": "In the Suzuki-Kasami token-based algorithm, process  P_j  holding the token sends it to a requesting process  P_i  if  P_i 's sequence number of request,  seq_i[i] , matches the token's record of  P_i 's last critical section completion,  C[i] , plus one. This ensures  P_i  is waiting for the token. The correct condition for token passage is typically  request\\_array[i] = token\\_array[i] + 1 . The accepted answer option  seq_{i}[i] = C[i] + 1  uses the given notation for this condition. ",
+          "explanation": "In the Suzuki-Kasami token-based algorithm, process  P_j  holding the token sends it to a requesting process  P_i  if  P_i 's sequence number of request,  seq_i[i] , matches the token's record of  P_i 's last critical section completion,  C[i] , plus one. This ensures  P_i  is waiting for the token. The correct condition for token passage is typically  request  _array[i] = token  _array[i] + 1 . The accepted answer option  seq_{i}[i] = C[i] + 1  uses the given notation for this condition. ",
           "id": "w4_q8"
         },
         {
@@ -512,7 +512,7 @@
       "Week_name": "Week 5",
       "questions": [
         {
-          "question": "Week 5, Q1: Consider the following statements regarding the minimum spanning tree (MST): S1: If each edge of the graph has a unique weight, then the MST is unique. S2: If  F  is a fragment and  e  is the least weight outgoing edge, then  F \\cup \\{e\\}  is also a fragment.",
+          "question": "Week 5, Q1: Consider the following statements regarding the minimum spanning tree (MST): S1: If each edge of the graph has a unique weight, then the MST is unique. S2: If  F  is a fragment and  e  is the least weight outgoing edge, then  F   cup   {e  }  is also a fragment.",
           "options": [
             "Both S1 and S2 are true.",
             "S1 is true, but S2 is false.",
@@ -784,7 +784,7 @@
             "20"
           ],
           "answer": "16",
-          "explanation": "The required minimum number of generals ( N ) to tolerate  f  traitors (Byzantine faulty processes) is  N \\ge 3f + 1 . For  f=5  traitors,  N \\ge 3(5) + 1 = 16 . ",
+          "explanation": "The required minimum number of generals ( N ) to tolerate  f  traitors (Byzantine faulty processes) is  N   ge 3f + 1 . For  f=5  traitors,  N   ge 3(5) + 1 = 16 . ",
           "id": "w7_q2"
         },
         {
@@ -848,7 +848,7 @@
           "id": "w7_q7"
         },
         {
-          "question": "Week 7, Q8: Which of the following statements are correct regarding virtually synchronous multicast (Let us say that view  V  changes to view  V^* )? S1. If a message  m  is sent to view  V  before the view change, then either all processes in  (V \\cap V^*)  receive  m , or none do. S2. A message sent to view  V  can be delivered only to processes in  V , and not to successive views.",
+          "question": "Week 7, Q8: Which of the following statements are correct regarding virtually synchronous multicast (Let us say that view  V  changes to view  V^* )? S1. If a message  m  is sent to view  V  before the view change, then either all processes in  (V   cap V^*)  receive  m , or none do. S2. A message sent to view  V  can be delivered only to processes in  V , and not to successive views.",
           "options": [
             "S1 is true, S2 is true",
             "S1 is true, S2 is false",
@@ -1072,7 +1072,7 @@
             "S1 is false, S2 is false"
           ],
           "answer": "S1 is true, S2 is false",
-          "explanation": "Dynamo uses **gossip-style protocols** (specifically a variant of the  \\Phi  Accrual Failure Detector) for node membership and failure detection (S1 is true). It uses **vector clocks** for object versioning to handle conflicts, **not scalar clocks** (S2 is false). ",
+          "explanation": "Dynamo uses **gossip-style protocols** (specifically a variant of the    Phi  Accrual Failure Detector) for node membership and failure detection (S1 is true). It uses **vector clocks** for object versioning to handle conflicts, **not scalar clocks** (S2 is false). ",
           "id": "w9_q5"
         },
         {
@@ -1474,7 +1474,7 @@
             "S1 is false, S2 is false"
           ],
           "answer": "S1 is false, S2 is true",
-          "explanation": "In Stellar, nodes only need to participate if they are validating the network; not all nodes must be part of the consensus process (S1 is false). The definition of a **quorum** in the Stellar Consensus Protocol (SCP) is a set of nodes  Q  such that every member  v \\in Q  has at least one of its chosen quorum slices included in  Q  (S2 is true). ",
+          "explanation": "In Stellar, nodes only need to participate if they are validating the network; not all nodes must be part of the consensus process (S1 is false). The definition of a **quorum** in the Stellar Consensus Protocol (SCP) is a set of nodes  Q  such that every member  v   in Q  has at least one of its chosen quorum slices included in  Q  (S2 is true). ",
           "id": "w12_q7"
         },
         {
@@ -1576,7 +1576,7 @@
         "O(n^3)"
       ],
       "answer": "O(log(n))",
-      "explanation": "In an epidemic/gossip-based protocol where any node can contact any other, the time complexity for distribution across 'n' nodes is typically logarithmic,  O(\\log(n))  (in rounds). ",
+      "explanation": "In an epidemic/gossip-based protocol where any node can contact any other, the time complexity for distribution across 'n' nodes is typically logarithmic,  O(  log(n))  (in rounds). ",
       "id": "q_anti_entropy_time_complexity"
     },
     {
@@ -1804,7 +1804,7 @@
         "may grow or shrink"
       ],
       "answer": "grows",
-      "explanation": "The path length (number of hops) in Chord is logarithmic,  O(\\log N) , so it **grows** with the number of nodes  N . ",
+      "explanation": "The path length (number of hops) in Chord is logarithmic,  O(  log N) , so it **grows** with the number of nodes  N . ",
       "id": "q_chord_path_length"
     },
     {
@@ -1820,39 +1820,39 @@
       "id": "q_chord_node_join"
     },
     {
-      "question": "A Chord node requires information about at least  O(\\log(N))  other nodes for efficient routing in an  N -node system.",
+      "question": "A Chord node requires information about at least  O(  log(N))  other nodes for efficient routing in an  N -node system.",
       "options": [
         " O(N) ",
         " O(N/2) ",
-        " O(\\log(N)) ",
-        " O(\\log(N)^2) "
+        " O(  log(N)) ",
+        " O(  log(N)^2) "
       ],
-      "answer": " O(\\log(N)) ",
-      "explanation": "The Chord protocol uses a finger table of size  O(\\log N)  to ensure efficient logarithmic routing time. ",
+      "answer": " O(  log(N)) ",
+      "explanation": "The Chord protocol uses a finger table of size  O(  log N)  to ensure efficient logarithmic routing time. ",
       "id": "q_chord_routing_info"
     },
     {
-      "question": "If  a  and  b  are two events and  V_a  and  V_b  represent the corresponding vector times of these events (using a vector clock), what can be said about the relation between  a  and  b  when  (\\vee_{a}<V_{b})   \\wedge   (V_a \not\rightarrow V_b) ?",
+      "question": "If  a  and  b  are two events and  V_a  and  V_b  represent the corresponding vector times of these events (using a vector clock), what can be said about the relation between  a  and  b  when  (V_{a}<V_{b})     wedge   (V_a   not  → V_b) ?",
       "options": [
-        " a  happens before  (a \rightarrow b) ",
-        " b  happened before  a   (b \rightarrow a) ",
-        " a  and  b  are concurrent  (a \\parallel b) ",
+        " a  happens before  (a   → b) ",
+        " b  happened before  a   (b   → a) ",
+        " a  and  b  are concurrent  (a  ⋈ b) ",
         "There is no explicit relation."
       ],
-      "answer": " a  and  b  are concurrent  (a \\parallel b) ",
-      "explanation": "Vector clock theory states that if  V_a \not\\le V_b  and  V_b \not\\le V_a , the events  a  and  b  are concurrent ( a \\parallel b ). The condition given in the prompt,  (V_a < V_b) \\wedge (V_a \not\rightarrow V_b) , is ambiguous or contains a typo, but the accepted answer is **concurrent**. Assuming the intended condition was that neither dominates the other. ",
+      "answer": " a  and  b  are concurrent  (a  ⋈ b) ",
+      "explanation": "Vector clock theory states that if  V_a   not  le V_b  and  V_b   not  le V_a , the events  a  and  b  are concurrent ( a ⋈ b ). The condition given in the prompt,  (V_a < V_b)   wedge (V_a   not  → V_b) , is ambiguous or contains a typo, but the accepted answer is **concurrent**. Assuming the intended condition was that neither dominates the other. ",
       "id": "q_vector_clock_relation"
     },
     {
       "question": "In the happens-before-relationship scheme, when process  j  receives an event  a  from process  i , the clock is updated to ________ where  T_j  and  T_i  are the clocks of process  j  and  i , respectively.",
       "options": [
-        " T_{j}=\\max(T_{j}, T_i(a))+1 ",
+        " T_{j}=  max(T_{j}, T_i(a))+1 ",
         " T_{j}=T_{j}+1 ",
         " T_{j}=T_{i}(a) ",
         " T_{j}=T_{i}(a)+1 "
       ],
-      "answer": " T_{j}=\\max(T_{j}, T_i(a))+1 ",
-      "explanation": "For Lamport timestamps, the update rule when a process  j  receives a message with timestamp  T_i(a)  from process  i  is  T_j = \\max(T_j, T_i(a)) + 1 . The options provided use  T_j = \\max(T_j + T_i(a)) + 1  which seems to be a slight misrepresentation or a different notation but represents the correct rule structure. I will use the accepted answer's format. ",
+      "answer": " T_{j}=  max(T_{j}, T_i(a))+1 ",
+      "explanation": "For Lamport timestamps, the update rule when a process  j  receives a message with timestamp  T_i(a)  from process  i  is  T_j =   max(T_j, T_i(a)) + 1 . The options provided use  T_j =   max(T_j + T_i(a)) + 1  which seems to be a slight misrepresentation or a different notation but represents the correct rule structure. I will use the accepted answer's format. ",
       "id": "q_lamport_clock_update"
     },
     {
@@ -1864,7 +1864,7 @@
         "20 units"
       ],
       "answer": "10 units.",
-      "explanation": "In Cristian's algorithm, the drift is  \\delta  (one-way message delay), which is typically approximated as:  \\delta \\approx (T_{round} - T_{proc}) / 2 . Here,  T_{round} = 15 - 10 = 5  (sender local time round trip),  T_{proc} = 25 - 20 = 5  (receiver local processing time). If the local clocks are *perfect*, the request should arrive at  10 + \\delta , and the reply at  25 + \\delta . Sender receives at 15. The accepted answer of 10 units suggests a different interpretation of 'drift' or an error in the provided values/options for a standard calculation. Based on the accepted answer, a direct calculation may not be the intent. *The original document says the answer is '10 units.' despite the inputs.* ",
+      "explanation": "In Cristian's algorithm, the drift is    delta  (one-way message delay), which is typically approximated as:    delta   approx (T_{round} - T_{proc}) / 2 . Here,  T_{round} = 15 - 10 = 5  (sender local time round trip),  T_{proc} = 25 - 20 = 5  (receiver local processing time). If the local clocks are *perfect*, the request should arrive at  10 +   delta , and the reply at  25 +   delta . Sender receives at 15. The accepted answer of 10 units suggests a different interpretation of 'drift' or an error in the provided values/options for a standard calculation. Based on the accepted answer, a direct calculation may not be the intent. *The original document says the answer is '10 units.' despite the inputs.* ",
       "id": "q_cristian_drift"
     },
     {
@@ -1906,17 +1906,17 @@
     {
       "question": "In the Chang-Robert's algorithm, the message of the leader will propagate across ________ nodes in the ring.",
       "options": [
-        " \\log(n) ",
+        "   log(n) ",
         " n ",
         " n-k ",
-        " \\sqrt{n} "
+        "   sqrt{n} "
       ],
       "answer": " n ",
       "explanation": "Once a leader is elected, its message must propagate across all ** n ** nodes in the ring to announce the result. ",
       "id": "q_chang_roberts_leader_message"
     },
     {
-      "question": "In the optimized leader election algorithm with time complexity  O(n (\\log n)) , if a node receives (probe,  j ,  k ,  d ) from left such that  j < id  and  d=2^k  then send ________ to left.",
+      "question": "In the optimized leader election algorithm with time complexity  O(n (  log n)) , if a node receives (probe,  j ,  k ,  d ) from left such that  j < id  and  d=2^k  then send ________ to left.",
       "options": [
         "(probe,  j ,  k ,  d+1 ) to right",
         "(probe,  j ,  k+1 ,  d ) to right",
@@ -1924,7 +1924,7 @@
         "(reply,  j ,  k+1 ) to right"
       ],
       "answer": "(reply,  j ,  k ) to left",
-      "explanation": "In the  O(n \\log n)  algorithm, if a node's ID is greater than the incoming probe's initiator ID ( j < id ), it stops the probe and sends a **reply** back to the left. The condition  d=2^k  is a checkpoint indicating the probe has traversed  2^k  nodes. ",
+      "explanation": "In the  O(n   log n)  algorithm, if a node's ID is greater than the incoming probe's initiator ID ( j < id ), it stops the probe and sends a **reply** back to the left. The condition  d=2^k  is a checkpoint indicating the probe has traversed  2^k  nodes. ",
       "id": "q_optimized_leader_election"
     },
     {
@@ -1972,7 +1972,7 @@
         " seq_{i}[i] = C[i] + 1 "
       ],
       "answer": " seq_{i}[i] = C[i] + 1 ",
-      "explanation": "In the Suzuki-Kasami token-based algorithm, process  P_j  holding the token sends it to a requesting process  P_i  if  P_i 's sequence number of request,  seq_i[i] , matches the token's record of  P_i 's last critical section completion,  C[i] , plus one. This ensures  P_i  is waiting for the token. The correct condition for token passage is typically  request\\_array[i] = token\\_array[i] + 1 . The accepted answer option  seq_{i}[i] = C[i] + 1  uses the given notation for this condition. ",
+      "explanation": "In the Suzuki-Kasami token-based algorithm, process  P_j  holding the token sends it to a requesting process  P_i  if  P_i 's sequence number of request,  seq_i[i] , matches the token's record of  P_i 's last critical section completion,  C[i] , plus one. This ensures  P_i  is waiting for the token. The correct condition for token passage is typically  request  _array[i] = token  _array[i] + 1 . The accepted answer option  seq_{i}[i] = C[i] + 1  uses the given notation for this condition. ",
       "id": "q_suzuki_kasami_token_send"
     },
     {
@@ -2000,7 +2000,7 @@
       "id": "q_raymond_tree_statements"
     },
     {
-      "question": "Consider the following statements regarding the minimum spanning tree (MST): S1: If each edge of the graph has a unique weight, then the MST is unique. S2: If  F  is a fragment and  e  is the least weight outgoing edge, then  F \\cup \\{e\\}  is also a fragment.",
+      "question": "Consider the following statements regarding the minimum spanning tree (MST): S1: If each edge of the graph has a unique weight, then the MST is unique. S2: If  F  is a fragment and  e  is the least weight outgoing edge, then  F   cup   {e  }  is also a fragment.",
       "options": [
         "Both S1 and S2 are true.",
         "S1 is true, but S2 is false.",
@@ -2260,7 +2260,7 @@
         "20"
       ],
       "answer": "16",
-      "explanation": "The required minimum number of generals ( N ) to tolerate  f  traitors (Byzantine faulty processes) is  N \\ge 3f + 1 . For  f=5  traitors,  N \\ge 3(5) + 1 = 16 . ",
+      "explanation": "The required minimum number of generals ( N ) to tolerate  f  traitors (Byzantine faulty processes) is  N   ge 3f + 1 . For  f=5  traitors,  N   ge 3(5) + 1 = 16 . ",
       "id": "q_byzantine_minimum_generals"
     },
     {
@@ -2324,7 +2324,7 @@
       "id": "q_fault_tolerance_processes"
     },
     {
-      "question": "Which of the following statements are correct regarding virtually synchronous multicast (Let us say that view  V  changes to view  V^* )? S1. If a message  m  is sent to view  V  before the view change, then either all processes in  (V \\cap V^*)  receive  m , or none do. S2. A message sent to view  V  can be delivered only to processes in  V , and not to successive views.",
+      "question": "Which of the following statements are correct regarding virtually synchronous multicast (Let us say that view  V  changes to view  V^* )? S1. If a message  m  is sent to view  V  before the view change, then either all processes in  (V   cap V^*)  receive  m , or none do. S2. A message sent to view  V  can be delivered only to processes in  V , and not to successive views.",
       "options": [
         "S1 is true, S2 is true",
         "S1 is true, S2 is false",
@@ -2536,7 +2536,7 @@
         "S1 is false, S2 is false"
       ],
       "answer": "S1 is true, S2 is false",
-      "explanation": "Dynamo uses **gossip-style protocols** (specifically a variant of the  \\Phi  Accrual Failure Detector) for node membership and failure detection (S1 is true). It uses **vector clocks** for object versioning to handle conflicts, **not scalar clocks** (S2 is false). ",
+      "explanation": "Dynamo uses **gossip-style protocols** (specifically a variant of the    Phi  Accrual Failure Detector) for node membership and failure detection (S1 is true). It uses **vector clocks** for object versioning to handle conflicts, **not scalar clocks** (S2 is false). ",
       "id": "q_dynamo_mechanisms"
     },
     {
@@ -2920,7 +2920,7 @@
         "S1 is false, S2 is false"
       ],
       "answer": "S1 is false, S2 is true",
-      "explanation": "In Stellar, nodes only need to participate if they are validating the network; not all nodes must be part of the consensus process (S1 is false). The definition of a **quorum** in the Stellar Consensus Protocol (SCP) is a set of nodes  Q  such that every member  v \\in Q  has at least one of its chosen quorum slices included in  Q  (S2 is true). ",
+      "explanation": "In Stellar, nodes only need to participate if they are validating the network; not all nodes must be part of the consensus process (S1 is false). The definition of a **quorum** in the Stellar Consensus Protocol (SCP) is a set of nodes  Q  such that every member  v   in Q  has at least one of its chosen quorum slices included in  Q  (S2 is true). ",
       "id": "q_stellar_statements"
     },
     {
