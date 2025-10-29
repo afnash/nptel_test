@@ -64,7 +64,7 @@
             "O(n^3)"
           ],
           "answer": "O(log(n))",
-          "explanation": "In an epidemic/gossip-based protocol where any node can contact any other, the time complexity for distribution across 'n' nodes is typically logarithmic, $O(\\log(n))$ (in rounds). ",
+          "explanation": "In an epidemic/gossip-based protocol where any node can contact any other, the time complexity for distribution across 'n' nodes is typically logarithmic,  O(\\log(n))  (in rounds). ",
           "id": "w1_q5"
         },
         {
@@ -146,7 +146,7 @@
           "id": "w2_q1"
         },
         {
-          "question": "Week 2, Q2: The configuration parameter $b$ in the Pastry network affects:",
+          "question": "Week 2, Q2: The configuration parameter  b  in the Pastry network affects:",
           "options": [
             "The number of non-empty entries in the routing table only.",
             "The number of hops required only.",
@@ -154,19 +154,19 @@
             "None of the options."
           ],
           "answer": "The number of non-empty entries in the routing table AND the number of required hops.",
-          "explanation": "The parameter $b$ (base of the node ID) in Pastry determines the size of the routing table entries and consequently affects the number of hops required for routing. ",
+          "explanation": "The parameter  b  (base of the node ID) in Pastry determines the size of the routing table entries and consequently affects the number of hops required for routing. ",
           "id": "w2_q2"
         },
         {
           "question": "Week 2, Q3: While routing a request in Pastry, if the hash of the key (K) is in the range of the node's leaf set (L), then ________.",
           "options": [
-            "forward K to $L_i$ such that $|K-L_i|$ is minimal.",
-            "forward K to $L_i$ such that $|K-L_i|$ is maximal.",
-            "forward K to $L_i$ such that $K - L_i$ is negative.",
-            "forward K to any random $L_i$."
+            "forward K to  L_i  such that  |K-L_i|  is minimal.",
+            "forward K to  L_i  such that  |K-L_i|  is maximal.",
+            "forward K to  L_i  such that  K - L_i  is negative.",
+            "forward K to any random  L_i ."
           ],
-          "answer": "forward K to $L_i$ such that $|K-L_i|$ is minimal.",
-          "explanation": "The leaf set contains the nodes numerically closest to the current node. If the key falls within the range of the leaf set, the node forwards the request to the neighbor in $L$ with the numerically **minimal** distance $|K-L_i|$. ",
+          "answer": "forward K to  L_i  such that  |K-L_i|  is minimal.",
+          "explanation": "The leaf set contains the nodes numerically closest to the current node. If the key falls within the range of the leaf set, the node forwards the request to the neighbor in  L  with the numerically **minimal** distance  |K-L_i| . ",
           "id": "w2_q3"
         },
         {
@@ -218,7 +218,7 @@
           "id": "w2_q7"
         },
         {
-          "question": "Week 2, Q8: If a requester receives a $Reply.Restart$ message from downstream nodes in Freenet, then ________.",
+          "question": "Week 2, Q8: If a requester receives a  Reply.Restart  message from downstream nodes in Freenet, then ________.",
           "options": [
             "It extends its timer.",
             "It shortens its timer.",
@@ -226,7 +226,7 @@
             "It resends the request."
           ],
           "answer": "It extends its timer.",
-          "explanation": "A $Reply.Restart$ message indicates that a node on the path had to restart a search, suggesting the requester should wait longer for a final result, so it **extends its timer**. ",
+          "explanation": "A  Reply.Restart  message indicates that a node on the path had to restart a search, suggesting the requester should wait longer for a final result, so it **extends its timer**. ",
           "id": "w2_q8"
         },
         {
@@ -304,14 +304,14 @@
             "may grow or shrink"
           ],
           "answer": "grows",
-          "explanation": "The path length (number of hops) in Chord is logarithmic, $O(\\log N)$, so it **grows** with the number of nodes $N$. ",
+          "explanation": "The path length (number of hops) in Chord is logarithmic,  O(\\log N) , so it **grows** with the number of nodes  N . ",
           "id": "w3_q4"
         },
         {
-          "question": "Week 3, Q5: Which of the following tasks is performed by Chord when a node $n$ joins the network? [Choose the most appropriate answer]",
+          "question": "Week 3, Q5: Which of the following tasks is performed by Chord when a node  n  joins the network? [Choose the most appropriate answer]",
           "options": [
-            "Initialize the predecessor and fingers of node $n$.",
-            "Update the fingers and predecessors of existing nodes to reflect the addition of $n$.",
+            "Initialize the predecessor and fingers of node  n .",
+            "Update the fingers and predecessors of existing nodes to reflect the addition of  n .",
             "Notify the higher layer software so that it can transfer states (e.g., values) associated with keys that the node is now responsible for.",
             "All of the options"
           ],
@@ -320,43 +320,43 @@
           "id": "w3_q5"
         },
         {
-          "question": "Week 3, Q6: A Chord node requires information about at least $O(\\log(N))$ other nodes for efficient routing in an $N$-node system.",
+          "question": "Week 3, Q6: A Chord node requires information about at least  O(\\log(N))  other nodes for efficient routing in an  N -node system.",
           "options": [
-            "$O(N)$",
-            "$O(N/2)$",
-            "$O(\\log(N))$",
-            "$O(\\log(N)^2)$"
+            " O(N) ",
+            " O(N/2) ",
+            " O(\\log(N)) ",
+            " O(\\log(N)^2) "
           ],
-          "answer": "$O(\\log(N))$",
-          "explanation": "The Chord protocol uses a finger table of size $O(\\log N)$ to ensure efficient logarithmic routing time. ",
+          "answer": " O(\\log(N)) ",
+          "explanation": "The Chord protocol uses a finger table of size  O(\\log N)  to ensure efficient logarithmic routing time. ",
           "id": "w3_q6"
         },
         {
-          "question": "Week 3, Q7: If $a$ and $b$ are two events and $V_a$ and $V_b$ represent the corresponding vector times of these events (using a vector clock), what can be said about the relation between $a$ and $b$ when $(\\vee_{a}<V_{b})$ $\\wedge$ $(V_a \not\rightarrow V_b)$?",
+          "question": "Week 3, Q7: If  a  and  b  are two events and  V_a  and  V_b  represent the corresponding vector times of these events (using a vector clock), what can be said about the relation between  a  and  b  when  (\\vee_{a}<V_{b})   \\wedge   (V_a \not\rightarrow V_b) ?",
           "options": [
-            "$a$ happens before $(a \rightarrow b)$",
-            "$b$ happened before $a$ $(b \rightarrow a)$",
-            "$a$ and $b$ are concurrent $(a \\parallel b)$",
+            " a  happens before  (a \rightarrow b) ",
+            " b  happened before  a   (b \rightarrow a) ",
+            " a  and  b  are concurrent  (a \\parallel b) ",
             "There is no explicit relation."
           ],
-          "answer": "$a$ and $b$ are concurrent $(a \\parallel b)$",
-          "explanation": "Vector clock theory states that if $V_a \not\\le V_b$ and $V_b \not\\le V_a$, the events $a$ and $b$ are concurrent ($a \\parallel b$). The condition given in the prompt, $(V_a < V_b) \\wedge (V_a \not\rightarrow V_b)$, is ambiguous or contains a typo, but the accepted answer is **concurrent**. Assuming the intended condition was that neither dominates the other. ",
+          "answer": " a  and  b  are concurrent  (a \\parallel b) ",
+          "explanation": "Vector clock theory states that if  V_a \not\\le V_b  and  V_b \not\\le V_a , the events  a  and  b  are concurrent ( a \\parallel b ). The condition given in the prompt,  (V_a < V_b) \\wedge (V_a \not\rightarrow V_b) , is ambiguous or contains a typo, but the accepted answer is **concurrent**. Assuming the intended condition was that neither dominates the other. ",
           "id": "w3_q7"
         },
         {
-          "question": "Week 3, Q8: In the happens-before-relationship scheme, when process $j$ receives an event $a$ from process $i$, the clock is updated to ________ where $T_j$ and $T_i$ are the clocks of process $j$ and $i$, respectively.",
+          "question": "Week 3, Q8: In the happens-before-relationship scheme, when process  j  receives an event  a  from process  i , the clock is updated to ________ where  T_j  and  T_i  are the clocks of process  j  and  i , respectively.",
           "options": [
-            "$T_{j}=\\max(T_{j}, T_i(a))+1$",
-            "$T_{j}=T_{j}+1$",
-            "$T_{j}=T_{i}(a)$",
-            "$T_{j}=T_{i}(a)+1$"
+            " T_{j}=\\max(T_{j}, T_i(a))+1 ",
+            " T_{j}=T_{j}+1 ",
+            " T_{j}=T_{i}(a) ",
+            " T_{j}=T_{i}(a)+1 "
           ],
-          "answer": "$T_{j}=\\max(T_{j}, T_i(a))+1$",
-          "explanation": "For Lamport timestamps, the update rule when a process $j$ receives a message with timestamp $T_i(a)$ from process $i$ is $T_j = \\max(T_j, T_i(a)) + 1$. The options provided use $T_j = \\max(T_j + T_i(a)) + 1$ which seems to be a slight misrepresentation or a different notation but represents the correct rule structure. I will use the accepted answer's format. ",
+          "answer": " T_{j}=\\max(T_{j}, T_i(a))+1 ",
+          "explanation": "For Lamport timestamps, the update rule when a process  j  receives a message with timestamp  T_i(a)  from process  i  is  T_j = \\max(T_j, T_i(a)) + 1 . The options provided use  T_j = \\max(T_j + T_i(a)) + 1  which seems to be a slight misrepresentation or a different notation but represents the correct rule structure. I will use the accepted answer's format. ",
           "id": "w3_q8"
         },
         {
-          "question": "Week 3, Q9: Assume that the sender sends a request to a receiver at its local time $(t=10)$, the receiver receives the request at its local time $(t=20)$ and sends a reply at its local time $(t=25)$. The sender receives the reply at its local time $(t=15)$. Using Cristian's algorithm, the drift is ________ units.",
+          "question": "Week 3, Q9: Assume that the sender sends a request to a receiver at its local time  (t=10) , the receiver receives the request at its local time  (t=20)  and sends a reply at its local time  (t=25) . The sender receives the reply at its local time  (t=15) . Using Cristian's algorithm, the drift is ________ units.",
           "options": [
             "10 units.",
             "5 units.",
@@ -364,7 +364,7 @@
             "20 units"
           ],
           "answer": "10 units.",
-          "explanation": "In Cristian's algorithm, the drift is $\\delta$ (one-way message delay), which is typically approximated as: $\\delta \\approx (T_{round} - T_{proc}) / 2$. Here, $T_{round} = 15 - 10 = 5$ (sender local time round trip), $T_{proc} = 25 - 20 = 5$ (receiver local processing time). If the local clocks are *perfect*, the request should arrive at $10 + \\delta$, and the reply at $25 + \\delta$. Sender receives at 15. The accepted answer of 10 units suggests a different interpretation of 'drift' or an error in the provided values/options for a standard calculation. Based on the accepted answer, a direct calculation may not be the intent. *The original document says the answer is '10 units.' despite the inputs.* ",
+          "explanation": "In Cristian's algorithm, the drift is  \\delta  (one-way message delay), which is typically approximated as:  \\delta \\approx (T_{round} - T_{proc}) / 2 . Here,  T_{round} = 15 - 10 = 5  (sender local time round trip),  T_{proc} = 25 - 20 = 5  (receiver local processing time). If the local clocks are *perfect*, the request should arrive at  10 + \\delta , and the reply at  25 + \\delta . Sender receives at 15. The accepted answer of 10 units suggests a different interpretation of 'drift' or an error in the provided values/options for a standard calculation. Based on the accepted answer, a direct calculation may not be the intent. *The original document says the answer is '10 units.' despite the inputs.* ",
           "id": "w3_q9"
         },
         {
@@ -398,39 +398,39 @@
           "id": "w4_q1"
         },
         {
-          "question": "Week 4, Q2: In the Chang-Robert's leader election algorithm, if node $p$ with state $find$, receives a message $q$ from its neighbor such that if ________ then it changes the state to $lost$.",
+          "question": "Week 4, Q2: In the Chang-Robert's leader election algorithm, if node  p  with state  find , receives a message  q  from its neighbor such that if ________ then it changes the state to  lost .",
           "options": [
-            "$q=p$",
-            "$q > p$",
-            "$q < p$",
+            " q=p ",
+            " q > p ",
+            " q < p ",
             "All the options"
           ],
-          "answer": "$q < p$",
-          "explanation": "A node $p$ changes its state to **lost** if it receives a message $q$ where the ID of $q$ is **less than its own ID** ($q < p$), meaning a node with a higher ID than the message has been found. ",
+          "answer": " q < p ",
+          "explanation": "A node  p  changes its state to **lost** if it receives a message  q  where the ID of  q  is **less than its own ID** ( q < p ), meaning a node with a higher ID than the message has been found. ",
           "id": "w4_q2"
         },
         {
           "question": "Week 4, Q3: In the Chang-Robert's algorithm, the message of the leader will propagate across ________ nodes in the ring.",
           "options": [
-            "$\\log(n)$",
-            "$n$",
-            "$n-k$",
-            "$\\sqrt{n}$"
+            " \\log(n) ",
+            " n ",
+            " n-k ",
+            " \\sqrt{n} "
           ],
-          "answer": "$n$",
-          "explanation": "Once a leader is elected, its message must propagate across all **$n$** nodes in the ring to announce the result. ",
+          "answer": " n ",
+          "explanation": "Once a leader is elected, its message must propagate across all ** n ** nodes in the ring to announce the result. ",
           "id": "w4_q3"
         },
         {
-          "question": "Week 4, Q4: In the optimized leader election algorithm with time complexity $O(n (\\log n))$, if a node receives (probe, $j$, $k$, $d$) from left such that $j < id$ and $d=2^k$ then send ________ to left.",
+          "question": "Week 4, Q4: In the optimized leader election algorithm with time complexity  O(n (\\log n)) , if a node receives (probe,  j ,  k ,  d ) from left such that  j < id  and  d=2^k  then send ________ to left.",
           "options": [
-            "(probe, $j$, $k$, $d+1$) to right",
-            "(probe, $j$, $k+1$, $d$) to right",
-            "(reply, $j$, $k$) to left",
-            "(reply, $j$, $k+1$) to right"
+            "(probe,  j ,  k ,  d+1 ) to right",
+            "(probe,  j ,  k+1 ,  d ) to right",
+            "(reply,  j ,  k ) to left",
+            "(reply,  j ,  k+1 ) to right"
           ],
-          "answer": "(reply, $j$, $k$) to left",
-          "explanation": "In the $O(n \\log n)$ algorithm, if a node's ID is greater than the incoming probe's initiator ID ($j < id$), it stops the probe and sends a **reply** back to the left. The condition $d=2^k$ is a checkpoint indicating the probe has traversed $2^k$ nodes. ",
+          "answer": "(reply,  j ,  k ) to left",
+          "explanation": "In the  O(n \\log n)  algorithm, if a node's ID is greater than the incoming probe's initiator ID ( j < id ), it stops the probe and sends a **reply** back to the left. The condition  d=2^k  is a checkpoint indicating the probe has traversed  2^k  nodes. ",
           "id": "w4_q4"
         },
         {
@@ -442,7 +442,7 @@
             "One"
           ],
           "answer": "Four",
-          "explanation": "In a tree-based leader election (like the one based on the $GHS$ MST algorithm), at most **four** messages (Find, Reply, Report, Change-Root, or similar types depending on the specific algorithm) are typically sent along any edge, two in each direction. ",
+          "explanation": "In a tree-based leader election (like the one based on the  GHS  MST algorithm), at most **four** messages (Find, Reply, Report, Change-Root, or similar types depending on the specific algorithm) are typically sent along any edge, two in each direction. ",
           "id": "w4_q5"
         },
         {
@@ -458,27 +458,27 @@
           "id": "w4_q6"
         },
         {
-          "question": "Week 4, Q7: In the Maekawa's algorithm, when a process $P_j$ receives a $relinquish$ message from process $P_k$, it signifies that ________.",
+          "question": "Week 4, Q7: In the Maekawa's algorithm, when a process  P_j  receives a  relinquish  message from process  P_k , it signifies that ________.",
           "options": [
-            "$P_k$ has a low priority.",
-            "$P_k$ has released the lock.",
-            "$P_k$ has received a failed message.",
-            "$P_k$ has not yet acquired the lock."
+            " P_k  has a low priority.",
+            " P_k  has released the lock.",
+            " P_k  has received a failed message.",
+            " P_k  has not yet acquired the lock."
           ],
-          "answer": "$P_k$ has received a failed message.",
-          "explanation": "In Maekawa's algorithm, a $relinquish$ message is sent by a process $P_k$ to nodes in its request set to renounce its right to the critical section (effectively removing itself from the wait queue) after it has received a **failed** message. ",
+          "answer": " P_k  has received a failed message.",
+          "explanation": "In Maekawa's algorithm, a  relinquish  message is sent by a process  P_k  to nodes in its request set to renounce its right to the critical section (effectively removing itself from the wait queue) after it has received a **failed** message. ",
           "id": "w4_q7"
         },
         {
-          "question": "Week 4, Q8: In the Suzuki-Kasami algorithm, process $P_j$ sends the token to $P_i$, if ________.",
+          "question": "Week 4, Q8: In the Suzuki-Kasami algorithm, process  P_j  sends the token to  P_i , if ________.",
           "options": [
-            "$seq_i[i] = C[i] + 1$",
-            "$seq_i[j] = C[j] + 1$",
-            "$seq_j[j] = C[j] + 1$",
-            "$seq_{i}[i] = C[i] + 1$"
+            " seq_i[i] = C[i] + 1 ",
+            " seq_i[j] = C[j] + 1 ",
+            " seq_j[j] = C[j] + 1 ",
+            " seq_{i}[i] = C[i] + 1 "
           ],
-          "answer": "$seq_{i}[i] = C[i] + 1$",
-          "explanation": "In the Suzuki-Kasami token-based algorithm, process $P_j$ holding the token sends it to a requesting process $P_i$ if $P_i$'s sequence number of request, $seq_i[i]$, matches the token's record of $P_i$'s last critical section completion, $C[i]$, plus one. This ensures $P_i$ is waiting for the token. The correct condition for token passage is typically $request\\_array[i] = token\\_array[i] + 1$. The accepted answer option $seq_{i}[i] = C[i] + 1$ uses the given notation for this condition. ",
+          "answer": " seq_{i}[i] = C[i] + 1 ",
+          "explanation": "In the Suzuki-Kasami token-based algorithm, process  P_j  holding the token sends it to a requesting process  P_i  if  P_i 's sequence number of request,  seq_i[i] , matches the token's record of  P_i 's last critical section completion,  C[i] , plus one. This ensures  P_i  is waiting for the token. The correct condition for token passage is typically  request\\_array[i] = token\\_array[i] + 1 . The accepted answer option  seq_{i}[i] = C[i] + 1  uses the given notation for this condition. ",
           "id": "w4_q8"
         },
         {
@@ -512,7 +512,7 @@
       "Week_name": "Week 5",
       "questions": [
         {
-          "question": "Week 5, Q1: Consider the following statements regarding the minimum spanning tree (MST): S1: If each edge of the graph has a unique weight, then the MST is unique. S2: If $F$ is a fragment and $e$ is the least weight outgoing edge, then $F \\cup \\{e\\}$ is also a fragment.",
+          "question": "Week 5, Q1: Consider the following statements regarding the minimum spanning tree (MST): S1: If each edge of the graph has a unique weight, then the MST is unique. S2: If  F  is a fragment and  e  is the least weight outgoing edge, then  F \\cup \\{e\\}  is also a fragment.",
           "options": [
             "Both S1 and S2 are true.",
             "S1 is true, but S2 is false.",
@@ -536,19 +536,19 @@
           "id": "w5_q2"
         },
         {
-          "question": "Week 5, Q3: When combining two fragments $F_1$ and $F_2$, all the nodes in $F_1$ take on the name and level of $F_2$ if ________.",
+          "question": "Week 5, Q3: When combining two fragments  F_1  and  F_2 , all the nodes in  F_1  take on the name and level of  F_2  if ________.",
           "options": [
-            "$level(F_1) < level(F_2)$",
-            "$level(F_1) > level(F_2)$",
-            "$level(F_1) = level(F_2)$",
+            " level(F_1) < level(F_2) ",
+            " level(F_1) > level(F_2) ",
+            " level(F_1) = level(F_2) ",
             "All the options"
           ],
-          "answer": "$level(F_1) < level(F_2)$",
-          "explanation": "In the GHS algorithm, when combining fragments of different levels, the fragment with the **lower level** ($F_1$) adopts the name and level of the fragment with the **higher level** ($F_2$). ",
+          "answer": " level(F_1) < level(F_2) ",
+          "explanation": "In the GHS algorithm, when combining fragments of different levels, the fragment with the **lower level** ( F_1 ) adopts the name and level of the fragment with the **higher level** ( F_2 ). ",
           "id": "w5_q3"
         },
         {
-          "question": "Week 5, Q4: If a node $p$ receives a $< test, level', name' >$ message from node $q$ such that $name(p) = name'$ and $status[q] = basic$, then $status[q]$ is set to ________.",
+          "question": "Week 5, Q4: If a node  p  receives a  < test, level', name' >  message from node  q  such that  name(p) = name'  and  status[q] = basic , then  status[q]  is set to ________.",
           "options": [
             "basic",
             "reject",
@@ -556,7 +556,7 @@
             "previous value"
           ],
           "answer": "reject",
-          "explanation": "In the GHS algorithm, if a node $p$ receives a $test$ message from $q$ and $p$'s fragment name is the same as the test message's name ($name(p) = name'$), it means $q$ is testing an edge *within* the same fragment. To prevent cycles and keep the search for the core of a new fragment focused, $p$ sets $q$'s status to **reject**. ",
+          "explanation": "In the GHS algorithm, if a node  p  receives a  test  message from  q  and  p 's fragment name is the same as the test message's name ( name(p) = name' ), it means  q  is testing an edge *within* the same fragment. To prevent cycles and keep the search for the core of a new fragment focused,  p  sets  q 's status to **reject**. ",
           "id": "w5_q4"
         },
         {
@@ -568,7 +568,7 @@
             "5"
           ],
           "answer": "2",
-          "explanation": "In the GHS algorithm, when testing edges to find the minimum weight outgoing connection (MWOE), a node typically receives up to **two** response messages on a given edge: a $Reject$ or an $Accept$ (or a similar pair). ",
+          "explanation": "In the GHS algorithm, when testing edges to find the minimum weight outgoing connection (MWOE), a node typically receives up to **two** response messages on a given edge: a  Reject  or an  Accept  (or a similar pair). ",
           "id": "w5_q5"
         },
         {
@@ -722,7 +722,7 @@
           "id": "w6_q7"
         },
         {
-          "question": "Week 6, Q8: If a proposal $(n, v)$ is chosen, then every proposal with a number greater than $n$ that is chosen, has value $v$.",
+          "question": "Week 6, Q8: If a proposal  (n, v)  is chosen, then every proposal with a number greater than  n  that is chosen, has value  v .",
           "options": [
             "lesser",
             "greater",
@@ -730,7 +730,7 @@
             "None of the options"
           ],
           "answer": "greater",
-          "explanation": "This statement is part of the **safety property** of Paxos: If a proposal with number $n$ and value $v$ is chosen, all subsequently chosen proposals (i.e., those with a number **greater** than $n$) must also have the value $v$. ",
+          "explanation": "This statement is part of the **safety property** of Paxos: If a proposal with number  n  and value  v  is chosen, all subsequently chosen proposals (i.e., those with a number **greater** than  n ) must also have the value  v . ",
           "id": "w6_q8"
         },
         {
@@ -784,7 +784,7 @@
             "20"
           ],
           "answer": "16",
-          "explanation": "The required minimum number of generals ($N$) to tolerate $f$ traitors (Byzantine faulty processes) is $N \\ge 3f + 1$. For $f=5$ traitors, $N \\ge 3(5) + 1 = 16$. ",
+          "explanation": "The required minimum number of generals ( N ) to tolerate  f  traitors (Byzantine faulty processes) is  N \\ge 3f + 1 . For  f=5  traitors,  N \\ge 3(5) + 1 = 16 . ",
           "id": "w7_q2"
         },
         {
@@ -796,19 +796,19 @@
             "min"
           ],
           "answer": "majority",
-          "explanation": "In the standard Byzantine Generals Problem algorithm ($OM(m)$), a loyal general determines the final order by computing the **majority** value from the set of received orders. ",
+          "explanation": "In the standard Byzantine Generals Problem algorithm ( OM(m) ), a loyal general determines the final order by computing the **majority** value from the set of received orders. ",
           "id": "w7_q3"
         },
         {
-          "question": "Week 7, Q4: In the step $OM(m-1)$ of the Byzantine agreement algorithm, general $i$ receives ________ values (where $m$ is greater than 0 and $n$ is the total number of generals)?",
+          "question": "Week 7, Q4: In the step  OM(m-1)  of the Byzantine agreement algorithm, general  i  receives ________ values (where  m  is greater than 0 and  n  is the total number of generals)?",
           "options": [
-            "$n$",
-            "$n-1$",
-            "$n-2$",
-            "$n+1$"
+            " n ",
+            " n-1 ",
+            " n-2 ",
+            " n+1 "
           ],
-          "answer": "$n-2$",
-          "explanation": "In the recursive message structure of the $OM(m)$ algorithm, General $i$ starts by sending its order to $n-1$ generals. In the subsequent step, $OM(m-1)$, each of the other $n-1$ generals relays their received order to the $n-2$ other generals (excluding themselves and $i$). Thus, General $i$ receives $n-2$ values from other generals. ",
+          "answer": " n-2 ",
+          "explanation": "In the recursive message structure of the  OM(m)  algorithm, General  i  starts by sending its order to  n-1  generals. In the subsequent step,  OM(m-1) , each of the other  n-1  generals relays their received order to the  n-2  other generals (excluding themselves and  i ). Thus, General  i  receives  n-2  values from other generals. ",
           "id": "w7_q4"
         },
         {
@@ -836,7 +836,7 @@
           "id": "w7_q6"
         },
         {
-          "question": "Week 7, Q7: Which of the following statements are correct? S1. To tolerate $k$ fail-stop failures, we need $k+1$ processes. S2. If processes produce arbitrary outputs, we need $k+1$ processes where there are $k$ failures.",
+          "question": "Week 7, Q7: Which of the following statements are correct? S1. To tolerate  k  fail-stop failures, we need  k+1  processes. S2. If processes produce arbitrary outputs, we need  k+1  processes where there are  k  failures.",
           "options": [
             "S1 is true, S2 is true",
             "S1 is true, S2 is false",
@@ -844,11 +844,11 @@
             "S1 is false, S2 is false"
           ],
           "answer": "S1 is true, S2 is false",
-          "explanation": "To tolerate $k$ **fail-stop** (crash) failures, you need $k+1$ processes to ensure at least one remains operational (S1 is true). To tolerate $k$ Byzantine (arbitrary) failures, you need $3k+1$ processes, not $k+1$ (S2 is false). ",
+          "explanation": "To tolerate  k  **fail-stop** (crash) failures, you need  k+1  processes to ensure at least one remains operational (S1 is true). To tolerate  k  Byzantine (arbitrary) failures, you need  3k+1  processes, not  k+1  (S2 is false). ",
           "id": "w7_q7"
         },
         {
-          "question": "Week 7, Q8: Which of the following statements are correct regarding virtually synchronous multicast (Let us say that view $V$ changes to view $V^*$)? S1. If a message $m$ is sent to view $V$ before the view change, then either all processes in $(V \\cap V^*)$ receive $m$, or none do. S2. A message sent to view $V$ can be delivered only to processes in $V$, and not to successive views.",
+          "question": "Week 7, Q8: Which of the following statements are correct regarding virtually synchronous multicast (Let us say that view  V  changes to view  V^* )? S1. If a message  m  is sent to view  V  before the view change, then either all processes in  (V \\cap V^*)  receive  m , or none do. S2. A message sent to view  V  can be delivered only to processes in  V , and not to successive views.",
           "options": [
             "S1 is true, S2 is true",
             "S1 is true, S2 is false",
@@ -856,11 +856,11 @@
             "S1 is false, S2 is false"
           ],
           "answer": "S1 is true, S2 is true",
-          "explanation": "Virtual synchrony guarantees atomic message delivery relative to view changes. S1 is the key property: any message $m$ multicast to $V$ is delivered to a subset of nodes, where that subset is either all or none of the nodes that survive into the new view $V^*$. S2 is also generally true for the definition of the atomic multicast. ",
+          "explanation": "Virtual synchrony guarantees atomic message delivery relative to view changes. S1 is the key property: any message  m  multicast to  V  is delivered to a subset of nodes, where that subset is either all or none of the nodes that survive into the new view  V^* . S2 is also generally true for the definition of the atomic multicast. ",
           "id": "w7_q8"
         },
         {
-          "question": "Week 7, Q9: Which of the following statements are correct regarding 2-Phase Commit? S1. In Phase 1a, the coordinator sends a $vote-request$ message to all participants. S2. In Phase 1b, each participant returns either $Vote-commit$, $Vote-abort$, or $None-of-All$.",
+          "question": "Week 7, Q9: Which of the following statements are correct regarding 2-Phase Commit? S1. In Phase 1a, the coordinator sends a  vote-request  message to all participants. S2. In Phase 1b, each participant returns either  Vote-commit ,  Vote-abort , or  None-of-All .",
           "options": [
             "S1 is true, S2 is true",
             "S1 is true, S2 is false",
@@ -868,7 +868,7 @@
             "S1 is false, S2 is false"
           ],
           "answer": "S1 is true, S2 is false",
-          "explanation": "In 2PC, Phase 1a is indeed when the coordinator sends a **$vote-request$** message (S1 is true). In Phase 1b, each participant can only return **$Vote-commit$** (Yes) or **$Vote-abort$** (No); there is no standard '$None-of-All$' option (S2 is false). ",
+          "explanation": "In 2PC, Phase 1a is indeed when the coordinator sends a ** vote-request ** message (S1 is true). In Phase 1b, each participant can only return ** Vote-commit ** (Yes) or ** Vote-abort ** (No); there is no standard ' None-of-All ' option (S2 is false). ",
           "id": "w7_q9"
         },
         {
@@ -880,7 +880,7 @@
             "Global-commit"
           ],
           "answer": "Prepare-commit",
-          "explanation": "In 3PC, if all votes from Phase 1 are 'Yes', the coordinator proceeds to Phase 2 (the Pre-Commit phase) by sending a **$Prepare-commit$** message to all participants. ",
+          "explanation": "In 3PC, if all votes from Phase 1 are 'Yes', the coordinator proceeds to Phase 2 (the Pre-Commit phase) by sending a ** Prepare-commit ** message to all participants. ",
           "id": "w7_q10"
         }
       ]
@@ -1072,7 +1072,7 @@
             "S1 is false, S2 is false"
           ],
           "answer": "S1 is true, S2 is false",
-          "explanation": "Dynamo uses **gossip-style protocols** (specifically a variant of the $\\Phi$ Accrual Failure Detector) for node membership and failure detection (S1 is true). It uses **vector clocks** for object versioning to handle conflicts, **not scalar clocks** (S2 is false). ",
+          "explanation": "Dynamo uses **gossip-style protocols** (specifically a variant of the  \\Phi  Accrual Failure Detector) for node membership and failure detection (S1 is true). It uses **vector clocks** for object versioning to handle conflicts, **not scalar clocks** (S2 is false). ",
           "id": "w9_q5"
         },
         {
@@ -1406,7 +1406,7 @@
           "id": "w12_q1"
         },
         {
-          "question": "Week 12, Q2: Which of the following statements are correct regarding continuous consistency? S1. When reading a replica, we always get the accurate value and never encounter a stale value. S2. Different replicas of variable $x$ are loosely synchronized and are not exactly identical.",
+          "question": "Week 12, Q2: Which of the following statements are correct regarding continuous consistency? S1. When reading a replica, we always get the accurate value and never encounter a stale value. S2. Different replicas of variable  x  are loosely synchronized and are not exactly identical.",
           "options": [
             "S1 is true, S2 is true",
             "S1 is true, S2 is false",
@@ -1474,7 +1474,7 @@
             "S1 is false, S2 is false"
           ],
           "answer": "S1 is false, S2 is true",
-          "explanation": "In Stellar, nodes only need to participate if they are validating the network; not all nodes must be part of the consensus process (S1 is false). The definition of a **quorum** in the Stellar Consensus Protocol (SCP) is a set of nodes $Q$ such that every member $v \\in Q$ has at least one of its chosen quorum slices included in $Q$ (S2 is true). ",
+          "explanation": "In Stellar, nodes only need to participate if they are validating the network; not all nodes must be part of the consensus process (S1 is false). The definition of a **quorum** in the Stellar Consensus Protocol (SCP) is a set of nodes  Q  such that every member  v \\in Q  has at least one of its chosen quorum slices included in  Q  (S2 is true). ",
           "id": "w12_q7"
         },
         {
@@ -1490,7 +1490,7 @@
           "id": "w12_q8"
         },
         {
-          "question": "Week 12, Q9: Which of the following statements are correct regarding federated voting properties? S1. No duplication: Every correct node delivers at most one voted value. S2. Validity: If all nodes vote for a value $a$, they eventually deliver a different value $a'$.",
+          "question": "Week 12, Q9: Which of the following statements are correct regarding federated voting properties? S1. No duplication: Every correct node delivers at most one voted value. S2. Validity: If all nodes vote for a value  a , they eventually deliver a different value  a' .",
           "options": [
             "S1 is true, S2 is true",
             "S1 is true, S2 is false",
@@ -1498,7 +1498,7 @@
             "S1 is false, S2 is false"
           ],
           "answer": "S1 is true, S2 is false",
-          "explanation": "The **No Duplication** property (a form of Agreement) ensures a process decides at most one value (S1 is true). The **Validity** property states that if all correct nodes vote for $a$, they must eventually deliver $a$, not a different value $a'$ (S2 is false). ",
+          "explanation": "The **No Duplication** property (a form of Agreement) ensures a process decides at most one value (S1 is true). The **Validity** property states that if all correct nodes vote for  a , they must eventually deliver  a , not a different value  a'  (S2 is false). ",
           "id": "w12_q9"
         },
         {
@@ -1507,10 +1507,10 @@
             "Nodes can behave arbitrarily.",
             "Nodes can behave maliciously.",
             "Malicious nodes cannot collaborate with each other.",
-            "With $3f+1$ nodes, we can tolerate at most $f$ Byzantine failures."
+            "With  3f+1  nodes, we can tolerate at most  f  Byzantine failures."
           ],
           "answer": "Malicious nodes cannot collaborate with each other.",
-          "explanation": "Byzantine faulty nodes can indeed **collaborate maliciously** with each other. This ability to collude is what makes Byzantine fault tolerance ($3f+1$ total nodes for $f$ faults) so challenging. ",
+          "explanation": "Byzantine faulty nodes can indeed **collaborate maliciously** with each other. This ability to collude is what makes Byzantine fault tolerance ( 3f+1  total nodes for  f  faults) so challenging. ",
           "id": "w12_q10"
         }
       ]
@@ -1576,7 +1576,7 @@
         "O(n^3)"
       ],
       "answer": "O(log(n))",
-      "explanation": "In an epidemic/gossip-based protocol where any node can contact any other, the time complexity for distribution across 'n' nodes is typically logarithmic, $O(\\log(n))$ (in rounds). ",
+      "explanation": "In an epidemic/gossip-based protocol where any node can contact any other, the time complexity for distribution across 'n' nodes is typically logarithmic,  O(\\log(n))  (in rounds). ",
       "id": "q_anti_entropy_time_complexity"
     },
     {
@@ -1652,7 +1652,7 @@
       "id": "q_dht_statements"
     },
     {
-      "question": "The configuration parameter $b$ in the Pastry network affects:",
+      "question": "The configuration parameter  b  in the Pastry network affects:",
       "options": [
         "The number of non-empty entries in the routing table only.",
         "The number of hops required only.",
@@ -1660,19 +1660,19 @@
         "None of the options."
       ],
       "answer": "The number of non-empty entries in the routing table AND the number of required hops.",
-      "explanation": "The parameter $b$ (base of the node ID) in Pastry determines the size of the routing table entries and consequently affects the number of hops required for routing. ",
+      "explanation": "The parameter  b  (base of the node ID) in Pastry determines the size of the routing table entries and consequently affects the number of hops required for routing. ",
       "id": "q_pastry_parameter_b"
     },
     {
       "question": "While routing a request in Pastry, if the hash of the key (K) is in the range of the node's leaf set (L), then ________.",
       "options": [
-        "forward K to $L_i$ such that $|K-L_i|$ is minimal.",
-        "forward K to $L_i$ such that $|K-L_i|$ is maximal.",
-        "forward K to $L_i$ such that $K - L_i$ is negative.",
-        "forward K to any random $L_i$."
+        "forward K to  L_i  such that  |K-L_i|  is minimal.",
+        "forward K to  L_i  such that  |K-L_i|  is maximal.",
+        "forward K to  L_i  such that  K - L_i  is negative.",
+        "forward K to any random  L_i ."
       ],
-      "answer": "forward K to $L_i$ such that $|K-L_i|$ is minimal.",
-      "explanation": "The leaf set contains the nodes numerically closest to the current node. If the key falls within the range of the leaf set, the node forwards the request to the neighbor in $L$ with the numerically **minimal** distance $|K-L_i|$. ",
+      "answer": "forward K to  L_i  such that  |K-L_i|  is minimal.",
+      "explanation": "The leaf set contains the nodes numerically closest to the current node. If the key falls within the range of the leaf set, the node forwards the request to the neighbor in  L  with the numerically **minimal** distance  |K-L_i| . ",
       "id": "q_pastry_leaf_set_routing"
     },
     {
@@ -1724,7 +1724,7 @@
       "id": "q_pre_routing_encryption"
     },
     {
-      "question": "If a requester receives a $Reply.Restart$ message from downstream nodes in Freenet, then ________.",
+      "question": "If a requester receives a  Reply.Restart  message from downstream nodes in Freenet, then ________.",
       "options": [
         "It extends its timer.",
         "It shortens its timer.",
@@ -1732,7 +1732,7 @@
         "It resends the request."
       ],
       "answer": "It extends its timer.",
-      "explanation": "A $Reply.Restart$ message indicates that a node on the path had to restart a search, suggesting the requester should wait longer for a final result, so it **extends its timer**. ",
+      "explanation": "A  Reply.Restart  message indicates that a node on the path had to restart a search, suggesting the requester should wait longer for a final result, so it **extends its timer**. ",
       "id": "q_freenet_reply_restart"
     },
     {
@@ -1804,14 +1804,14 @@
         "may grow or shrink"
       ],
       "answer": "grows",
-      "explanation": "The path length (number of hops) in Chord is logarithmic, $O(\\log N)$, so it **grows** with the number of nodes $N$. ",
+      "explanation": "The path length (number of hops) in Chord is logarithmic,  O(\\log N) , so it **grows** with the number of nodes  N . ",
       "id": "q_chord_path_length"
     },
     {
-      "question": "Which of the following tasks is performed by Chord when a node $n$ joins the network? [Choose the most appropriate answer]",
+      "question": "Which of the following tasks is performed by Chord when a node  n  joins the network? [Choose the most appropriate answer]",
       "options": [
-        "Initialize the predecessor and fingers of node $n$.",
-        "Update the fingers and predecessors of existing nodes to reflect the addition of $n$.",
+        "Initialize the predecessor and fingers of node  n .",
+        "Update the fingers and predecessors of existing nodes to reflect the addition of  n .",
         "Notify the higher layer software so that it can transfer states (e.g., values) associated with keys that the node is now responsible for.",
         "All of the options"
       ],
@@ -1820,43 +1820,43 @@
       "id": "q_chord_node_join"
     },
     {
-      "question": "A Chord node requires information about at least $O(\\log(N))$ other nodes for efficient routing in an $N$-node system.",
+      "question": "A Chord node requires information about at least  O(\\log(N))  other nodes for efficient routing in an  N -node system.",
       "options": [
-        "$O(N)$",
-        "$O(N/2)$",
-        "$O(\\log(N))$",
-        "$O(\\log(N)^2)$"
+        " O(N) ",
+        " O(N/2) ",
+        " O(\\log(N)) ",
+        " O(\\log(N)^2) "
       ],
-      "answer": "$O(\\log(N))$",
-      "explanation": "The Chord protocol uses a finger table of size $O(\\log N)$ to ensure efficient logarithmic routing time. ",
+      "answer": " O(\\log(N)) ",
+      "explanation": "The Chord protocol uses a finger table of size  O(\\log N)  to ensure efficient logarithmic routing time. ",
       "id": "q_chord_routing_info"
     },
     {
-      "question": "If $a$ and $b$ are two events and $V_a$ and $V_b$ represent the corresponding vector times of these events (using a vector clock), what can be said about the relation between $a$ and $b$ when $(\\vee_{a}<V_{b})$ $\\wedge$ $(V_a \not\rightarrow V_b)$?",
+      "question": "If  a  and  b  are two events and  V_a  and  V_b  represent the corresponding vector times of these events (using a vector clock), what can be said about the relation between  a  and  b  when  (\\vee_{a}<V_{b})   \\wedge   (V_a \not\rightarrow V_b) ?",
       "options": [
-        "$a$ happens before $(a \rightarrow b)$",
-        "$b$ happened before $a$ $(b \rightarrow a)$",
-        "$a$ and $b$ are concurrent $(a \\parallel b)$",
+        " a  happens before  (a \rightarrow b) ",
+        " b  happened before  a   (b \rightarrow a) ",
+        " a  and  b  are concurrent  (a \\parallel b) ",
         "There is no explicit relation."
       ],
-      "answer": "$a$ and $b$ are concurrent $(a \\parallel b)$",
-      "explanation": "Vector clock theory states that if $V_a \not\\le V_b$ and $V_b \not\\le V_a$, the events $a$ and $b$ are concurrent ($a \\parallel b$). The condition given in the prompt, $(V_a < V_b) \\wedge (V_a \not\rightarrow V_b)$, is ambiguous or contains a typo, but the accepted answer is **concurrent**. Assuming the intended condition was that neither dominates the other. ",
+      "answer": " a  and  b  are concurrent  (a \\parallel b) ",
+      "explanation": "Vector clock theory states that if  V_a \not\\le V_b  and  V_b \not\\le V_a , the events  a  and  b  are concurrent ( a \\parallel b ). The condition given in the prompt,  (V_a < V_b) \\wedge (V_a \not\rightarrow V_b) , is ambiguous or contains a typo, but the accepted answer is **concurrent**. Assuming the intended condition was that neither dominates the other. ",
       "id": "q_vector_clock_relation"
     },
     {
-      "question": "In the happens-before-relationship scheme, when process $j$ receives an event $a$ from process $i$, the clock is updated to ________ where $T_j$ and $T_i$ are the clocks of process $j$ and $i$, respectively.",
+      "question": "In the happens-before-relationship scheme, when process  j  receives an event  a  from process  i , the clock is updated to ________ where  T_j  and  T_i  are the clocks of process  j  and  i , respectively.",
       "options": [
-        "$T_{j}=\\max(T_{j}, T_i(a))+1$",
-        "$T_{j}=T_{j}+1$",
-        "$T_{j}=T_{i}(a)$",
-        "$T_{j}=T_{i}(a)+1$"
+        " T_{j}=\\max(T_{j}, T_i(a))+1 ",
+        " T_{j}=T_{j}+1 ",
+        " T_{j}=T_{i}(a) ",
+        " T_{j}=T_{i}(a)+1 "
       ],
-      "answer": "$T_{j}=\\max(T_{j}, T_i(a))+1$",
-      "explanation": "For Lamport timestamps, the update rule when a process $j$ receives a message with timestamp $T_i(a)$ from process $i$ is $T_j = \\max(T_j, T_i(a)) + 1$. The options provided use $T_j = \\max(T_j + T_i(a)) + 1$ which seems to be a slight misrepresentation or a different notation but represents the correct rule structure. I will use the accepted answer's format. ",
+      "answer": " T_{j}=\\max(T_{j}, T_i(a))+1 ",
+      "explanation": "For Lamport timestamps, the update rule when a process  j  receives a message with timestamp  T_i(a)  from process  i  is  T_j = \\max(T_j, T_i(a)) + 1 . The options provided use  T_j = \\max(T_j + T_i(a)) + 1  which seems to be a slight misrepresentation or a different notation but represents the correct rule structure. I will use the accepted answer's format. ",
       "id": "q_lamport_clock_update"
     },
     {
-      "question": "Assume that the sender sends a request to a receiver at its local time $(t=10)$, the receiver receives the request at its local time $(t=20)$ and sends a reply at its local time $(t=25)$. The sender receives the reply at its local time $(t=15)$. Using Cristian's algorithm, the drift is ________ units.",
+      "question": "Assume that the sender sends a request to a receiver at its local time  (t=10) , the receiver receives the request at its local time  (t=20)  and sends a reply at its local time  (t=25) . The sender receives the reply at its local time  (t=15) . Using Cristian's algorithm, the drift is ________ units.",
       "options": [
         "10 units.",
         "5 units.",
@@ -1864,7 +1864,7 @@
         "20 units"
       ],
       "answer": "10 units.",
-      "explanation": "In Cristian's algorithm, the drift is $\\delta$ (one-way message delay), which is typically approximated as: $\\delta \\approx (T_{round} - T_{proc}) / 2$. Here, $T_{round} = 15 - 10 = 5$ (sender local time round trip), $T_{proc} = 25 - 20 = 5$ (receiver local processing time). If the local clocks are *perfect*, the request should arrive at $10 + \\delta$, and the reply at $25 + \\delta$. Sender receives at 15. The accepted answer of 10 units suggests a different interpretation of 'drift' or an error in the provided values/options for a standard calculation. Based on the accepted answer, a direct calculation may not be the intent. *The original document says the answer is '10 units.' despite the inputs.* ",
+      "explanation": "In Cristian's algorithm, the drift is  \\delta  (one-way message delay), which is typically approximated as:  \\delta \\approx (T_{round} - T_{proc}) / 2 . Here,  T_{round} = 15 - 10 = 5  (sender local time round trip),  T_{proc} = 25 - 20 = 5  (receiver local processing time). If the local clocks are *perfect*, the request should arrive at  10 + \\delta , and the reply at  25 + \\delta . Sender receives at 15. The accepted answer of 10 units suggests a different interpretation of 'drift' or an error in the provided values/options for a standard calculation. Based on the accepted answer, a direct calculation may not be the intent. *The original document says the answer is '10 units.' despite the inputs.* ",
       "id": "q_cristian_drift"
     },
     {
@@ -1892,39 +1892,39 @@
       "id": "q_chang_roberts_statements"
     },
     {
-      "question": "In the Chang-Robert's leader election algorithm, if node $p$ with state $find$, receives a message $q$ from its neighbor such that if ________ then it changes the state to $lost$.",
+      "question": "In the Chang-Robert's leader election algorithm, if node  p  with state  find , receives a message  q  from its neighbor such that if ________ then it changes the state to  lost .",
       "options": [
-        "$q=p$",
-        "$q > p$",
-        "$q < p$",
+        " q=p ",
+        " q > p ",
+        " q < p ",
         "All the options"
       ],
-      "answer": "$q < p$",
-      "explanation": "A node $p$ changes its state to **lost** if it receives a message $q$ where the ID of $q$ is **less than its own ID** ($q < p$), meaning a node with a higher ID than the message has been found. ",
+      "answer": " q < p ",
+      "explanation": "A node  p  changes its state to **lost** if it receives a message  q  where the ID of  q  is **less than its own ID** ( q < p ), meaning a node with a higher ID than the message has been found. ",
       "id": "q_chang_roberts_lost_state"
     },
     {
       "question": "In the Chang-Robert's algorithm, the message of the leader will propagate across ________ nodes in the ring.",
       "options": [
-        "$\\log(n)$",
-        "$n$",
-        "$n-k$",
-        "$\\sqrt{n}$"
+        " \\log(n) ",
+        " n ",
+        " n-k ",
+        " \\sqrt{n} "
       ],
-      "answer": "$n$",
-      "explanation": "Once a leader is elected, its message must propagate across all **$n$** nodes in the ring to announce the result. ",
+      "answer": " n ",
+      "explanation": "Once a leader is elected, its message must propagate across all ** n ** nodes in the ring to announce the result. ",
       "id": "q_chang_roberts_leader_message"
     },
     {
-      "question": "In the optimized leader election algorithm with time complexity $O(n (\\log n))$, if a node receives (probe, $j$, $k$, $d$) from left such that $j < id$ and $d=2^k$ then send ________ to left.",
+      "question": "In the optimized leader election algorithm with time complexity  O(n (\\log n)) , if a node receives (probe,  j ,  k ,  d ) from left such that  j < id  and  d=2^k  then send ________ to left.",
       "options": [
-        "(probe, $j$, $k$, $d+1$) to right",
-        "(probe, $j$, $k+1$, $d$) to right",
-        "(reply, $j$, $k$) to left",
-        "(reply, $j$, $k+1$) to right"
+        "(probe,  j ,  k ,  d+1 ) to right",
+        "(probe,  j ,  k+1 ,  d ) to right",
+        "(reply,  j ,  k ) to left",
+        "(reply,  j ,  k+1 ) to right"
       ],
-      "answer": "(reply, $j$, $k$) to left",
-      "explanation": "In the $O(n \\log n)$ algorithm, if a node's ID is greater than the incoming probe's initiator ID ($j < id$), it stops the probe and sends a **reply** back to the left. The condition $d=2^k$ is a checkpoint indicating the probe has traversed $2^k$ nodes. ",
+      "answer": "(reply,  j ,  k ) to left",
+      "explanation": "In the  O(n \\log n)  algorithm, if a node's ID is greater than the incoming probe's initiator ID ( j < id ), it stops the probe and sends a **reply** back to the left. The condition  d=2^k  is a checkpoint indicating the probe has traversed  2^k  nodes. ",
       "id": "q_optimized_leader_election"
     },
     {
@@ -1936,7 +1936,7 @@
         "One"
       ],
       "answer": "Four",
-      "explanation": "In a tree-based leader election (like the one based on the $GHS$ MST algorithm), at most **four** messages (Find, Reply, Report, Change-Root, or similar types depending on the specific algorithm) are typically sent along any edge, two in each direction. ",
+      "explanation": "In a tree-based leader election (like the one based on the  GHS  MST algorithm), at most **four** messages (Find, Reply, Report, Change-Root, or similar types depending on the specific algorithm) are typically sent along any edge, two in each direction. ",
       "id": "q_tree_leader_messages"
     },
     {
@@ -1952,27 +1952,27 @@
       "id": "q_ricart_agarwala_reply"
     },
     {
-      "question": "In the Maekawa's algorithm, when a process $P_j$ receives a $relinquish$ message from process $P_k$, it signifies that ________.",
+      "question": "In the Maekawa's algorithm, when a process  P_j  receives a  relinquish  message from process  P_k , it signifies that ________.",
       "options": [
-        "$P_k$ has a low priority.",
-        "$P_k$ has released the lock.",
-        "$P_k$ has received a failed message.",
-        "$P_k$ has not yet acquired the lock."
+        " P_k  has a low priority.",
+        " P_k  has released the lock.",
+        " P_k  has received a failed message.",
+        " P_k  has not yet acquired the lock."
       ],
-      "answer": "$P_k$ has received a failed message.",
-      "explanation": "In Maekawa's algorithm, a $relinquish$ message is sent by a process $P_k$ to nodes in its request set to renounce its right to the critical section (effectively removing itself from the wait queue) after it has received a **failed** message. ",
+      "answer": " P_k  has received a failed message.",
+      "explanation": "In Maekawa's algorithm, a  relinquish  message is sent by a process  P_k  to nodes in its request set to renounce its right to the critical section (effectively removing itself from the wait queue) after it has received a **failed** message. ",
       "id": "q_maekawa_relinquish"
     },
     {
-      "question": "In the Suzuki-Kasami algorithm, process $P_j$ sends the token to $P_i$, if ________.",
+      "question": "In the Suzuki-Kasami algorithm, process  P_j  sends the token to  P_i , if ________.",
       "options": [
-        "$seq_i[i] = C[i] + 1$",
-        "$seq_i[j] = C[j] + 1$",
-        "$seq_j[j] = C[j] + 1$",
-        "$seq_{i}[i] = C[i] + 1$"
+        " seq_i[i] = C[i] + 1 ",
+        " seq_i[j] = C[j] + 1 ",
+        " seq_j[j] = C[j] + 1 ",
+        " seq_{i}[i] = C[i] + 1 "
       ],
-      "answer": "$seq_{i}[i] = C[i] + 1$",
-      "explanation": "In the Suzuki-Kasami token-based algorithm, process $P_j$ holding the token sends it to a requesting process $P_i$ if $P_i$'s sequence number of request, $seq_i[i]$, matches the token's record of $P_i$'s last critical section completion, $C[i]$, plus one. This ensures $P_i$ is waiting for the token. The correct condition for token passage is typically $request\\_array[i] = token\\_array[i] + 1$. The accepted answer option $seq_{i}[i] = C[i] + 1$ uses the given notation for this condition. ",
+      "answer": " seq_{i}[i] = C[i] + 1 ",
+      "explanation": "In the Suzuki-Kasami token-based algorithm, process  P_j  holding the token sends it to a requesting process  P_i  if  P_i 's sequence number of request,  seq_i[i] , matches the token's record of  P_i 's last critical section completion,  C[i] , plus one. This ensures  P_i  is waiting for the token. The correct condition for token passage is typically  request\\_array[i] = token\\_array[i] + 1 . The accepted answer option  seq_{i}[i] = C[i] + 1  uses the given notation for this condition. ",
       "id": "q_suzuki_kasami_token_send"
     },
     {
@@ -2000,7 +2000,7 @@
       "id": "q_raymond_tree_statements"
     },
     {
-      "question": "Consider the following statements regarding the minimum spanning tree (MST): S1: If each edge of the graph has a unique weight, then the MST is unique. S2: If $F$ is a fragment and $e$ is the least weight outgoing edge, then $F \\cup \\{e\\}$ is also a fragment.",
+      "question": "Consider the following statements regarding the minimum spanning tree (MST): S1: If each edge of the graph has a unique weight, then the MST is unique. S2: If  F  is a fragment and  e  is the least weight outgoing edge, then  F \\cup \\{e\\}  is also a fragment.",
       "options": [
         "Both S1 and S2 are true.",
         "S1 is true, but S2 is false.",
@@ -2024,19 +2024,19 @@
       "id": "q_ghs_fragment_join"
     },
     {
-      "question": "When combining two fragments $F_1$ and $F_2$, all the nodes in $F_1$ take on the name and level of $F_2$ if ________.",
+      "question": "When combining two fragments  F_1  and  F_2 , all the nodes in  F_1  take on the name and level of  F_2  if ________.",
       "options": [
-        "$level(F_1) < level(F_2)$",
-        "$level(F_1) > level(F_2)$",
-        "$level(F_1) = level(F_2)$",
+        " level(F_1) < level(F_2) ",
+        " level(F_1) > level(F_2) ",
+        " level(F_1) = level(F_2) ",
         "All the options"
       ],
-      "answer": "$level(F_1) < level(F_2)$",
-      "explanation": "In the GHS algorithm, when combining fragments of different levels, the fragment with the **lower level** ($F_1$) adopts the name and level of the fragment with the **higher level** ($F_2$). ",
+      "answer": " level(F_1) < level(F_2) ",
+      "explanation": "In the GHS algorithm, when combining fragments of different levels, the fragment with the **lower level** ( F_1 ) adopts the name and level of the fragment with the **higher level** ( F_2 ). ",
       "id": "q_ghs_fragment_combine"
     },
     {
-      "question": "If a node $p$ receives a $< test, level', name' >$ message from node $q$ such that $name(p) = name'$ and $status[q] = basic$, then $status[q]$ is set to ________.",
+      "question": "If a node  p  receives a  < test, level', name' >  message from node  q  such that  name(p) = name'  and  status[q] = basic , then  status[q]  is set to ________.",
       "options": [
         "basic",
         "reject",
@@ -2044,7 +2044,7 @@
         "previous value"
       ],
       "answer": "reject",
-      "explanation": "In the GHS algorithm, if a node $p$ receives a $test$ message from $q$ and $p$'s fragment name is the same as the test message's name ($name(p) = name'$), it means $q$ is testing an edge *within* the same fragment. To prevent cycles and keep the search for the core of a new fragment focused, $p$ sets $q$'s status to **reject**. ",
+      "explanation": "In the GHS algorithm, if a node  p  receives a  test  message from  q  and  p 's fragment name is the same as the test message's name ( name(p) = name' ), it means  q  is testing an edge *within* the same fragment. To prevent cycles and keep the search for the core of a new fragment focused,  p  sets  q 's status to **reject**. ",
       "id": "q_ghs_test_message"
     },
     {
@@ -2056,7 +2056,7 @@
         "5"
       ],
       "answer": "2",
-      "explanation": "In the GHS algorithm, when testing edges to find the minimum weight outgoing connection (MWOE), a node typically receives up to **two** response messages on a given edge: a $Reject$ or an $Accept$ (or a similar pair). ",
+      "explanation": "In the GHS algorithm, when testing edges to find the minimum weight outgoing connection (MWOE), a node typically receives up to **two** response messages on a given edge: a  Reject  or an  Accept  (or a similar pair). ",
       "id": "q_ghs_messages_per_level"
     },
     {
@@ -2204,7 +2204,7 @@
       "id": "q_raft_log_consistency"
     },
     {
-      "question": "If a proposal $(n, v)$ is chosen, then every proposal with a number greater than $n$ that is chosen, has value $v$.",
+      "question": "If a proposal  (n, v)  is chosen, then every proposal with a number greater than  n  that is chosen, has value  v .",
       "options": [
         "lesser",
         "greater",
@@ -2212,7 +2212,7 @@
         "None of the options"
       ],
       "answer": "greater",
-      "explanation": "This statement is part of the **safety property** of Paxos: If a proposal with number $n$ and value $v$ is chosen, all subsequently chosen proposals (i.e., those with a number **greater** than $n$) must also have the value $v$. ",
+      "explanation": "This statement is part of the **safety property** of Paxos: If a proposal with number  n  and value  v  is chosen, all subsequently chosen proposals (i.e., those with a number **greater** than  n ) must also have the value  v . ",
       "id": "q_paxos_safety_property"
     },
     {
@@ -2260,7 +2260,7 @@
         "20"
       ],
       "answer": "16",
-      "explanation": "The required minimum number of generals ($N$) to tolerate $f$ traitors (Byzantine faulty processes) is $N \\ge 3f + 1$. For $f=5$ traitors, $N \\ge 3(5) + 1 = 16$. ",
+      "explanation": "The required minimum number of generals ( N ) to tolerate  f  traitors (Byzantine faulty processes) is  N \\ge 3f + 1 . For  f=5  traitors,  N \\ge 3(5) + 1 = 16 . ",
       "id": "q_byzantine_minimum_generals"
     },
     {
@@ -2272,19 +2272,19 @@
         "min"
       ],
       "answer": "majority",
-      "explanation": "In the standard Byzantine Generals Problem algorithm ($OM(m)$), a loyal general determines the final order by computing the **majority** value from the set of received orders. ",
+      "explanation": "In the standard Byzantine Generals Problem algorithm ( OM(m) ), a loyal general determines the final order by computing the **majority** value from the set of received orders. ",
       "id": "q_byzantine_general_computation"
     },
     {
-      "question": "In the step $OM(m-1)$ of the Byzantine agreement algorithm, general $i$ receives ________ values (where $m$ is greater than 0 and $n$ is the total number of generals)?",
+      "question": "In the step  OM(m-1)  of the Byzantine agreement algorithm, general  i  receives ________ values (where  m  is greater than 0 and  n  is the total number of generals)?",
       "options": [
-        "$n$",
-        "$n-1$",
-        "$n-2$",
-        "$n+1$"
+        " n ",
+        " n-1 ",
+        " n-2 ",
+        " n+1 "
       ],
-      "answer": "$n-2$",
-      "explanation": "In the recursive message structure of the $OM(m)$ algorithm, General $i$ starts by sending its order to $n-1$ generals. In the subsequent step, $OM(m-1)$, each of the other $n-1$ generals relays their received order to the $n-2$ other generals (excluding themselves and $i$). Thus, General $i$ receives $n-2$ values from other generals. ",
+      "answer": " n-2 ",
+      "explanation": "In the recursive message structure of the  OM(m)  algorithm, General  i  starts by sending its order to  n-1  generals. In the subsequent step,  OM(m-1) , each of the other  n-1  generals relays their received order to the  n-2  other generals (excluding themselves and  i ). Thus, General  i  receives  n-2  values from other generals. ",
       "id": "q_byzantine_om_messages"
     },
     {
@@ -2312,7 +2312,7 @@
       "id": "q_communication_semantics"
     },
     {
-      "question": "Which of the following statements are correct? S1. To tolerate $k$ fail-stop failures, we need $k+1$ processes. S2. If processes produce arbitrary outputs, we need $k+1$ processes where there are $k$ failures.",
+      "question": "Which of the following statements are correct? S1. To tolerate  k  fail-stop failures, we need  k+1  processes. S2. If processes produce arbitrary outputs, we need  k+1  processes where there are  k  failures.",
       "options": [
         "S1 is true, S2 is true",
         "S1 is true, S2 is false",
@@ -2320,11 +2320,11 @@
         "S1 is false, S2 is false"
       ],
       "answer": "S1 is true, S2 is false",
-      "explanation": "To tolerate $k$ **fail-stop** (crash) failures, you need $k+1$ processes to ensure at least one remains operational (S1 is true). To tolerate $k$ Byzantine (arbitrary) failures, you need $3k+1$ processes, not $k+1$ (S2 is false). ",
+      "explanation": "To tolerate  k  **fail-stop** (crash) failures, you need  k+1  processes to ensure at least one remains operational (S1 is true). To tolerate  k  Byzantine (arbitrary) failures, you need  3k+1  processes, not  k+1  (S2 is false). ",
       "id": "q_fault_tolerance_processes"
     },
     {
-      "question": "Which of the following statements are correct regarding virtually synchronous multicast (Let us say that view $V$ changes to view $V^*$)? S1. If a message $m$ is sent to view $V$ before the view change, then either all processes in $(V \\cap V^*)$ receive $m$, or none do. S2. A message sent to view $V$ can be delivered only to processes in $V$, and not to successive views.",
+      "question": "Which of the following statements are correct regarding virtually synchronous multicast (Let us say that view  V  changes to view  V^* )? S1. If a message  m  is sent to view  V  before the view change, then either all processes in  (V \\cap V^*)  receive  m , or none do. S2. A message sent to view  V  can be delivered only to processes in  V , and not to successive views.",
       "options": [
         "S1 is true, S2 is true",
         "S1 is true, S2 is false",
@@ -2332,11 +2332,11 @@
         "S1 is false, S2 is false"
       ],
       "answer": "S1 is true, S2 is true",
-      "explanation": "Virtual synchrony guarantees atomic message delivery relative to view changes. S1 is the key property: any message $m$ multicast to $V$ is delivered to a subset of nodes, where that subset is either all or none of the nodes that survive into the new view $V^*$. S2 is also generally true for the definition of the atomic multicast. ",
+      "explanation": "Virtual synchrony guarantees atomic message delivery relative to view changes. S1 is the key property: any message  m  multicast to  V  is delivered to a subset of nodes, where that subset is either all or none of the nodes that survive into the new view  V^* . S2 is also generally true for the definition of the atomic multicast. ",
       "id": "q_virtual_synchronous_multicast"
     },
     {
-      "question": "Which of the following statements are correct regarding 2-Phase Commit? S1. In Phase 1a, the coordinator sends a $vote-request$ message to all participants. S2. In Phase 1b, each participant returns either $Vote-commit$, $Vote-abort$, or $None-of-All$.",
+      "question": "Which of the following statements are correct regarding 2-Phase Commit? S1. In Phase 1a, the coordinator sends a  vote-request  message to all participants. S2. In Phase 1b, each participant returns either  Vote-commit ,  Vote-abort , or  None-of-All .",
       "options": [
         "S1 is true, S2 is true",
         "S1 is true, S2 is false",
@@ -2344,7 +2344,7 @@
         "S1 is false, S2 is false"
       ],
       "answer": "S1 is true, S2 is false",
-      "explanation": "In 2PC, Phase 1a is indeed when the coordinator sends a **$vote-request$** message (S1 is true). In Phase 1b, each participant can only return **$Vote-commit$** (Yes) or **$Vote-abort$** (No); there is no standard '$None-of-All$' option (S2 is false). ",
+      "explanation": "In 2PC, Phase 1a is indeed when the coordinator sends a ** vote-request ** message (S1 is true). In Phase 1b, each participant can only return ** Vote-commit ** (Yes) or ** Vote-abort ** (No); there is no standard ' None-of-All ' option (S2 is false). ",
       "id": "q_two_phase_commit"
     },
     {
@@ -2356,7 +2356,7 @@
         "Global-commit"
       ],
       "answer": "Prepare-commit",
-      "explanation": "In 3PC, if all votes from Phase 1 are 'Yes', the coordinator proceeds to Phase 2 (the Pre-Commit phase) by sending a **$Prepare-commit$** message to all participants. ",
+      "explanation": "In 3PC, if all votes from Phase 1 are 'Yes', the coordinator proceeds to Phase 2 (the Pre-Commit phase) by sending a ** Prepare-commit ** message to all participants. ",
       "id": "q_three_phase_commit"
     },
     {
@@ -2536,7 +2536,7 @@
         "S1 is false, S2 is false"
       ],
       "answer": "S1 is true, S2 is false",
-      "explanation": "Dynamo uses **gossip-style protocols** (specifically a variant of the $\\Phi$ Accrual Failure Detector) for node membership and failure detection (S1 is true). It uses **vector clocks** for object versioning to handle conflicts, **not scalar clocks** (S2 is false). ",
+      "explanation": "Dynamo uses **gossip-style protocols** (specifically a variant of the  \\Phi  Accrual Failure Detector) for node membership and failure detection (S1 is true). It uses **vector clocks** for object versioning to handle conflicts, **not scalar clocks** (S2 is false). ",
       "id": "q_dynamo_mechanisms"
     },
     {
@@ -2852,7 +2852,7 @@
       "id": "q_acid_atomicity"
     },
     {
-      "question": "Which of the following statements are correct regarding continuous consistency? S1. When reading a replica, we always get the accurate value and never encounter a stale value. S2. Different replicas of variable $x$ are loosely synchronized and are not exactly identical.",
+      "question": "Which of the following statements are correct regarding continuous consistency? S1. When reading a replica, we always get the accurate value and never encounter a stale value. S2. Different replicas of variable  x  are loosely synchronized and are not exactly identical.",
       "options": [
         "S1 is true, S2 is true",
         "S1 is true, S2 is false",
@@ -2920,7 +2920,7 @@
         "S1 is false, S2 is false"
       ],
       "answer": "S1 is false, S2 is true",
-      "explanation": "In Stellar, nodes only need to participate if they are validating the network; not all nodes must be part of the consensus process (S1 is false). The definition of a **quorum** in the Stellar Consensus Protocol (SCP) is a set of nodes $Q$ such that every member $v \\in Q$ has at least one of its chosen quorum slices included in $Q$ (S2 is true). ",
+      "explanation": "In Stellar, nodes only need to participate if they are validating the network; not all nodes must be part of the consensus process (S1 is false). The definition of a **quorum** in the Stellar Consensus Protocol (SCP) is a set of nodes  Q  such that every member  v \\in Q  has at least one of its chosen quorum slices included in  Q  (S2 is true). ",
       "id": "q_stellar_statements"
     },
     {
@@ -2936,7 +2936,7 @@
       "id": "q_stellar_consensus_type"
     },
     {
-      "question": "Which of the following statements are correct regarding federated voting properties? S1. No duplication: Every correct node delivers at most one voted value. S2. Validity: If all nodes vote for a value $a$, they eventually deliver a different value $a'$.",
+      "question": "Which of the following statements are correct regarding federated voting properties? S1. No duplication: Every correct node delivers at most one voted value. S2. Validity: If all nodes vote for a value  a , they eventually deliver a different value  a' .",
       "options": [
         "S1 is true, S2 is true",
         "S1 is true, S2 is false",
@@ -2944,7 +2944,7 @@
         "S1 is false, S2 is false"
       ],
       "answer": "S1 is true, S2 is false",
-      "explanation": "The **No Duplication** property (a form of Agreement) ensures a process decides at most one value (S1 is true). The **Validity** property states that if all correct nodes vote for $a$, they must eventually deliver $a$, not a different value $a'$ (S2 is false). ",
+      "explanation": "The **No Duplication** property (a form of Agreement) ensures a process decides at most one value (S1 is true). The **Validity** property states that if all correct nodes vote for  a , they must eventually deliver  a , not a different value  a'  (S2 is false). ",
       "id": "q_federated_voting_properties"
     },
     {
@@ -2953,10 +2953,10 @@
         "Nodes can behave arbitrarily.",
         "Nodes can behave maliciously.",
         "Malicious nodes cannot collaborate with each other.",
-        "With $3f+1$ nodes, we can tolerate at most $f$ Byzantine failures."
+        "With  3f+1  nodes, we can tolerate at most  f  Byzantine failures."
       ],
       "answer": "Malicious nodes cannot collaborate with each other.",
-      "explanation": "Byzantine faulty nodes can indeed **collaborate maliciously** with each other. This ability to collude is what makes Byzantine fault tolerance ($3f+1$ total nodes for $f$ faults) so challenging. ",
+      "explanation": "Byzantine faulty nodes can indeed **collaborate maliciously** with each other. This ability to collude is what makes Byzantine fault tolerance ( 3f+1  total nodes for  f  faults) so challenging. ",
       "id": "q_byzantine_faults_incorrect"
     }
   ]

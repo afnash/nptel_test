@@ -430,15 +430,15 @@ let quizApp;
 const link1 = "https://drive.google.com/file/d/1PzfvKQUl-FYqb4KbuzcsGzL16Mds714-/view?usp=sharing"
 const link2 = "https://drive.google.com/file/d/136C2RXIWN3OI5S7cZZiCgJIJrrPsvKuO/view?usp=sharing"
 const link3 = "https://drive.google.com/file/d/1UD9S0A7N15cR43sHXM1chSofabWmQYjr/view?usp=sharing"
-const link4 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.bj2qhxpzptuc"
-const link5 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.kkfeldhfirzd"
-const link6 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.xpae877kiffg"
-const link7 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.pd4hzvn6fms2"
-const link8 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.qmcfsfe17x0r"
-const link9 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.wtifxkh9mlt4"
-const link10 = "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.votxh6hkn3t0"
-const link11= "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.6v2q42iq9n9m"
-const link12= "https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?tab=t.ciergd8njz0u"
+const link4 = "https://drive.google.com/file/d/1Vmokhw8daGtPaHH70VCtUM7IgT6im04v/view?usp=drive_link"
+const link5 = "https://drive.google.com/file/d/1phrqllcz93_8PJOfp28P7r8Aop6EqAme/view?usp=drive_link"
+const link6 = "https://drive.google.com/file/d/1lYQHmlQxyna7r2iyIkCPqnoP6JRdnijl/view?usp=drive_link"
+const link7 = "https://drive.google.com/file/d/17w4kpu_WMgcbQx9p1xhpLLD0EBQ42GCU/view?usp=drive_link"
+const link8 = "https://drive.google.com/file/d/1OjucxQFw4ZXmm0pLWK8BbmCfjHzO7GJ0/view?usp=drive_link"
+const link9 = "https://drive.google.com/file/d/1IikJFThtZzWQop5krvpUuR1xJxZ97r1_/view?usp=drive_link"
+const link10 = "https://drive.google.com/file/d/1YN6cJrkQkbt2i5hogGaXVstSrw-9U6fZ/view?usp=drive_link"
+const link11= "https://drive.google.com/file/d/1ogPQdnZ6uEwjSlJrCJzmekDBpMocmzkZ/view?usp=drive_link"
+const link12= "https://drive.google.com/file/d/1qRQQAcRKp8XcbaW6ClNzO__XjnM7tYyC/view?usp=drive_link"
 function startQuiz(mode) {
     if (mode === 'weekly') {
         quizApp.showWeeklySelection();
@@ -458,7 +458,7 @@ function startQuiz(mode) {
 }
 
 function startLearning() {
-    window.open("https://docs.google.com/document/d/1etjCmEVu4I4S2d5c5ve4VVIQIcDL9WC_h4fZuxAY2LU/edit?usp=sharing","_blank");
+    window.open("https://drive.google.com/file/d/1je2vtlYWcgkxr5Li88hiZlabbROG0fYh/view?usp=sharing","_blank");
 }
 
 function startWeeklyQuiz(WeekIndex) {
