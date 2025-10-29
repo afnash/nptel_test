@@ -346,12 +346,12 @@
         {
           "question": "Week 3, Q8: In the happens-before-relationship scheme, when process  j  receives an event  a  from process  i , the clock is updated to ________ where  T_j  and  T_i  are the clocks of process  j  and  i , respectively.",
           "options": [
-            " T_{j}=  max(T_{j}, T_i(a))+1 ",
-            " T_{j}=T_{j}+1 ",
-            " T_{j}=T_{i}(a) ",
-            " T_{j}=T_{i}(a)+1 "
+            " T_j=  max(T_j, T_i(a))+1 ",
+            " T_j=T_j+1 ",
+            " T_j=T_i(a) ",
+            " T_j=T_i(a)+1 "
           ],
-          "answer": " T_{j}=  max(T_{j}, T_i(a))+1 ",
+          "answer": " T_j=  max(T_j, T_i(a))+1 ",
           "explanation": "For Lamport timestamps, the update rule when a process  j  receives a message with timestamp  T_i(a)  from process  i  is  T_j =   max(T_j, T_i(a)) + 1 . The options provided use  T_j =   max(T_j + T_i(a)) + 1  which seems to be a slight misrepresentation or a different notation but represents the correct rule structure. I will use the accepted answer's format. ",
           "id": "w3_q8"
         },
@@ -475,10 +475,10 @@
             " seq_i[i] = C[i] + 1 ",
             " seq_i[j] = C[j] + 1 ",
             " seq_j[j] = C[j] + 1 ",
-            " seq_{i}[i] = C[i] + 1 "
+            " seq_i[i] = C[i] + 1 "
           ],
-          "answer": " seq_{i}[i] = C[i] + 1 ",
-          "explanation": "In the Suzuki-Kasami token-based algorithm, process  P_j  holding the token sends it to a requesting process  P_i  if  P_i 's sequence number of request,  seq_i[i] , matches the token's record of  P_i 's last critical section completion,  C[i] , plus one. This ensures  P_i  is waiting for the token. The correct condition for token passage is typically  request  _array[i] = token  _array[i] + 1 . The accepted answer option  seq_{i}[i] = C[i] + 1  uses the given notation for this condition. ",
+          "answer": " seq_i[i] = C[i] + 1 ",
+          "explanation": "In the Suzuki-Kasami token-based algorithm, process  P_j  holding the token sends it to a requesting process  P_i  if  P_i 's sequence number of request,  seq_i[i] , matches the token's record of  P_i 's last critical section completion,  C[i] , plus one. This ensures  P_i  is waiting for the token. The correct condition for token passage is typically  request  _array[i] = token  _array[i] + 1 . The accepted answer option  seq_i[i] = C[i] + 1  uses the given notation for this condition. ",
           "id": "w4_q8"
         },
         {
@@ -1846,12 +1846,12 @@
     {
       "question": "In the happens-before-relationship scheme, when process  j  receives an event  a  from process  i , the clock is updated to ________ where  T_j  and  T_i  are the clocks of process  j  and  i , respectively.",
       "options": [
-        " T_{j}=  max(T_{j}, T_i(a))+1 ",
-        " T_{j}=T_{j}+1 ",
-        " T_{j}=T_{i}(a) ",
-        " T_{j}=T_{i}(a)+1 "
+        " T_j=  max(T_j, T_i(a))+1 ",
+        " T_j=T_j+1 ",
+        " T_j=T_i(a) ",
+        " T_j=T_i(a)+1 "
       ],
-      "answer": " T_{j}=  max(T_{j}, T_i(a))+1 ",
+      "answer": " T_j=  max(T_j, T_i(a))+1 ",
       "explanation": "For Lamport timestamps, the update rule when a process  j  receives a message with timestamp  T_i(a)  from process  i  is  T_j =   max(T_j, T_i(a)) + 1 . The options provided use  T_j =   max(T_j + T_i(a)) + 1  which seems to be a slight misrepresentation or a different notation but represents the correct rule structure. I will use the accepted answer's format. ",
       "id": "q_lamport_clock_update"
     },
@@ -1969,10 +1969,10 @@
         " seq_i[i] = C[i] + 1 ",
         " seq_i[j] = C[j] + 1 ",
         " seq_j[j] = C[j] + 1 ",
-        " seq_{i}[i] = C[i] + 1 "
+        " seq_i[i] = C[i] + 1 "
       ],
-      "answer": " seq_{i}[i] = C[i] + 1 ",
-      "explanation": "In the Suzuki-Kasami token-based algorithm, process  P_j  holding the token sends it to a requesting process  P_i  if  P_i 's sequence number of request,  seq_i[i] , matches the token's record of  P_i 's last critical section completion,  C[i] , plus one. This ensures  P_i  is waiting for the token. The correct condition for token passage is typically  request  _array[i] = token  _array[i] + 1 . The accepted answer option  seq_{i}[i] = C[i] + 1  uses the given notation for this condition. ",
+      "answer": " seq_i[i] = C[i] + 1 ",
+      "explanation": "In the Suzuki-Kasami token-based algorithm, process  P_j  holding the token sends it to a requesting process  P_i  if  P_i 's sequence number of request,  seq_i[i] , matches the token's record of  P_i 's last critical section completion,  C[i] , plus one. This ensures  P_i  is waiting for the token. The correct condition for token passage is typically  request  _array[i] = token  _array[i] + 1 . The accepted answer option  seq_i[i] = C[i] + 1  uses the given notation for this condition. ",
       "id": "q_suzuki_kasami_token_send"
     },
     {
