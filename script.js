@@ -429,9 +429,9 @@ class QuizApp {
 let quizApp;
 const link1 = "https://drive.google.com/file/d/14Cc11O3-7EoMPCtPbXqIgwOJepvPRqvc/view?usp=drive_link"
 const link2 = "https://drive.google.com/file/d/136C2RXIWN3OI5S7cZZiCgJIJrrPsvKuO/view?usp=sharing"
-const link3 = "https://drive.google.com/file/d/1UD9S0A7N15cR43sHXM1chSofabWmQYjr/view?usp=sharing"
-const link4 = "https://drive.google.com/file/d/1Vmokhw8daGtPaHH70VCtUM7IgT6im04v/view?usp=drive_link"
-const link5 = "https://drive.google.com/file/d/1phrqllcz93_8PJOfp28P7r8Aop6EqAme/view?usp=drive_link"
+const link3 = "https://drive.google.com/file/d/14O06bDo780Tl7w0sNaaxFDICtoQXjBAq/view?usp=drive_link"
+const link4 = "https://drive.google.com/file/d/1zRgjfHh0A61DybDZGnOW5VyOftebhPmQ/view?usp=drive_link"
+const link5 = "https://drive.google.com/file/d/1kGr7Pr69vPtnFskW9PMIXYfZqusXgP-q/view?usp=drive_link"
 const link6 = "https://drive.google.com/file/d/1lYQHmlQxyna7r2iyIkCPqnoP6JRdnijl/view?usp=drive_link"
 const link7 = "https://drive.google.com/file/d/17w4kpu_WMgcbQx9p1xhpLLD0EBQ42GCU/view?usp=drive_link"
 const link8 = "https://drive.google.com/file/d/1OjucxQFw4ZXmm0pLWK8BbmCfjHzO7GJ0/view?usp=drive_link"
@@ -458,7 +458,7 @@ function startQuiz(mode) {
 }
 
 function startLearning() {
-    window.open("https://drive.google.com/drive/folders/1k0rqvinjuirc0MsXmIbkGa3sQTCR9YaN?usp=sharing","_blank");
+    window.open("https://drive.google.com/file/d/1yJc9ycY0nImwAd4VY20WryEPGJF5q2dx/view?usp=drive_link","_blank");
 }
 
 function startWeeklyQuiz(WeekIndex) {
