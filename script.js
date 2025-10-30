@@ -458,7 +458,7 @@ function startQuiz(mode) {
 }
 
 function startLearning() {
-    window.open("https://drive.google.com/file/d/1je2vtlYWcgkxr5Li88hiZlabbROG0fYh/view?usp=sharing","_blank");
+    window.open("https://drive.google.com/drive/folders/1k0rqvinjuirc0MsXmIbkGa3sQTCR9YaN?usp=sharing","_blank");
 }
 
 function startWeeklyQuiz(WeekIndex) {
